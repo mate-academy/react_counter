@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,MACE,YAAa,CACb,iBACF,CAEA,SACE,cAAe,CACf,YACF","file":"main.ada14ed5.chunk.css","sourcesContent":[".main {\n  padding: 50px;\n  text-align: center;\n}\n\n.counter {\n  font-size: 30px;\n  padding: 50px;\n}\n"]}

@@ -4,7 +4,6 @@ import './App.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    // Не вызывайте здесь this.setState()!
     this.state = {
       counter: 0,
     };

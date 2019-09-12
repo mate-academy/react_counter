@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,QACE,WAAY,CACZ,YAAa,CACb,qBACF,CAEA,OACE,SAAU,CACV,cACF","file":"main.c73f546e.chunk.css","sourcesContent":[".button {\n  width: 200px;\n  height: 200px;\n  background-color: pink;\n}\n\n.count {\n  color: red;\n  font-size: 87px;\n}\n"]}

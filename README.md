@@ -1,6 +1,11 @@
-# Base template for React
+# React counter
 
 ## Task
+
+Create component `Counter`, which render `button` and `div`.
+Click on `button` change increment count. `div` shows text: "Count: 0".
+Number inside `div` should be chenged after each click.
+
 
 ## Workflow
 

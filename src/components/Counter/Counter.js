@@ -6,32 +6,34 @@ export default class Counter extends Component {
     super(props)
 
     this.state = {
-      count: props.initialCount
+      counter: props.initialCount
     }
   }
 
   incrementCount = () => {
-    this.setState(({ count }) => ({
-      count: count + 1
+    this.setState(({ counter }) => ({
+      counter: counter + 1
     }))
   }
 
   decrementCount = () => {
-    this.setState(({ count }) => ({
-      count: count - 1
+    this.setState(({ counter }) => ({
+      counter: counter - 1
     }))
   }
 
   resetCount = () => {
     this.setState({
-      count: this.props.initialCount
+      counter: this.props.initialCount
     })
   }
 
   render() {
+    const { counter } = this.state;
+
     return (
       <div className="counter">
-        <div className="counter__count">Count: {this.state.count}</div>
+        <div className="counter__count">Count: {counter}</div>
         <button
           type="button"
           className="counter__button"

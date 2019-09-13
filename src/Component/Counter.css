@@ -1,0 +1,22 @@
+.counter {
+  padding-top: 25px;
+  height: 50px;
+  color: darkslateblue;
+  font-weight: bold;
+}
+
+.button {
+  background-color: bisque;
+  color: coral;
+  height: 50px;
+  width: 80px;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.5s;
+  border: 2px solid coral;
+}
+
+.button:hover {
+  transform: translateY(2px);
+  background-color: blanchedalmond;
+}

@@ -5,13 +5,13 @@ class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+      counter: 0,
     }
   }
 
   handleClick() {
     this.setState(prevState => ({
-      count: prevState.count + 1,
+      counter: prevState.counter + 1,
     }));
   }
 
@@ -26,7 +26,7 @@ class Counter extends React.Component {
           Click me
         </button>
         <div className="counter">
-          count: {this.state.count}
+          count: {this.state.counter}
         </div>
       </div>
     );

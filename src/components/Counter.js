@@ -7,9 +7,10 @@ class Counter extends Component {
 
   resetCounter = () => this.setState({ value: 0 });
 
-  changeValue = () => this.setState(prevState => ({
+  changeValue = () => (
+    this.setState(prevState => ({
       value: prevState.value + 1,
-    })
+    }))
   );
 
   render() {

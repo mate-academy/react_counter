@@ -6,7 +6,7 @@ class App extends React.Component {
     count : 0,
   };
 
-  clickFunc() {
+  handleClick() {
     this.setState({
       count: this.state.count + 1
     })
@@ -25,7 +25,7 @@ class App extends React.Component {
           </p>
         </div>
         <button
-          onClick={() => this.clickFunc()}
+          onClick={() => this.handleClick()}
           className="positive ui button"
         >
           Click me !

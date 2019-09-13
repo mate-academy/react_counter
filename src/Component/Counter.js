@@ -11,7 +11,7 @@ class Counter extends React.Component {
 
   onClickCounter = () => {
     this.setState(prevState => ({
-      count: ++prevState.count,
+      count: prevState.count + 1,
     }));
   }
 

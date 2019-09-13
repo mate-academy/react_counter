@@ -1,9 +1,11 @@
+/* eslint-disable no-alert */
+/* eslint-disable react/button-has-type */
 import React from 'react';
 import './App.css';
 
 function App() {
   const clicked = () => {
-    alert('Button was clicked!')
+    alert('Button was clicked!');
   };
 
   return (

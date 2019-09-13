@@ -1,0 +1,17 @@
+.block {
+  margin: 100px auto 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.count-block {
+  margin-bottom: 40px;
+}

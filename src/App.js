@@ -7,7 +7,7 @@ class App extends React.Component {
 
   handleClick = () => (
     this.setState(prevState => ({
-    counter: prevState.counter + 1,
+      counter: prevState.counter + 1,
     }))
   );
 
@@ -16,7 +16,7 @@ class App extends React.Component {
       <div>
         <div className="resultValue">Count: {this.state.counter}</div>
         <button className="btn" onClick={this.handleClick}>Click me!</button>
-    </div>
+      </div>
     );
   }
 }

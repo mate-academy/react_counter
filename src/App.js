@@ -1,18 +1,40 @@
-/* eslint-disable no-alert */
-/* eslint-disable react/button-has-type */
 import React from 'react';
 import './App.css';
 
-function App() {
-  const clicked = () => {
-    alert('Button was clicked!');
-  };
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+    };
+  }
 
-  return (
-    <div className="button-position">
-      <button className="alert-button" onClick={clicked}>Click me</button>
-    </div>
-  );
+  incrementCount = () => {
+    this.setState(prevState => ({
+      count: 1 + prevState.count,
+    }));
+  }
+
+  decrementCount = () => {
+    this.setState(prevState => ({
+      count: prevState.count - 1,
+    }));
+  }
+  resetCount = () => {
+    this.setState({
+      count: 0,
+    });
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.count}</h1>
+        <button onClick={this.incrementCount} type="button">Increment</button>
+        <button onClick={this.decrementCount} type="button">decrement</button>
+        <button onClick={this.resetCount} type="button">reset</button>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default Counter;

@@ -10,7 +10,7 @@ class Counter extends Component {
     };
   }
 
-  clickHandler = () => {
+  handler = () => {
     this.setState({
       counter: this.state.counter + 1,
     });
@@ -21,11 +21,10 @@ class Counter extends Component {
       <div className="ui inverted segment wrapper-button">
         <h1 wrapper__title>Counter: {this.state.counter}</h1>
 
-
         <button
           type="button"
           className="ui inverted teal button btn"
-          onClick={this.clickHandler}
+          onClick={this.handler}
         >
           Change counter
         </button>

@@ -59,3 +59,4 @@ You should be writing code in `src/` directory.
 ### Demo link
 
 - [DEMO LINK](https://igaryok.github.io/react_counter/)
+- [PR](https://github.com/mate-academy/react_counter/pull/17)

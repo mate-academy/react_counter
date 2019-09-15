@@ -2,12 +2,8 @@ import React, { Component } from 'react';
 import './Counter.scss';
 
 export default class Counter extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      counter: 0,
-    };
+  state = {
+    counter: 0,
   };
 
   onCounterClick = () => {

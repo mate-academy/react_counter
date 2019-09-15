@@ -8,20 +8,19 @@ class App extends React.Component {
       counter: 0
     }
   }
-   handleFunc = () => {
-    this.setState((prevState) => {
-
-      return {
-        counter: prevState.counter + 1,
-      }
-    });
+   clickFunc = () => {
+    this.setState((prevState) => ({counter: prevState.counter + 1})
+    );
   }
 
   render () {
     return (
       <>
-        <button id="btn" onClick={this.handleFunc} type="button">Click ME</button>
-        <div className="digital">count = {this.state.counter}</div>
+        <button
+          id="btn"
+          onClick={this.clickFunc}
+          type="button">Click ME</button>
+        <div className="digital-block">count = {this.state.counter}</div>
       </>
     );
   }

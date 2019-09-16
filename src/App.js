@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Counter from './components/Counter/Counter';
 import './App.css';
 
-function App() {
-  return (
-    <div>
+class App extends Component {
+  state = {};
 
-    </div>
-  );
+  render() {
+    //   const { counterValue } = this.state;
+
+    return (
+      <Counter />
+    );
+  }
 }
 
 export default App;

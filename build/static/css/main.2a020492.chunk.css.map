@@ -1,0 +1,1 @@
+{"version":3,"sources":["Counter.css"],"names":[],"mappings":"AAAA,OAEE,iBACF,CAEA,yBAJE,WAMF","file":"main.2a020492.chunk.css","sourcesContent":[".place {\n  margin: 20px;\n  text-align: center;\n}\n\n.place:only-child {\n  margin: 20px;\n}\n"]}

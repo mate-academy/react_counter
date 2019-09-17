@@ -11,7 +11,6 @@ class Counter extends Component {
     this.setState(prevState => ({
       counterValue: prevState.counterValue + prevState.step,
     }));
-
   }
 
   render() {

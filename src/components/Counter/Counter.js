@@ -2,19 +2,15 @@ import React, { Component } from 'react';
 import './Counter.css';
 
 class Counter extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      counterValue: 0,
-      step: 1,
-    };
-  }
+  state = {
+    counterValue: 0,
+    step: 1,
+  };
 
   handleClick = () => {
-    this.setState({
-      counterValue: this.state.counterValue + this.state.step,
-    });
+    this.setState(prevState => ({
+      counterValue: prevState.counterValue + prevState.step,
+    }));
 
   }
 
@@ -31,7 +27,6 @@ class Counter extends Component {
           className="btn btn-primary"
           type="button"
           onClick={handleClick}
-
         >
           Click to count
         </button>

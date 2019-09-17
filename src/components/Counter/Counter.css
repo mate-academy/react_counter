@@ -1,0 +1,8 @@
+.place {
+  margin: 20px;
+  text-align: center;
+}
+
+.place:only-child {
+  margin: 20px;
+}

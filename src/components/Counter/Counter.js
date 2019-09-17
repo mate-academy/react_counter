@@ -2,11 +2,8 @@ import React from 'react';
 import './Counter.css';
 
 class Counter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  state = {
       count: 0,
-    }
   }
 
   handleClick = () => {

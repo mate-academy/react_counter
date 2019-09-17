@@ -3,7 +3,7 @@ import './Counter.css';
 
 class Counter extends React.Component {
   state = {
-      count: 0,
+    count: 0,
   }
 
   handleClick = () => {

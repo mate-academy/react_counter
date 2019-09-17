@@ -6,11 +6,9 @@ class Counter extends React.Component {
     counter: 0,
   };
 
-  handleCounter = () => this.setState(prevState => (
-    {
+  handleCounter = () => this.setState(prevState => ({
       counter: prevState.counter + 1
-    }
-    ));
+    }));
 
   render() {
     const { counter } = this.state;

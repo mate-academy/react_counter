@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.wrapper-button h1 {
+.wrapper__title {
   font-size: 30px;
   color: cyan;
 }

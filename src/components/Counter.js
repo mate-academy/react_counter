@@ -2,29 +2,30 @@ import React, { Component } from 'react';
 import './Counter.css';
 
 class Counter extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      counter: 0,
-    };
-  }
+  state = {
+    counter: 0,
+  };
 
   handler = () => {
-    this.setState({
-      counter: this.state.counter + 1,
+    this.setState(prevState => {
+      return {
+        counter: prevState.counter + 1,
+      };
     });
-  }
+  };
 
   render() {
+    const { counter } = this.state;
+    const { handler } = this;
+
     return (
       <div className="ui inverted segment wrapper-button">
-        <h1 wrapper__title>Counter: {this.state.counter}</h1>
+        <h1 className="wrapper__title">Counter: {counter}</h1>
 
         <button
           type="button"
           className="ui inverted teal button btn"
-          onClick={this.handler}
+          onClick={handler}
         >
           Change counter
         </button>

@@ -12,11 +12,10 @@ class Counter extends React.Component {
   };
 
   render() {
-    const counter = this.state.counter;
-    const handleClick = this.handleClick;
+    const { counter } = this.state;
     return (
       <>
-        <button name="clicker" className="ui button" onClick={handleClick}>
+        <button name="clicker" className="ui button" onClick={this.handleClick}>
           Click me
         </button>
         <div className="counter ui label">Counter: {counter}</div>

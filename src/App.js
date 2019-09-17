@@ -15,7 +15,8 @@ class App extends React.Component {
   decrement = () => {
     this.setState(prevState => (prevState.counter > 0
       ? { counter: prevState.counter - 1 }
-      : { counter: 0 }));
+      : { counter: 0 }
+    ));
   }
 
   reset = () => {

@@ -8,7 +8,7 @@ class App extends React.Component {
       counter: 0
     }
   }
-   clickFunc = () => {
+  handleClick = () => {
     this.setState((prevState) => ({counter: prevState.counter + 1})
     );
   }
@@ -18,8 +18,9 @@ class App extends React.Component {
       <>
         <button
           id="btn"
-          onClick={this.clickFunc}
-          type="button">Click ME</button>
+          onClick={this.handleClick}
+          type="button"
+        >Click ME</button>
         <div className="digital-block">count = {this.state.counter}</div>
       </>
     );

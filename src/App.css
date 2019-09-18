@@ -1,0 +1,24 @@
+.button-position {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.alert-button {
+  cursor: pointer;
+  border: none;
+  border-radius: 500px;
+  outline: none;
+  width: 150px;
+  height: 50px;
+  background-color: aquamarine;
+  color: rgb(47, 78, 255);
+  transition: 0.4s;
+}
+
+.alert-button:hover {
+  color: white;
+  background-color: blue;
+}

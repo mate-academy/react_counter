@@ -1,0 +1,8 @@
+.counterContainer {
+  width: max-content;
+  margin: 100px auto;
+}
+
+.ui.secondary.button {
+  margin: 5px 40px;
+}

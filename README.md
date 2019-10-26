@@ -1,5 +1,10 @@
 # React counter
 
+### Demo link
+
+- [DEMO LINK](https://volodymyr-roiuk.github.io/react_counter/)
+
+
 ## Task
 
 Create component `Counter`, which render `button` and `div`.
@@ -56,6 +61,4 @@ Number inside `div` should be chenged after each click.
 
 You should be writing code in `src/` directory.
 
-### Demo link
 
-Add link here: `[DEMO LINK](https://<your_account>.github.io/<repo_name>/)`

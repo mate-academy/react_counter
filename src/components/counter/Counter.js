@@ -10,7 +10,7 @@ class Counter extends React.PureComponent {
     };
   }
 
-  buttonClick() {
+  buttonClick = () => {
     this.setState((prevState) => {
       return {
         ...prevState,
@@ -21,14 +21,13 @@ class Counter extends React.PureComponent {
 
   render() {
     const { clickCounter } = this.state;
-    const buttonClick = this.buttonClick.bind(this);
 
     return (
       <>
         <div>
           You clicked on button {clickCounter} times
         </div>
-        <Button secondary onClick={buttonClick}>
+        <Button secondary onClick={this.buttonClick}>
           Click me
         </Button>
       </>

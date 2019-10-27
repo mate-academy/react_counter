@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,kBACE,yBAAkB,CAAlB,sBAAkB,CAAlB,iBAAkB,CAClB,iBACF,CAEA,qBACE,eACF","file":"main.c01539a8.chunk.css","sourcesContent":[".counterContainer {\n  width: max-content;\n  margin: 100px auto;\n}\n\n.ui.secondary.button {\n  margin: 5px 40px;\n}\n"]}

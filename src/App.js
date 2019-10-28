@@ -1,12 +1,29 @@
 import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div>
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-    </div>
-  );
+    this.state = {
+      count: 0,
+    };
+  }
+
+  render() {
+    const clickHandler = () => {
+      this.setState(prevState => ({
+        count: ++prevState.count
+      }));
+    };
+
+    return (
+      <div>
+        <div>Count: {this.state.count}</div>
+        <button onClick={clickHandler}>Increment Count</button>
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -10,19 +10,21 @@ class Counter extends React.Component {
     };
   }
 
+  handler() {
+    this.setState(prevCount => ({
+      ...prevCount,
+      counter: prevCount.counter + 1,
+    }));
+  };
+
   render() {
-    const { counter } = this.state;
-    const handler = () => {
-      this.setState(prevCount => ({
-        ...prevCount,
-        counter: prevCount.counter + 1,
-      }));
-    };
+    const {counter} = this.state;
+    const handler = this.handler.bind(this);
 
     return (
       <div className="counter_block">
         <div className="counter">
-          You clicked { counter } times.
+            You clicked {counter} times.
         </div>
         <button onClick={handler} class="ui primary button">
             Click me

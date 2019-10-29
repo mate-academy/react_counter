@@ -12,6 +12,7 @@ class App extends React.Component {
 
   clickHandler = () => {
     this.setState(prevState => ({
+      ...prevState,
       count: prevState.count + 1
     }));
   }

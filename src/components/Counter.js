@@ -13,8 +13,9 @@ class Counter extends React.Component {
   render() {
     const { counter } = this.state;
     const handler = () => {
-      this.setState(startCount => ({
-        counter: startCount.counter + 1,
+      this.setState(prevCount => ({
+        ...prevCount,
+        counter: prevCount.counter + 1,
       }));
     };
 

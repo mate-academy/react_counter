@@ -1,0 +1,1 @@
+{"version":3,"sources":["counter.css","main.css"],"names":[],"mappings":"AAAA,eACE,iBACF,CAEA,SACE,kBACF,CCNA,MACE,8BACF","file":"main.5d2e31a7.chunk.css","sourcesContent":[".counter_block {\n  text-align: center;\n}\n\n.counter {\n  margin-bottom: 10px;\n}\n",".main {\n  padding: 50px calc(50% - 100px);\n}\n"]}

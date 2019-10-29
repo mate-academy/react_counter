@@ -8,13 +8,15 @@ class Counter extends React.PureComponent {
     };
   }
 
+  clicker = () => {
+    this.setState(prevCount => ({
+      counter: prevCount.counter + 1,
+    }));
+  };
+
   render() {
     const { counter } = this.state;
-    const clicker = () => {
-      this.setState(firstCount => ({
-        counter: firstCount.counter + 1,
-      }));
-    };
+
     return (
       <>
         <h1>
@@ -22,7 +24,7 @@ class Counter extends React.PureComponent {
           { counter }
           &apos; times!
         </h1>
-        <button type="submit" onClick={clicker}>
+        <button type="submit" onClick={this.clicker}>
           Cklick me!
         </button>
       </>

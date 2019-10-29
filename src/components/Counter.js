@@ -11,6 +11,7 @@ class Counter extends Component {
 
   getCount = () => {
     this.setState(state => ({
+      ...state,
       counter: state.counter + 1,
     }));
   };

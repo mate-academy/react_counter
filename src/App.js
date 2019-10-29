@@ -10,9 +10,9 @@ class App extends React.Component {
     }
   }
 
-  clickerCount = () => {
-    this.setState({clickCounter: this.state.clickCounter + 1})
-  };
+  clickerCount = () =>
+    this.setState(prevState => ({clickCounter: prevState.clickCounter + 1}));
+
 
   render() {
 
@@ -20,7 +20,7 @@ class App extends React.Component {
       <div className="main">
         <div className="number-window">{this.state.clickCounter}</div>
         <button class="ui animated button"
-          onClick={() => this.clickerCount()}>
+          onClick={this.clickerCount}>
           <div class="visible content">Click</div>
           <div class="hidden content"><i aria-hidden="true" class="arrow right icon"></i></div>
         </button>

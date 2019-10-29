@@ -1,0 +1,10 @@
+body {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+body div,
+button {
+  margin: auto;
+}

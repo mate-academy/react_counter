@@ -8,8 +8,10 @@ class Counter extends React.PureComponent {
     };
   }
 
+
   clicker = () => {
     this.setState(prevCount => ({
+      ...prevCount,
       counter: prevCount.counter + 1,
     }));
   };

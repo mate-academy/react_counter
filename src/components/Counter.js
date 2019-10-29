@@ -9,21 +9,21 @@ class Counter extends React.Component {
     };
   }
 
+  click = () => {
+    this.setState(previous => ({
+      count: previous.count + 1,
+    }));
+  };
+
   render() {
-    const { count } = this.state;
-    const click = () => {
-      this.setState(previous => ({
-        count: previous.count + 1,
-      }));
-    };
 
     return (
       <>
         <div>
           The summ of clicks is
-          <strong>{` ${count}`}</strong>
+          <strong>{` ${this.state.count}`}</strong>
         </div>
-        <button className="btn btn-outline-dark" onClick={click} type="submit">
+        <button className="btn btn-outline-dark" onClick={this.click} type="submit">
           Click
         </button>
       </>

@@ -10,17 +10,18 @@ class App extends React.Component {
     };
   }
 
-  render() {
-    const clickHandler = () => {
-      this.setState(prevState => ({
-        count: ++prevState.count
-      }));
-    };
+  clickHandler = () => {
+    this.setState(prevState => ({
+      count: prevState.count + 1
+    }));
+  }
 
+
+  render() {
     return (
       <div>
         <div>Count: {this.state.count}</div>
-        <button onClick={clickHandler}>Increment Count</button>
+        <button onClick={this.clickHandler}>Increment Count</button>
       </div>
     );
   }

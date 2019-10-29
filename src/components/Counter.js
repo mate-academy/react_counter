@@ -10,10 +10,12 @@ class Counter extends React.Component {
   }
 
   clickCounter = () => {
-    this.setState(prev => ({
-      prev,
-      count: prev.count + 1,
-    }));
+    this.setState(prev => {
+      return {
+        prev,
+        count: prev.count + 1,
+      }
+    });
   };
 
   render() {

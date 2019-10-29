@@ -8,8 +8,9 @@ export default class Counter extends Component {
   }
 
   clickTimes = () => {
-    this.setState(prevCounter => ({
-      clickCounter: ++prevCounter.clickCounter
+    this.setState(prevState => ({
+      ...prevState,
+      clickCounter: prevState.clickCounter + 1
     }));
   }
 

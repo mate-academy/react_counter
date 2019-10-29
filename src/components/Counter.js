@@ -11,7 +11,8 @@ class Counter extends React.Component {
 
   click = () => {
     this.setState(previous => ({
-      count: previous.count + 1,
+      ...previous,
+      count: previous.count + 1
     }));
   };
 

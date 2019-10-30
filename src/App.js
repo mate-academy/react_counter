@@ -3,11 +3,7 @@ import './App.css';
 import Counter from './Counter';
 
 function App() {
-  return (
-    <div>
-      <Counter />
-    </div>
-  );
+  return <Counter />
 }
 
 export default App;

@@ -7,13 +7,19 @@ class Counter extends Component {
     this.state = {
       counter: 0,
     };
-
-    this.setCounter = this.setCounter.bind(this);
   }
 
-  setCounter() {
+  setCounter = () => {
+    this.setState(state => ({
+      counter: state.counter + 1,
+    }));
+  };
+
+  /*  Вариант 2:
+  setCounter = () => {
     this.setState({ counter: this.state.counter + 1 });
   }
+  */
 
   render() {
     return (

@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,WACE,YAAa,CACb,qBAAsB,CACtB,kBAAmB,CACnB,gBACF,CAEA,WACE,WAAY,CACZ,WACF","file":"main.a416d33c.chunk.css","sourcesContent":[".container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 100px;\n}\n\n.ui.button {\n  width: 130px;\n  height: 40px;\n}\n"]}

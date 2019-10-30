@@ -1,5 +1,5 @@
 # React counter
-
+[DEMO](https://anisimovv.github.io/react_counter/)
 ## Task
 
 Create component `Counter`, which render `button` and `div`.

@@ -29,10 +29,16 @@
   font-weight: bold;
   color: white;
   cursor: pointer;
+  outline: none;
 }
 
 .nuclear-button:active {
   -webkit-box-shadow: 0 0 0 60px rgba(0, 0, 0, 0.05) inset;
           box-shadow: 0 0 0 60px rgba(0, 0, 0, 0.05) inset;
+  outline: none;
+}
+
+.nuclear-button:focus {
+  outline: none;
 }
 /*# sourceMappingURL=nuclearButton.css.map */

@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 
+import ButtonWithInfo from './components/ButtonWithInfo';
+
 function App() {
   return (
-    <div>
-
-    </div>
+    <ButtonWithInfo label="click me!" />
   );
 }
 

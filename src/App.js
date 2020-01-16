@@ -1,12 +1,8 @@
 import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div>
-
-    </div>
-  );
-}
+const App = () => (
+  <h1>Count: 0</h1>
+);
 
 export default App;

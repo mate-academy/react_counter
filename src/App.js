@@ -4,19 +4,19 @@ import './App.css';
 
 class App extends Component {
   state = {
-    count: 0,
+    counter: 0,
   };
 
   handleClick = () => {
     this.setState(prevState => ({
-      count: prevState.count + 1,
+      counter: prevState.counter + 1,
     }));
   };
 
   render() {
-    const { count } = this.state;
+    const { counter } = this.state;
 
-    return <Counter count={count} handleClick={this.handleClick} />;
+    return <Counter counter={counter} handleClick={this.handleClick} />;
   }
 }
 

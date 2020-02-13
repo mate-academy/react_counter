@@ -16,13 +16,11 @@ export default class Counter extends Component {
     const { value } = this.state;
 
     return (
-      <div>
-        <h1>
-          Count:
-          {' '}
-          {value}
+      <div className="wrapper">
+        <h1 className="header">
+          {`Count: ${value}`}
         </h1>
-        <button type="button" onClick={this.handleIncrement}>
+        <button type="button" className="button" onClick={this.handleIncrement}>
                   Increment
         </button>
       </div>

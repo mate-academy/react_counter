@@ -1,48 +1,36 @@
 import React, { Component } from 'react';
+import { Button } from '../Button/Button';
 import './Counter.css';
 
 export class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-  }
+  state = {
+    counter: 0,
+  };
 
-  incrementCount() {
-    this.setState(prevState => (
-      { count: prevState.count + 1 }
-    ));
-  }
-
-  decrementCount() {
-    this.setState(prevState => (
-      { count: prevState.count - 1 }
-    ));
+  handleCount(value) {
+    this.setState(prevState => ({
+      counter: prevState.counter + value,
+    }));
   }
 
   render() {
     return (
       <div>
         <h1>
-Count:
-          {this.state.count}
+          {'Count:'}
+          {this.state.counter}
         </h1>
         <span>
-          <button
-            type="button"
-            onClick={() => this.incrementCount()}
-            className="button"
-          >
-+
-          </button>
-          <button
-            type="button"
-            onClick={() => this.decrementCount()}
-            className="button"
-          >
--
-          </button>
+          <Button
+            sign="+"
+            counter={this.state.counter}
+            updateCount={sign => this.handleCount(sign)}
+          />
+          <Button
+            sign="-"
+            counter={this.state.counter}
+            updateCount={sign => this.handleCount(sign)}
+          />
         </span>
       </div>
     );

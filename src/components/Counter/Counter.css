@@ -1,0 +1,11 @@
+.counter {
+  text-align: center;
+}
+
+.button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: rgb(236, 152, 152);
+  border-radius: 30px;
+}

@@ -1,0 +1,30 @@
+.counter {
+  width: 150px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.counter__title {
+  color: #512b58;
+  font-size: 30px;
+  text-align: center;
+}
+
+.counter__button {
+  width: 100%;
+  font-size: 24px;
+  line-height: 24px;
+  background-color: #79bac1;
+  color: #2a7886;
+  padding: 10px 0;
+  border: 1px solid #2a7886;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.counter__button:hover {
+  color: #512b58;
+  background-color: #2a7886;
+}

@@ -6,7 +6,7 @@ export class Counter extends React.Component {
     value: 0,
   }
 
-  handleCounter = (evt) => {
+  handleCounter = () => {
     this.setState(prevState => ({
       value: prevState.value + 1,
     }));

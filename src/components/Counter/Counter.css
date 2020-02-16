@@ -3,10 +3,21 @@
 }
 
 .button {
-  width: 100px;
-  height: 30px;
+  width: 120px;
+  height: 40px;
   border: none;
-  background-color: rgb(236, 152, 152);
+  background-color: rgb(55, 102, 245);
   border-radius: 30px;
   outline: none;
+  transition: transform 0.2s ease-in;
+
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button:active {
+  background-color: rgb(8, 61, 219);
+  transform: translateY(1px);
 }

@@ -2,8 +2,8 @@ import React from 'react';
 import './Counter.css';
 
 export class Counter extends React.PureComponent {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       count: 0,

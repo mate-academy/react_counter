@@ -2,14 +2,11 @@ import React from 'react';
 import './Counter.css';
 
 class Counter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      counter: 0,
-    };
+  state = {
+    counter: 0,
   }
 
-  increaseCount = () => {
+  increaseCounter = () => {
     this.setState(prevState => ({
       counter: prevState.counter + 1,
     }));
@@ -24,7 +21,7 @@ class Counter extends React.Component {
         <button
           type="button"
           className="counter-btn"
-          onClick={this.increaseCount}
+          onClick={this.increaseCounter}
         >
             Click me
         </button>

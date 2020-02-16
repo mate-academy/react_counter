@@ -11,10 +11,12 @@
 
 button {
   width: 100%;
+  padding: 10px;
+
   background-color: #eee;
   border-radius: 20px;
   border: none;
-  padding: 10px;
+  
   cursor: pointer;
   transition: background-color 0.15s;
 }

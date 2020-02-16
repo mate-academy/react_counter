@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Counter.css';
 
-class Counter extends React.Component {
+export class Counter extends Component {
   state = {
     counter: 0,
   };
@@ -23,5 +23,3 @@ class Counter extends React.Component {
     );
   }
 }
-
-export default Counter;

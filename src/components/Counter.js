@@ -6,7 +6,7 @@ class Counter extends React.Component {
     count: 0,
   };
 
-  increase = () => {
+  increaseCounter = () => {
     this.setState(state => ({
       count: state.count + 1,
     }));
@@ -24,7 +24,7 @@ class Counter extends React.Component {
         <button
           type="button"
           className="counter__button"
-          onClick={this.increase}
+          onClick={this.increaseCounter}
         >
           Click Me
         </button>

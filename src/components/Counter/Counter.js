@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const Counter = ({ counter }) => (
   <h1>
     Count:
-    { counter }
+    {counter}
   </h1>
 );
 

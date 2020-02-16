@@ -1,0 +1,23 @@
+.counter {
+  text-align: center;
+}
+
+.button {
+  width: 120px;
+  height: 40px;
+  border: none;
+  background-color: rgb(55, 102, 245);
+  border-radius: 30px;
+  outline: none;
+  transition: transform 0.2s ease-in;
+
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button:active {
+  background-color: rgb(8, 61, 219);
+  transform: translateY(1px);
+}

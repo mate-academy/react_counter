@@ -1,20 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export class Counter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      counter: 0,
-    };
-  }
+export class Counter extends Component {
+  state = {
+    counter: 0,
+  };
 
-  increment = () => {
+  incrementCounter = () => {
     this.setState(prevState => ({
       counter: prevState.counter + 1,
     }));
   }
 
-  resetToZero = () => {
+  resetCounter = () => {
     this.setState({
       counter: 0,
     });
@@ -27,14 +24,14 @@ export class Counter extends React.Component {
         <button
           className="counter__button"
           type="button"
-          onClick={this.increment}
+          onClick={this.incrementCounter}
         >
           I am add to counter + 1
         </button>
         <button
           className="counter__button"
           type="button"
-          onClick={this.resetToZero}
+          onClick={this.resetCounter}
         >
           I am reset Counter
         </button>

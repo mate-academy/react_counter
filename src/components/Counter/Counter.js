@@ -1,14 +1,10 @@
 import React from 'react';
 import './Counter.css';
 
-export class Counter extends React.PureComponent {
-  constructor() {
-    super();
-
-    this.state = {
+export class Counter extends React.Component {
+    state = {
       count: 0,
     };
-  }
 
   increaseCounter = () => {
     this.setState(state => ({

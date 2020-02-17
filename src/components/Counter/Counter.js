@@ -2,21 +2,21 @@ import React from 'react';
 
 class Counter extends React.Component {
   state = {
-    count: 0,
+    counter: 0,
   };
 
   increase = () => {
     this.setState(state => ({
-      count: state.count + 1,
+      counter: state.counter + 1,
     }));
   };
 
   render() {
-    const { count } = this.state;
+    const { counter } = this.state;
 
     return (
       <>
-        <h1>{`Count: ${count}`}</h1>
+        <h1>{`Count: ${counter}`}</h1>
         <button type="button" onClick={this.increase}>+</button>
       </>
     );

@@ -1,18 +1,15 @@
 import React from 'react';
 
 export class Counter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      counter: 0,
-    };
+  state = {
+    counter: 0,
   }
 
   handleClick = () => {
     this.setState(prevState => ({
       counter: prevState.counter + 1,
     }));
-  }
+  };
 
   render() {
     return (

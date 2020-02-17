@@ -7,18 +7,24 @@ export class Counter extends Component {
   };
 
   handleClick = () => {
-    this.setState(increaseState => ({
-      counter: increaseState.counter + 1,
+    this.setState(prevState => ({
+      counter: prevState.counter + 1,
     }));
   };
 
   render() {
     return (
-      <div className="wrapper">
-        <h1>
+      <div className="counter">
+        <h1 className="counter__text">
           {`Count: ${this.state.counter}`}
         </h1>
-        <button onClick={this.handleClick} type="button">Add some</button>
+        <button
+          onClick={this.handleClick}
+          type="button"
+          className="counter__button"
+        >
+          Add some
+        </button>
       </div>
     );
   }

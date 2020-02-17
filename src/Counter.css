@@ -4,12 +4,12 @@
   color: #aaa;
 }
 
-.wrapper {
+.counter {
   margin: 40vh auto;
   width: fit-content;
 }
 
-button {
+.counter__button {
   width: 100%;
   padding: 10px;
 
@@ -21,6 +21,6 @@ button {
   transition: background-color 0.15s;
 }
 
-button:active {
+.counter__button:active {
   background-color: #ddd;
 }

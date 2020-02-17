@@ -2,19 +2,18 @@ import React from 'react';
 
 export class App extends React.Component {
   state = {
-    count: 0,
+    counter: 0,
   }
 
-  addCount = () => {
-    this.setState(prevState => (
-      { count: prevState.count + 1 }));
+  incrementCounter = () => {
+    this.setState(prevState => ({ counter: prevState.counter + 1 }));
   }
 
   render() {
     return (
       <>
-        <h1>{this.state.count}</h1>
-        <button type="button" onClick={this.addCount}>+1</button>
+        <h1>{this.state.counter}</h1>
+        <button type="button" onClick={this.incrementCounter}>+1</button>
       </>
     );
   }

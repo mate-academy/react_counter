@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Counter } from './components/Counter';
 import './App.css';
 
-const App = () => (
-  <h1>Count: 0</h1>
-);
+class App extends Component {
+  state = {
+    counter: 0,
+  };
+
+  handleClick = () => {
+    this.setState(prevState => ({
+      counter: prevState.counter + 1,
+    }));
+  };
+
+  render() {
+    const { counter } = this.state;
+
+    return <Counter counter={counter} handleClick={this.handleClick} />;
+  }
+}
 
 export default App;

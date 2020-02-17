@@ -9,15 +9,17 @@ export class Counter extends React.Component {
     };
   }
 
+  handlerClick = (event) => {
+    this.setState(prevState => ({ count: prevState.count + 1 }));
+  }
+
   render() {
     return (
       <>
         <h1>{`Count: ${this.state.count}`}</h1>
         <button
           type="submit"
-          onClick={event => this.setState(
-            prevState => ({ count: prevState.count + 1 }),
-          )}
+          onClick={this.handlerClick}
         >
           Press me for count
         </button>

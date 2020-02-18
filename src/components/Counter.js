@@ -4,26 +4,27 @@ import PropTypes from 'prop-types';
 import './Counter.css';
 
 export const Counter = ({
-  counerValue,
-  incrementFunction,
-  decrimentFunction,
+  counterValue,
+  incrementDecrement,
 }) => (
   <>
     <h1>
     Count:
-      {counerValue}
+      {counterValue}
     </h1>
     <button
+      name="increment"
       type="button"
       className="btn btn-outline-success"
-      onClick={incrementFunction}
+      onClick={incrementDecrement}
     >
             Increment
     </button>
     <button
+      name="decrement"
       type="button"
       className="btn btn-outline-success"
-      onClick={decrimentFunction}
+      onClick={incrementDecrement}
     >
       Decrement
     </button>
@@ -31,13 +32,11 @@ export const Counter = ({
 );
 
 Counter.propTypes = {
-  counerValue: PropTypes.number,
-  incrementFunction: PropTypes.func,
-  decrimentFunction: PropTypes.func,
+  counterValue: PropTypes.number,
+  incrementDecrement: PropTypes.func,
 };
 
 Counter.defaultProps = {
-  counerValue: 0,
-  incrementFunction: () => {},
-  decrimentFunction: () => {},
+  counterValue: 0,
+  incrementDecrement: () => {},
 };

@@ -8,15 +8,13 @@ export class App extends Component {
     counter: 0,
   };
 
-  handlerIncrement = () => {
-    this.setState(prevState => ({
-      counter: prevState.counter + 1,
-    }));
-  };
+  handleIncrementDecrement = (e) => {
+    const act = e.target.name === 'decrement'
+      ? -1
+      : +1;
 
-  handlerDecrement = () => {
     this.setState(prevState => ({
-      counter: prevState.counter - 1,
+      counter: prevState.counter + act,
     }));
   };
 
@@ -24,9 +22,8 @@ export class App extends Component {
     return (
       <div className="jumbotron">
         <Counter
-          counerValue={this.state.counter}
-          incrementFunction={this.handlerIncrement}
-          decrimentFunction={this.handlerDecrement}
+          counterValue={this.state.counter}
+          incrementDecrement={e => this.handleIncrementDecrement(e)}
         />
       </div>
     );

@@ -1,32 +1,58 @@
 import React from 'react';
-import './Counter.css';
+import './Counter.scss';
 
 class Counter extends React.Component {
   state = {
-    count: 0,
+    counter: 0,
   };
 
   increaseCounter = () => {
     this.setState(state => ({
-      count: state.count + 1,
+      counter: state.counter + 1,
     }));
   };
 
+  decreaseCounter = () => {
+    this.setState(state => ({
+      counter: state.counter - 1,
+    }));
+  };
+
+  reset = () => {
+    this.setState({
+      counter: 0,
+    });
+  };
+
   render() {
-    const { count } = this.state;
+    const { counter } = this.state;
 
     return (
       <>
         <h1 className="counter">
           Counter:
-          {count}
+          {counter}
         </h1>
         <button
           type="button"
           className="counter__button"
           onClick={this.increaseCounter}
         >
-          Click Me
+          Increase me
+        </button>
+        <button
+          type="button"
+          className="counter__button"
+          onClick={this.decreaseCounter}
+        >
+          Decrease me
+        </button>
+        <button
+          type="button"
+          className="counter__button"
+          onClick={this.reset}
+        >
+          Reset
         </button>
       </>
     );

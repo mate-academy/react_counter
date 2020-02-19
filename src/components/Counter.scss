@@ -1,0 +1,10 @@
+.counter {
+  font-size: 52px;
+  font-family: monospace;
+
+  &__button {
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+  }
+}

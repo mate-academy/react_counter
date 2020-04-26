@@ -16,6 +16,7 @@ const App = () => {
       </button>
       <h1 className="ui massive black label">
         Count:
+        {'  '}
         {count}
       </h1>
     </div>

@@ -1,8 +1,32 @@
 import React from 'react';
 import './App.css';
 
-const App = () => (
-  <h1>Count: 0</h1>
-);
+class Counter extends React.Component {
+  state = {
+    count: 0,
+  };
 
-export default App;
+  increase = () => {
+    this.setState(state => ({
+      count: state.count + 1,
+    }));
+  };
+
+  render() {
+    const { count } = this.state;
+
+    return (
+      <>
+        <h1>
+          Count:
+          {count}
+        </h1>
+        <button className="btn" type="submit" onClick={this.increase}>
+          Click me
+        </button>
+      </>
+    );
+  }
+}
+
+export default Counter;

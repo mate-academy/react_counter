@@ -1,0 +1,17 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #eee;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.ui.labels .label {
+  margin: 0;
+}

@@ -1,0 +1,21 @@
+.area--button {
+  text-align: center;
+  line-height: 100%;
+  margin-top: 50vh;
+}
+
+.button__plus {
+  width: 100px;
+  height: 30px;
+  background-color: aqua;
+  color: blueviolet;
+  font-size: 1.3em;
+  border: none;
+  border-radius: 30px;
+}
+
+.count {
+  padding: 5px;
+  border: 2px solid yellowgreen;
+  border-radius: 50%;
+}

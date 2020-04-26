@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
+import Count from './components/Count';
 
 const App = () => (
-  <h1>Count: 0</h1>
+  <Count />
 );
 
 export default App;

@@ -9,14 +9,13 @@ const App = () => {
       <button
         type="button"
         onClick={() => SetCount(count + 1)}
-        className="ui big right labeled icon button"
+        className="ui big right labeled icon button orange"
       >
         <i className="up arrow icon" />
         Increment
       </button>
-      <h1 className="ui massive black label">
-        Count:
-        {'  '}
+      <h1 className="ui massive olive label">
+        Count:&nbsp;&nbsp;
         {count}
       </h1>
     </div>

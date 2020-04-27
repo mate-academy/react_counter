@@ -6,24 +6,16 @@ class App extends React.Component {
     count: 0,
   }
 
-  componentDidMount() {
-    const btn = document.querySelector('.btn');
-
-    btn.addEventListener('click', (event) => {
-      if (event.target.type !== 'button') {
-        return;
-      }
-
-      this.setState(prevState => ({
-        count: prevState.count + 1,
-      }));
-    });
+  more = () => {
+    this.setState(prevState => ({
+      count: prevState.count + 1,
+    }));
   }
 
   render() {
     return (
       <>
-        <button type="button" className="btn">More</button>
+        <button type="button" onClick={this.more}>More</button>
         <h1>
           Count:
           {this.state.count}

@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(21, 4, 82);
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  color: whitesmoke;
+  font-size: 30px;
+}
+
+.btn_counter {
+  width: 120px;
+  height: 40px;
+  background-color: rgb(230, 125, 6);
+  color: beige;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+}

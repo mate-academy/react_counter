@@ -1,8 +1,17 @@
 import React from 'react';
-import './App.css';
+import Counter from './Counter';
+import Counrmin from './Countmin';
 
 const App = () => (
-  <h1>Count: 0</h1>
+
+  <>
+    <p>
+      {' '}
+      <Counter />
+    </p>
+    <p><Counrmin /></p>
+  </>
+
 );
 
 export default App;

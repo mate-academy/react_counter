@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+}
+
+.button {
+  background-color: dodgerblue;
+  border: 2px solid orange;
+  border-radius: 25px;
+  width: 160px;
+  height: 50px;
+}
+
+.button:focus {
+  background-color: gold;
+}

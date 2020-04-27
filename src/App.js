@@ -2,14 +2,14 @@ import React from 'react';
 import './App.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    count: 0,
+  }
 
-    this.state = {
-      count: 0,
-    };
+  componentDidMount() {
+    const btn = document.querySelector('.btn');
 
-    document.addEventListener('click', (event) => {
+    btn.addEventListener('click', (event) => {
       if (event.target.type !== 'button') {
         return;
       }

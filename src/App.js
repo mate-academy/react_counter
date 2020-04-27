@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
+import Button from './Button';
 
 const App = () => (
-  <h1>Count: 0</h1>
+  <Button />
 );
 
 export default App;

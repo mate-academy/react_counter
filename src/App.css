@@ -1,0 +1,12 @@
+.btnCount {
+  cursor: pointer;
+  background-color: rgb(228, 67, 4);
+  border: 1px solid red;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 20px;
+  outline: none;
+}
+.btnCount:hover {
+  background-color: rgb(226, 119, 77);
+}

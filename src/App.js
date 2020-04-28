@@ -19,8 +19,7 @@ class App extends React.Component {
     return (
       <>
         <h1>
-          Count:
-          {this.state.count}
+          {`Count: ${this.state.count}`}
         </h1>
         <button type="button" onClick={this.handleClick}>Click</button>
       </>

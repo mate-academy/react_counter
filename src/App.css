@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+.count__header {
+  text-align: center;
+}
+
+.count__button {
+  display: block;
+  margin: 0 auto;
+  border-radius: 7px;
+  border: 2px solid black;
+  width: 100px;
+  height: 50px;
+  font-weight: 700;
+  background-color: rgb(157, 184, 175);
+  outline: none;
+  transition: transform 0.3s;
+}
+
+.count__button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

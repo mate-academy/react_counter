@@ -1,0 +1,38 @@
+.count {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  background-color: antiquewhite;
+  border: 3px solid aquamarine;
+  border-radius: 15px;
+}
+
+.count__header {
+  color: darkred;
+  font-size: 48px;
+}
+
+.count__button {
+  height: 100px;
+  color: white;
+  font-size: 24px;
+  box-shadow: inset 0 0 15px 3px #23395e;
+  background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+  background-color: #2e466e;
+  border-radius: 10px;
+  border: 3px solid #1f2f47;
+  outline: none;
+}
+
+.count__button:hover {
+  background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+  background-color: #415989;
+}
+
+.count__button:active {
+  position: relative;
+  top: 1px;
+}

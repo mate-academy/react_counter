@@ -1,5 +1,6 @@
 # React counter
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_counter/)
+- Replace `Dead-TR` with your Github username in the 
+    ###[DEMO LINK](https://Dead-TR.github.io/react_counter/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## Task

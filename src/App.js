@@ -1,8 +1,10 @@
 import React from 'react';
+
+import Counter from './component/Counter';
 import './App.css';
 
 const App = () => (
-  <h1>Count: 0</h1>
+  <Counter />
 );
 
 export default App;

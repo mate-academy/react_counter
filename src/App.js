@@ -7,9 +7,9 @@ class App extends React.Component {
   }
 
   increaseCount = () => {
-    this.setState({
-      counter: this.prevstate + 1,
-    });
+    this.setState(prevstate => ({
+      counter: prevstate.counter + 1,
+    }));
   }
 
   render() {

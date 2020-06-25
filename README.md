@@ -1,5 +1,5 @@
 # React counter
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://Mishtal-Andrii.github.io/react_counter/)
+- Replace `<your_account>` with your Github username 
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## Task

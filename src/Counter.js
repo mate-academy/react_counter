@@ -1,10 +1,10 @@
 import React from 'react';
 
-class Counter extends React.Component {
+export class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+      count: 1,
     };
   }
 
@@ -29,5 +29,3 @@ class Counter extends React.Component {
     );
   }
 }
-
-export { Counter };

@@ -1,0 +1,58 @@
+.wrapper {
+  color: #212529;
+
+  width: 10%;
+  min-width: 150px;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+
+  border: 0.2rem solid #ececec;
+  border-radius: 8px;
+}
+
+.head {
+  color: #ad8200;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.button {
+  color: #212529;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  display: inline-block;
+  padding: 0.38rem 0.75rem;
+  vertical-align: middle;
+  text-align: center;
+
+  background-color: #ffc107;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  border-color: #ffc107;
+
+  transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+
+}
+
+.button:hover {
+  color: #212529;
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.button:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(222,170,12,0.5);
+}
+
+.button:active {
+  color: #212529;
+  background-color: #d39e00;
+  border-color: #c69500;
+}

@@ -6,9 +6,9 @@ class App extends React.Component {
     counter: 0,
   }
 
-  count = () => {
-    this.setState(index => ({
-      counter: index.counter + 1,
+  increaseCounter = () => {
+    this.setState(previousState => ({
+      counter: previousState.counter + 1,
     }));
   }
 

@@ -1,14 +1,10 @@
 import React from 'react';
 import './App.css';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      counter: 0,
-    };
-  }
+export class App extends React.Component {
+  state = {
+    counter: 0,
+  };
 
   increment = () => {
     this.setState(state => ({

@@ -1,30 +1,24 @@
 import React from 'react';
 
-class Counter extends React.Component {
+export class Counter extends React.Component {
   state = {
-    count: 0,
+    counter: 0,
   }
 
   increase = () => {
     this.setState(state => ({
-      count: state.count + 1,
+      counter: state.counter + 1,
     }));
   };
 
   render() {
-    const { count } = this.state;
-
     return (
       <>
         <h1>
-          Counter:
-          {' '}
-          {count}
+          { `Counter: ${this.state.counter} `}
         </h1>
         <button type="submit" onClick={this.increase}>Increase</button>
       </>
     );
   }
 }
-
-export { Counter };

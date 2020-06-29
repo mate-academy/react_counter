@@ -6,7 +6,7 @@ class App extends React.Component {
     counter: 0,
   }
 
-    enlargement = () => {
+    handleClick = () => {
       this.setState(state => ({
         counter: state.counter + 1,
       }));
@@ -21,7 +21,7 @@ class App extends React.Component {
             Count:
             {counter}
           </h1>
-          <button type="button" onClick={this.enlargement}>Increase</button>
+          <button type="button" onClick={this.handleClick}>Increase</button>
         </>
       );
     }

@@ -6,7 +6,7 @@ class Counter extends Component {
       counter: 0,
     };
 
-    press = () => {
+    increateCounter = () => {
       this.setState(prevState => ({
         counter: prevState.counter + 1,
       }));
@@ -21,7 +21,7 @@ class Counter extends Component {
           <button
             type="button"
             className="btn btn-dark btn-lg"
-            onClick={this.press}
+            onClick={this.increateCounter}
           >
             Press
           </button>

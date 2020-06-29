@@ -2,12 +2,12 @@ import React from 'react';
 
 class Counter extends React.Component {
   state = {
-    count: 0,
+    counter: 0,
   }
 
-  click = () => {
+  onClick = () => {
     this.setState(state => ({
-      count: state.count + 1,
+      counter: state.counter + 1,
     }));
   }
 
@@ -15,9 +15,9 @@ class Counter extends React.Component {
     return (
       <>
         <h1>
-          {`Count: ${this.state.count}`}
+          {`Count: ${this.state.counter}`}
         </h1>
-        <button type="button" onClick={this.click}>Click</button>
+        <button type="button" onClick={this.onClick}>Click</button>
       </>
     );
   }

@@ -3,20 +3,20 @@ import { Button } from '../button/Button';
 
 export class Counter extends React.Component {
   state = {
-    count: 0,
+    counter: 0,
   };
 
-  increase = () => {
+  handleChange = () => {
     this.setState(prevState => ({
-      count: prevState.count + 1,
+      counter: prevState.counter + 1,
     }));
   }
 
   render() {
     return (
       <>
-        <h1>{this.state.count}</h1>
-        <Button onClick={this.increase} />
+        <h1>{this.state.counter}</h1>
+        <Button onClick={this.handleChange} />
       </>
     );
   }

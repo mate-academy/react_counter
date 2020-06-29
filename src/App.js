@@ -1,8 +1,33 @@
 import React from 'react';
 import './App.css';
 
-const App = () => (
-  <h1>Count: 0</h1>
-);
+class App extends React.Component {
+  state = {
+    counter: 0,
+  };
+
+  count = () => {
+    this.setState(prevState => ({
+      counter: prevState.counter + 1,
+    }));
+  }
+
+  render() {
+    return (
+      <>
+        <h1>
+          Count:
+          {` ${this.state.counter}`}
+        </h1>
+        <button
+          type="button"
+          onClick={this.count}
+        >
+          +1
+        </button>
+      </>
+    );
+  }
+}
 
 export default App;

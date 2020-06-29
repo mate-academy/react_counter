@@ -3,29 +3,30 @@ import './App.css';
 
 class Counter extends React.Component {
   state = {
-    count: 0,
+    counter: 0,
   }
 
   addCount = (event) => {
-    this.setState(previous => (
-      { count: previous.count + 1 }
-    ));
+    this.setState(previous => ({
+      counter: previous.counter + 1,
+    }));
   }
 
   render() {
     return (
-      <>
+      <div className="counter">
         <h1>
           Count:
-          {this.state.count}
+          {this.state.counter}
         </h1>
         <button
           onClick={this.addCount}
           type="button"
+          className="click"
         >
           Click
         </button>
-      </>
+      </div>
     );
   }
 }

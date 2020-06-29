@@ -1,8 +1,8 @@
-body {
-  display: flex;
-  justify-content: center;
+.counter {
+  display: block;
+  margin-left: 45%;
 }
 
-button {
+.click {
   margin-left: 35px;
 }

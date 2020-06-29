@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 
-import Counter from './Counter';
+import Counter from './components/Counter/Counter';
 
 const App = () => (
   <Counter />

@@ -6,7 +6,7 @@ class App extends React.Component {
     counter: 0,
   }
 
-  count = () => {
+  onClick = () => {
     this.setState(prevState => ({
       counter: prevState.counter + 1,
     }));
@@ -19,7 +19,7 @@ class App extends React.Component {
           Count:
           {this.state.counter}
         </h1>
-        <button type="button" onClick={this.count}>
+        <button type="button" onClick={this.onClick}>
           Click
         </button>
       </>

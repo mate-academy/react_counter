@@ -18,20 +18,19 @@ export class Counter extends React.Component {
   }
 
   divisibleby5 = () => {
-    if (this.state.counter % 5 !== 0 || this.state.counter === 0) {
-      this.addOne();
-    }
-
-    if (this.state.counter % 5 === 0) {
+    this.addOne();
+    if (this.state.counter % 5 === 0 && this.state.counter !== 0) {
       this.add100();
-      this.addOne();
     }
   }
 
   render() {
     return (
       <>
-        {this.state.counter}
+        <h1>
+          Count:
+          {this.state.counter}
+        </h1>
         <p>
           <button type="button" onClick={this.addOne}>+1</button>
           <button type="button" onClick={this.add100}>+100</button>

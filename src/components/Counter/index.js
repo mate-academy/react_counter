@@ -12,7 +12,7 @@ function Counter() {
   }
 
   function increase() {
-    count % 5 === 0 && count !== 0 ? add100() : addOne();
+    (count + 1) % 5 === 0 && count !== 0 ? setCount(count + 101) : addOne();
   }
 
   return (

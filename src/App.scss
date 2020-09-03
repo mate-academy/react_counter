@@ -1,1 +1,25 @@
-// styles go here
+body {
+  background-color: black;
+}
+
+.section {
+  text-align: center;
+
+  &__header-title {
+    color: white;
+  }
+
+  &__button {
+    padding: 20px;
+    margin-right: 10px;
+    border: 1px solid rgba(255, 196, 0, 0);
+    background-color: white;
+    border-radius: 8px;
+    outline: none;
+
+    &:hover {
+      box-shadow: 0 6px 23px rgb(83, 176, 199);
+      background-color: white;
+    }
+  }
+}

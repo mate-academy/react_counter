@@ -1,1 +1,37 @@
-// styles go here
+html {
+  font-family: Helvetica, sans-serif;
+  background-color: whitesmoke;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.field {
+  width: 600px;
+  height: 300px;
+  background-color: white;
+  padding-top: 45px;
+
+  &__header {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  &__button {
+    width: 150px;
+    height: 70px;
+    background-color: whitesmoke;
+    border: none;
+    margin-top: 50px;
+    font-size: 18px;
+
+    &:hover {
+      background-color: white;
+      color: brown;
+    }
+  }
+}

@@ -33,8 +33,7 @@ class App extends React.Component {
     return (
       <>
         <h1>
-          Count:
-          {count}
+          {`Count: ${count}`}
         </h1>
         <button type="button" onClick={this.addOne}>
           Add 1

@@ -6,6 +6,8 @@
 Create component `Counter` that renders `h1` and 3 buttons. Initially `h1` shows
 "Count: 0".
 - The first button adds 1 to the count. Please do it using `addOne` method.
+
+
 - The second button adds 100. Create and use `add100` method.
 - The third button calls `addOne` then checks if new count is divisible by 5 and calls `add100`.
 

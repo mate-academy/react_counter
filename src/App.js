@@ -71,7 +71,7 @@ class App extends React.Component {
             className="field__button"
             onClick={this.reset}
           >
-          Reset
+          Reset counter
           </button>
 
         </div>

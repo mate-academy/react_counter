@@ -1,1 +1,16 @@
 // styles go here
+.btn {
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid blue;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(68, 238, 68);
+  box-shadow: grey 2px 2px 2px;
+
+  &:focus {
+    box-shadow: none;
+    outline:none;
+    border: 2px solid grey;
+  }
+}

@@ -51,7 +51,7 @@ class App extends React.Component {
           type="button"
           onClick={this.increase}
         >
-          / 5
+          increase
         </button>
       </>
     );

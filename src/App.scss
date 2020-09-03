@@ -1,1 +1,79 @@
-// styles go here
+$dimension: 15px;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  color: rgb(58, 58, 58);
+}
+
+body,
+h1 {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  user-select: none;
+}
+
+.App {
+  padding: $dimension;
+
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 1px 3px 2px 1px rgb(212, 212, 212);
+}
+
+.heading {
+  margin-left: $dimension * 2;
+  margin-bottom: $dimension;
+}
+
+.buttons {
+
+  &__main {
+    margin-bottom: $dimension;
+  }
+
+  &__button {
+    width: 110px;
+    padding: $dimension;
+    margin-right: $dimension;
+  
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(58, 58, 58);
+  
+    border: none;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 1px 3px 2px 1px rgb(212, 212, 212);
+    transition: box-shadow 0.1s,
+      transform 0.1s;
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  
+    &:active {
+      transform: translate(2px, 2px);
+      box-shadow: 0 0 #fff;
+    }
+
+    &--reset {
+      width: 100%;
+    }
+  }
+}

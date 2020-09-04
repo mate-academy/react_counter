@@ -20,11 +20,15 @@ export class Counter extends React.Component {
     }
 
     addOne = () => {
-      this.setState({counter: this.state.counter += 1});
+      this.setState(state => ({
+        counter: state.counter + 1,
+      }));
     };
-  
+
     add100 = () => {
-      this.setState({counter: this.state.counter += 100});
+      this.setState(state => ({
+        counter: state.counter + 100,
+      }));
     };
   
     increase = () => {
@@ -37,10 +41,11 @@ export class Counter extends React.Component {
     render() {
       return (
         <div className="section">
-          <h1 className="section__header-title">Counter: {this.state.counter}</h1>
+          <h1 className="section__header-title">{`Counter: ${this.state.counter}`}</h1>
           {
             buttonsName.map((buttonName, index) => (
               <button
+                type="button"
                 className={classNames("section__button", {
                   'section__button-clicked':buttonName === buttonsName[index]
                 })}
@@ -53,7 +58,7 @@ export class Counter extends React.Component {
             ))
           }
         </div>
-      )
+      );
   }
 }
 

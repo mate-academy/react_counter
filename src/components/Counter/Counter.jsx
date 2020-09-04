@@ -41,7 +41,9 @@ export class Counter extends React.Component {
     render() {
       return (
         <div className="section">
-          <h1 className="section__header-title">{`Counter: ${this.state.counter}`}</h1>
+          <h1 className="section__header-title">
+            {`Counter: ${this.state.counter}`}
+          </h1>
           {
             buttonsName.map((buttonName, index) => (
               <button

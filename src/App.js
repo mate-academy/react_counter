@@ -38,7 +38,7 @@ class App extends React.Component {
             this.addOne();
           }}
         >
-          {' AddOne '}
+          Add one
         </button>
         <button
           type="button"
@@ -46,7 +46,7 @@ class App extends React.Component {
             this.add100();
           }}
         >
-          {' Add100 '}
+          Add100
         </button>
         <button
           type="button"
@@ -54,7 +54,7 @@ class App extends React.Component {
             this.increase();
           }}
         >
-          {' Increase '}
+          Increase
         </button>
       </>
     );

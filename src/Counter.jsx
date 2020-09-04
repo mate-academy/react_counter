@@ -47,7 +47,7 @@ class Counter extends React.Component {
             className="count__button"
             onClick={this.add100}
           >
-            Add 2
+            Add 100
           </button>
 
           <button

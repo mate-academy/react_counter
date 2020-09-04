@@ -62,5 +62,12 @@ button {
     border: 2px solid rgb(219, 136, 12);
     border-radius: 50%;
     background-color: rgb(247, 169, 52);
+
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(219, 136, 12);
+    }
   }
 }

@@ -3,7 +3,7 @@ import './App.scss';
 
 class App extends React.Component {
   state = {
-    count: 1,
+    count: 0,
   }
 
   addOne = () => {
@@ -23,9 +23,10 @@ class App extends React.Component {
   };
 
   increase = () => {
-    this.state.count % 5 === 0
-      ? this.add100()
-      : this.addOne();
+    this.addOne();
+    if ((this.state.count + 1) % 5 === 0) {
+      this.add100();
+    }
   };
 
   render() {

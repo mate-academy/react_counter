@@ -6,15 +6,14 @@ const buttonsName = ['add 1', 'add 100', 'mix and devide 5'];
 export class Counter extends React.Component {
     state = {
       counter: 0,
-      buttons: buttonsName,
     };
   
     checkButton = (buttonName) => {
-      if (buttonName === this.state.buttons[0]) {
+      if (buttonName === buttonsName[0]) {
         this.addOne();
-      } else if (buttonName === this.state.buttons[1]) {
+      } else if (buttonName === buttonsName[1]) {
         this.add100();
-      } else if (buttonName === this.state.buttons[2]) {
+      } else if (buttonName === buttonsName[2]) {
         this.increase();
       }
     }
@@ -50,9 +49,7 @@ export class Counter extends React.Component {
             buttonsName.map((buttonName, index) => (
               <button
                 type="button"
-                className={classNames("section__button", {
-                  'section__button-clicked':buttonName === buttonsName[index]
-                })}
+                className={classNames("section__button")}
                 onClick={() => {
                   this.checkButton(buttonName);
                 }}

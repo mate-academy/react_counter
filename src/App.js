@@ -18,9 +18,11 @@ class App extends React.Component {
     }));
   };
 
-  increase = () => ((this.state.count + 1) % 5 === 0
-    ? (this.add100(), this.addOne())
-    : this.addOne()
+  increase = () => (
+    this.addOne()
+      || (this.state.count + 1) % 5 === 0
+      ? this.add100()
+      : ''
   );
 
   render() {

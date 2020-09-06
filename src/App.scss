@@ -1,1 +1,48 @@
-// styles go here
+* {
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  width: 500px;
+  background: #767c77;
+  border-radius: 50px;
+}
+
+.remote {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  &__button {
+    font-weight: bolder;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #f7f2e7;
+    transition: background 0.3s, box-shadow 0.2s;
+
+    &:hover {
+      background: #d8d3cd;
+    }
+
+    &:active {
+      box-shadow: inset 0 0 25px 0 rgba(118,124,119,1);
+    }
+  }
+}
+
+.screen {
+  width: 50%;
+  margin-top: 0;
+  background: #d8d3cd;
+  box-shadow: inset 0 0 25px 0 rgba(118,124,119,1);
+  text-align: center;
+  color: #f7f2e7;
+  border-radius: 50px;
+}

@@ -7,8 +7,8 @@ class App extends React.Component {
   };
 
   addOne = () => {
-    this.setState(state => ({
-      count: state.count + 1,
+    this.setState(stage => ({
+      count: stage.count + 1,
     }));
   };
 
@@ -22,7 +22,10 @@ class App extends React.Component {
     const { count } = this.state;
 
     this.addOne();
-    (count + 1) % 5 === 0 && this.add100();
+
+    if ((count + 1) % 5 === 0) {
+      this.add100();
+    }
   };
 
   render() {

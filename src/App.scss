@@ -1,1 +1,15 @@
-// styles go here
+
+.container {
+  text-align: center;
+}
+
+.btn {
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: blanchedalmond;
+}
+
+.btn:hover {
+  background-color: yellow;
+}

@@ -1,1 +1,79 @@
 // styles go here
+body {
+  text-align: center;
+  background: rgb(140, 236, 131);
+  animation: color 5s infinite;
+
+  @keyframes color {
+    25% {
+      background: rgb(155, 122, 185);
+    }
+    50% {
+      background: rgb(133, 182, 83);
+    }
+    75% {
+      background: rgb(202, 139, 115);
+    }
+  }
+}
+
+h1 {
+  animation: blinker 3s linear infinite;
+  color: rgb(18, 115, 206);
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 1;
+    animation: 3s;
+    color: rgb(241, 14, 71);
+  }
+}
+
+button {
+  padding: 5px;
+  margin-left: 20px;
+  width: 150px;
+}
+
+.first {
+  color: aqua;
+  border: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  outline: none;
+  background: brown;
+  transition: 2s;
+}
+.first:hover {
+  background: rgb(74, 16, 128);
+  background-position: 0, 0;
+}
+
+.third {
+  color: aqua;
+  border: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  outline: none;
+  background: brown;
+  transition: 2s;
+}
+.third:hover {
+  background: rgb(74, 16, 128);
+  background-position: 0, 0;
+}
+
+.second {
+  color: aqua;
+  border: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  outline: none;
+  background: brown;
+  transition: 2s;
+}
+.second:hover {
+  background: rgb(74, 16, 128);
+  background-position: 0, 0;
+}

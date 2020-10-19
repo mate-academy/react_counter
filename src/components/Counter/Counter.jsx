@@ -17,7 +17,17 @@ class Counter extends React.Component {
     }))
   };
 
-  increase = () => {};
+  increase = () => {
+    if (this.state.counter % 5 === 0) {
+      this.setState(state => ({
+        counter: this.state.counter + 101,
+      }))
+    } else {
+      this.setState(state => ({
+        counter: this.state.counter + 1,
+      }))
+    }
+  };
 
   render() {
     return (
@@ -29,9 +39,7 @@ class Counter extends React.Component {
       <button onClick={this.add100}>add 100</button>
       
       <button
-      onClick={this.state.counter% 5 === 0
-        ? this.add100
-        : this.addOne}
+      onClick={this.increase}
       >magic button
       </button>
       </>

@@ -7,43 +7,36 @@ class Counter extends React.Component {
 
   addOne = () => {
     this.setState(state => ({
-      counter: this.state.counter + 1,
+      counter: state.counter + 1,
     }))
   };
 
   add100 = () => {
     this.setState(state => ({
-      counter: this.state.counter + 100,
+      counter: state.counter + 100,
     }))
   };
 
   increase = () => {
     if (this.state.counter % 5 === 0) {
-      this.setState(state => ({
-        counter: this.state.counter + 101,
-      }))
-    } else {
-      this.setState(state => ({
-        counter: this.state.counter + 1,
-      }))
+     this.add100();
     }
+    this.addOne();
   };
 
   render() {
+    const { counter } = this.state;
     return (
       <>
-      <h1>Counter: {this.state.counter}</h1>
+      <h1>Counter: {counter}</h1>
 
       <button onClick={this.addOne}>add 1</button>
       
       <button onClick={this.add100}>add 100</button>
       
-      <button
-      onClick={this.increase}
-      >magic button
-      </button>
+      <button onClick={this.increase}>magic button</button>
       </>
-    )
+    ) 
   }
 }
 

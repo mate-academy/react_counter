@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import { Counter } from './components/Counter';
 
 class App extends React.Component {
   state = {
@@ -32,21 +33,12 @@ class App extends React.Component {
     const { count } = this.state;
 
     return (
-      <div className="count">
-        <h1>
-          Count:
-          {count}
-        </h1>
-        <button type="button" onClick={this.addOne}>
-          Add one
-        </button>
-        <button type="button" onClick={this.add100}>
-          Add 100
-        </button>
-        <button type="button" onClick={this.increase}>
-          Increase
-        </button>
-      </div>
+      <Counter
+        count={count}
+        addOne={this.addOne}
+        add100={this.add100}
+        increase={this.increase}
+      />
     );
   }
 }

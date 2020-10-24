@@ -22,7 +22,7 @@ class App extends React.Component {
   increase = () => {
     const { count } = this.state;
 
-    if (count % 5 === 0 && count !== 0) {
+    if (count % 5 === 0) {
       this.add100();
     }
 

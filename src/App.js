@@ -4,19 +4,23 @@ import { Button } from './components/Button';
 
 class App extends React.Component {
   state = {
-    number: 0,
+    counter: 0,
   };
 
   addOne = () => {
-    this.setState(prevState => ({ number: prevState.number + 1 }));
+    this.setState(prevState => ({
+      counter: prevState.counter + 1,
+    }));
   };
 
   add100 = () => {
-    this.setState(prevState => ({ number: prevState.number + 100 }));
+    this.setState(prevState => ({
+      counter: prevState.counter + 100,
+    }));
   };
 
   increase = () => {
-    if ((this.state.number % 5) === 0) {
+    if ((this.state.counter % 5) === 0) {
       this.add100();
     }
 
@@ -24,17 +28,17 @@ class App extends React.Component {
   };
 
   render() {
-    const { number } = this.state;
+    const { counter } = this.state;
 
     return (
       <div className="App">
         <h1>
-          {`Count: ${number}`}
+          {`Count: ${counter}`}
         </h1>
 
-        <Button onClick={this.addOne} text="Add 1" />
-        <Button onClick={this.add100} text="Add 100" />
-        <Button onClick={this.increase} text="Increase" />
+        <Button clickHandler={this.addOne} text="Add 1" />
+        <Button clickHandler={this.add100} text="Add 100" />
+        <Button clickHandler={this.increase} text="Increase" />
       </div>
     );
   }

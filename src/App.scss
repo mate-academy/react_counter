@@ -1,1 +1,66 @@
-// styles go here
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", sans-serif;
+}
+
+body,
+h1 {
+  margin: 0;
+}
+
+body {
+  background-color: #e8e9ee;
+}
+
+.App {
+  width: 30vw;
+  margin: 50px auto;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #0a69e9;
+  box-shadow: 2px 2px 4px #ccc;
+  border-radius: 10px;
+
+  &__counter {
+    width: 80%;
+    margin-bottom: 30px;
+    padding: 25px 15px;
+
+    background-color: #080808;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #080808;
+  }
+
+  & button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+
+    border-radius: 20px;
+    border: none;
+    outline: none;
+
+    color: #999;
+    text-transform: uppercase;
+
+    cursor: pointer;
+  }
+
+  & button:last-child {
+    margin-right: 0;
+  }
+}

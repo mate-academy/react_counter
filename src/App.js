@@ -60,7 +60,7 @@ class App extends React.Component {
               className="App__buttons button"
               onClick={this.add100}
             >
-              add100
+              {this.state.count % 5 === 0 ? 'add100' : 'plus 1'}
             </button>
           </div>
         </div>

@@ -21,14 +21,10 @@ class App extends React.Component {
   add100 = () => {
     this.setState((state) => {
       if (state.count % 5 === 0) {
-        return {
-          count: state.count + 101,
-        };
+        this.plus100();
       }
 
-      return {
-        count: state.count + 1,
-      };
+      this.plusOne();
     });
   };
 

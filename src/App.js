@@ -24,6 +24,8 @@ class App extends React.Component {
       if (state.currentCount % 5 === 0) {
         this.add100();
         this.addOne();
+      } else {
+        this.addOne();
       }
     });
   };

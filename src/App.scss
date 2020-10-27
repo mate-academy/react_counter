@@ -1,1 +1,58 @@
-// styles go here
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  background: #c5d5cb;
+}
+
+.container {
+  text-align: center;
+
+  margin: 50px auto;
+}
+
+.count-text {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.button {
+  padding: 10px;
+  margin: 0 5px;
+  border: 1px solid black;
+  border-radius: 30px;
+  outline: none;
+
+  font-family: inherit;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: background 0.4s, color 0.4s;
+
+}
+
+.button:hover {
+  background: black;
+  color: white;
+}

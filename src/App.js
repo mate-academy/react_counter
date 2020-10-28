@@ -1,4 +1,6 @@
 import React from 'react';
+import { Container, Row, Jumbotron, Button } from 'react-bootstrap';
+
 import './App.scss';
 
 class App extends React.Component {
@@ -24,32 +26,44 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
-        <h1>
-          {`Count: ${this.state.count}`}
-        </h1>
+      <Container>
+        <Jumbotron>
+          <Row className="justify-content-center">
+            <h1>
+              {`Count: ${this.state.count}`}
+            </h1>
+          </Row>
 
-        <button
-          type="button"
-          onClick={this.addOne}
-        >
-          + 1
-        </button>
+          <Row className="justify-content-around">
+            <Button
+              variant="outline-primary"
+              size="lg"
+              type="button"
+              onClick={this.addOne}
+            >
+              + 1
+            </Button>
 
-        <button
-          type="button"
-          onClick={this.add100}
-        >
-          + 100
-        </button>
+            <Button
+              variant="outline-primary"
+              size="lg"
+              type="button"
+              onClick={this.increase}
+            >
+              + MAGIC +
+            </Button>
 
-        <button
-          type="button"
-          onClick={this.increase}
-        >
-          MAGIC
-        </button>
-      </>
+            <Button
+              variant="outline-primary"
+              size="lg"
+              type="button"
+              onClick={this.add100}
+            >
+              + 100
+            </Button>
+          </Row>
+        </Jumbotron>
+      </Container>
     );
   }
 }

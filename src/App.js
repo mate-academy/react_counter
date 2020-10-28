@@ -8,15 +8,15 @@ class App extends React.Component {
   }
 
   addOne = () => {
-    this.setState({
-      count: this.state.count + 1,
-    });
+    this.setState(state => ({
+      count: state.count + 1,
+    }));
   }
 
   add100 = () => {
-    this.setState({
-      count: this.state.count + 100,
-    });
+    this.setState(state => ({
+      count: state.count + 100,
+    }));
   }
 
   increase = () => {
@@ -27,9 +27,7 @@ class App extends React.Component {
     }
   };
 
-
   render() {
-
     return (
       <Counter
         count={this.state.count}

@@ -6,19 +6,23 @@ export class Counter extends Component {
   }
 
   addOne = () => {
-    this.setState(state => (
-      {
-        count: state.count + 1,
-      }
-    ));
+    this.setState(state => ({
+      count: state.count + 1,
+    }));
   }
 
   add100 = () => {
-    this.setState(state => (
-      {
-        count: state.count + 100,
-      }
-    ));
+    this.setState(state => ({
+      count: state.count + 100,
+    }));
+  }
+
+  increase = () => {
+    if (this.state.count % 5 === 0) {
+      this.add100();
+    }
+
+    this.addOne();
   }
 
   render() {
@@ -35,16 +39,7 @@ export class Counter extends Component {
         <button type="button" onClick={this.add100}>
           add 100
         </button>
-        <button
-          type="button"
-          onClick={() => {
-            if (count % 5 === 0) {
-              this.add100();
-            }
-
-            this.addOne();
-          }}
-        >
+        <button type="button" onClick={this.increase}>
           increase
         </button>
       </section>

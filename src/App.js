@@ -34,13 +34,9 @@ class App extends React.Component {
     return (
       <div>
         <h1>{`Count: ${counter}`}</h1>
-        <button type="button" onClick={this.addOne}>
-          Add 1
-        </button>
+        <button type="button" onClick={this.addOne}> Add 1</button>
         <button type="button" onClick={this.add100}>Add 100</button>
-        <button type="button" onClick={this.increase}>
-          Counter divisible by 5
-        </button>
+        <button type="button" onClick={this.increase}>Increase</button>
       </div>
     );
   }

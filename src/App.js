@@ -67,7 +67,7 @@ class App extends React.Component {
             onClick={this.increase}
             positive
           >
-            Three
+            Increase
           </Button>
 
           <Button.Or />

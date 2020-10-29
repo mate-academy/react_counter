@@ -2,13 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export function Counter({
-  state,
+  result,
   addOne,
   add100,
   increase,
 }) {
-  const { result } = state;
-
   return (
     <>
       <h1>
@@ -38,9 +36,7 @@ export function Counter({
 }
 
 Counter.propTypes = {
-  state: PropTypes.shape({
-    result: PropTypes.number.isRequired,
-  }.isRequired).isRequired,
+  result: PropTypes.number.isRequired,
   addOne: PropTypes.func.isRequired,
   add100: PropTypes.func.isRequired,
   increase: PropTypes.func.isRequired,

@@ -9,19 +9,15 @@ class App extends React.Component {
   };
 
   addOne = () => {
-    this.setState(currentState => (
-      {
-        result: currentState.result + 1,
-      }
-    ));
+    this.setState(currentState => ({
+      result: currentState.result + 1,
+    }));
   }
 
   add100 = () => {
-    this.setState(currentState => (
-      {
-        result: currentState.result + 100,
-      }
-    ));
+    this.setState(currentState => ({
+      result: currentState.result + 100,
+    }));
   }
 
   increase = () => {
@@ -35,7 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <Counter
-        state={this.state}
+        result={this.state.resultgit}
         addOne={this.addOne}
         add100={this.add100}
         increase={this.increase}

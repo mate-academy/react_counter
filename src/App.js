@@ -10,15 +10,19 @@ class App extends React.Component {
   };
 
   addOne = () => {
-    this.setState(prevState => ({ counter: prevState.counter + 1 }));
+    this.setState(prevState => ({
+      counter: prevState.counter + 1,
+    }));
   }
 
   add100 = () => {
-    this.setState(prevState => ({ counter: prevState.counter + 100 }));
+    this.setState(prevState => ({
+      counter: prevState.counter + 100,
+    }));
   }
 
   increase = () => {
-    if ((this.state.counter % 5) === 0 && this.state.counter !== 0) {
+    if ((this.state.counter % 5) === 0) {
       this.add100();
       this.addOne();
     } else {
@@ -27,11 +31,13 @@ class App extends React.Component {
   }
 
   render() {
+    const { counter } = this.state;
+
     return (
       <div className="app">
         <h1 className="app__title">
           Count:
-          {this.state.counter}
+          {counter}
         </h1>
         <Button.Group>
           <Button

@@ -36,21 +36,21 @@ class App extends React.Component {
         <button
           className="app__button"
           type="button"
-          onClick={() => this.addOne()}
+          onClick={this.addOne}
         >
           Add 1
         </button>
         <button
           className="app__button"
           type="button"
-          onClick={() => this.add100()}
+          onClick={this.add100}
         >
           Add 100
         </button>
         <button
           className="app__button"
           type="button"
-          onClick={() => this.increase()}
+          onClick={this.increase}
         >
           Increase
         </button>

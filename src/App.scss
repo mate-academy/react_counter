@@ -1,1 +1,31 @@
-// styles go here
+body {
+  margin: 0;
+  box-sizing: border-box;
+
+  background-color: #f8bbd0;
+}
+
+.app {
+  padding: 100px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  &__header {
+    font-size: 50px;
+    color: #4a148c;
+  }
+
+  &__button {
+    width: 80px;
+    padding: 10px;
+    margin: 5px;
+    background-color: #ce93d8;
+    border: 1px solid #4a148c;
+
+    transition: 500ms;
+
+    &:hover {
+      background-color: aquamarine;
+    }
+  }
+}

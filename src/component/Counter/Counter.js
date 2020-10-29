@@ -1,15 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+
 import './Counter.scss';
 
-export const Counter = ({ count, addOne, add100, increase }) => (
+export const Counter = ({ counter, addOne, add100, increase }) => (
   <>
-    <h1 className={count % 5 === 0
-      ? 'multiple-of-five'
-      : 'not-multiple'
+    <h1 className={
+      classNames(
+        {
+          'multiple-of-five': counter % 5 === 0,
+        },
+      )
     }
     >
-      {`Count: ${count}`}
+      {`Count: ${counter}`}
     </h1>
     <button
       type="button"
@@ -26,9 +31,12 @@ export const Counter = ({ count, addOne, add100, increase }) => (
     <button
       type="button"
       onClick={increase}
-      className={count % 5 === 0
-        ? 'multiple-of-five-bg'
-        : ''
+      className={
+        classNames(
+          {
+            'multiple-of-five-bg': counter % 5 === 0,
+          },
+        )
       }
     >
       Increase
@@ -37,7 +45,7 @@ export const Counter = ({ count, addOne, add100, increase }) => (
 );
 
 Counter.propTypes = {
-  count: PropTypes.number.isRequired,
+  counter: PropTypes.number.isRequired,
   addOne: PropTypes.func.isRequired,
   add100: PropTypes.func.isRequired,
   increase: PropTypes.func.isRequired,

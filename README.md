@@ -1,5 +1,5 @@
 # React counter
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://EVolokhin.github.io/react_counter/)
+- Replace `<your_account>` with your Github username in the npm s
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## Task

@@ -1,0 +1,9 @@
+.counter {
+  text-align: center;
+  &__button {
+    margin: 0 20px;
+    padding: 10px 30px;
+    background-color: peru;
+    border: 3px outset navy;
+  }
+}

@@ -50,7 +50,8 @@ class App extends React.Component {
         <button
           type="button"
           onClick={
-            this.state.count % 10 !== 5 && this.state.count % 10 !== 0
+            count % 10 !== 5
+              && count % 10 !== 0
               ? this.addOne
               : this.increase
           }

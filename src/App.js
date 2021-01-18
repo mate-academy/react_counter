@@ -48,14 +48,14 @@ class App extends React.Component {
               type="button"
               className="btn btn-success"
             >
-              increase
+              add 100
             </button>
             <button
               onClick={this.increase}
               type="button"
               className="btn btn-warning"
             >
-              add 100
+              increase
             </button>
           </div>
         </div>

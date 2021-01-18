@@ -1,1 +1,13 @@
-// styles go here
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+}
+
+.button {
+  margin: 20px;
+  padding: 10px;
+}

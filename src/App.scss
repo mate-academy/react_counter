@@ -1,1 +1,16 @@
 // styles go here
+
+.jumbotron {
+  margin: 0 auto;
+  background: transparent;
+}
+
+.center-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  width: 90px;
+}

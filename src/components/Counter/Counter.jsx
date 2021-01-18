@@ -5,23 +5,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Counter extends React.Component {
   state = {
-    count: 0,
+    counter: 0,
   }
 
   addOne = () => {
     this.setState(prevState => ({
-      count: prevState.count + 1,
+      counter: prevState.counter + 1,
     }));
   };
 
   add100 = () => {
     this.setState(prevState => ({
-      count: prevState.count + 100,
+      counter: prevState.counter + 100,
     }));
   };
 
   increase = () => {
-    if (this.state.count % 5 === 0) {
+    if (this.state.counter % 5 === 0) {
       this.add100();
     }
 
@@ -29,13 +29,13 @@ class Counter extends React.Component {
   };
 
   render() {
-    const { count } = this.state;
+    const { counter } = this.state;
 
     return (
       <div className="App">
         <h1>
           Count:
-          {count}
+          {counter}
         </h1>
         <Button
           className="btn"

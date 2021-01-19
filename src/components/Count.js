@@ -19,12 +19,13 @@ class Count extends React.Component {
   }
 
   increase = () => {
-    this.setState((prevState) => {
-      if (prevState.count % 5 === 0) {
-        return { count: prevState.count + 100 };
+    this.setState((state) => {
+      if (state.count % 5 === 0) {
+        this.add100();
+        this.addOne();
+      } else {
+        this.addOne();
       }
-
-      return { count: prevState.count + 1 };
     });
   }
 

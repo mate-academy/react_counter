@@ -21,8 +21,9 @@ export class Counter extends React.Component {
     this.setState((prevState) => {
       if (prevState.count % 5 === 0) {
         this.add100();
-        this.addOne();
       }
+
+      this.addOne();
     });
   };
 

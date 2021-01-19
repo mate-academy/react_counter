@@ -1,0 +1,22 @@
+.Counter {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__buttons {
+    margin: 1rem 0;
+  }
+}
+
+.buttons {
+  padding: 1rem;
+
+  &__button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+  }
+}

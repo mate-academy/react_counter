@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;
+  box-shadow: 0 20px 27px 14px rgba(184,255,254,0.9);
+  background-color: rgba(184,255,254,0.9);
+  // text-shadow: 5px 6px 5px rgba(184,255,254,0.9);
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+  outline: none;
+
+  font-size: 18px;
+  box-shadow: 0 20px 27px 14px rgba(184,255,254,0.9);
+  border-radius: 10px;
+}
+
+.btns {
+  width: max-content;
+  margin: 0 auto;
+}

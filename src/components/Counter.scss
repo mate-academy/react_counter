@@ -1,0 +1,23 @@
+.counter {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  padding: 10px;
+  margin: 0 auto;
+  box-shadow: 1px 1px 10px 1px black;
+  border-radius: 5px;
+
+  &__button {
+    display: block;
+    width: 80px;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: rgb(158, 45, 158);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgb(138, 40, 138);
+    }
+  }
+}

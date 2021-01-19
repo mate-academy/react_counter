@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Eater&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -9,7 +10,7 @@ body {
 }
 
 html {
-  font-family: 'Nosifer', cursive;
+  font-family: "Nosifer", cursive;
   color: #fff;
   font-size: 32px;
 }
@@ -44,7 +45,7 @@ html {
     background-color: black;
     border: none;
     color: #fff;
-    font-family: 'Eater', cursive;
+    font-family: "Eater", cursive;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
@@ -58,7 +59,7 @@ html {
     }
 
     &:hover {
-      box-shadow: 1px 1px 10px rgba(192, 19, 19, 0.788);
+      box-shadow: 1px 1px 10px rgba(192, 19, 19, 0.78);
     }
   }
 }

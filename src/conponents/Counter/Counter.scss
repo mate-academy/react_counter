@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  font-family: 'Nosifer', cursive;
+  color: #fff;
+  font-size: 32px;
+}
+
+.counter {
+  height: 100vh;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    margin: 0;
+    color: red;
+  }
+
+  &__count {
+    display: inline-block;
+    width: 100px;
+  }
+
+  &__buttons {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 140px);
+    column-gap: 10px;
+  }
+
+  &__btn {
+    height: 60px;
+    background-color: black;
+    border: none;
+    color: #fff;
+    font-family: 'Eater', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 2px 2px 3px white;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+    &:hover {
+      box-shadow: 1px 1px 10px rgba(192, 19, 19, 0.788);
+    }
+  }
+}

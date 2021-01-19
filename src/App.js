@@ -1,4 +1,3 @@
-// import { render } from 'node-sass';
 import React from 'react';
 import './App.scss';
 

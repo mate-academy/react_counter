@@ -1,1 +1,26 @@
 // styles go here
+.buttons-field {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  width: 100px;
+  height: 50px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(144, 207, 236);
+  outline: none;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: all 0.5s;
+}
+
+.button:hover {
+  background-color: rgb(14, 110, 134);
+  color: white;
+}

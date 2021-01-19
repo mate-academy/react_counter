@@ -1,18 +1,13 @@
+// import { render } from 'node-sass';
 import React from 'react';
 import './App.scss';
 
-class App extends React.Component {
-  addOne = () => {};
+import Counter from './components/Counter';
 
-  add100 = () => {};
-
-  increase = () => {};
-
-  render() {
-    return (
-      <h1>Count: 0</h1>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <Counter />
+  </div>
+);
 
 export default App;

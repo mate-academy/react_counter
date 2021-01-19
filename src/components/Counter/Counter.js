@@ -20,9 +20,9 @@ export class Counter extends Component {
   increase = () => {
     if (this.state.count % 5 === 0 && this.state.count !== 0) {
       this.add100();
-    } else {
-      this.addOne();
     }
+
+    this.addOne();
   };
 
   render() {

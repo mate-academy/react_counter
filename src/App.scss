@@ -1,1 +1,28 @@
 // styles go here
+.counter {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  margin-right: 10px;
+  box-shadow: 0 1px 0 0 #fff6af;
+  background: #ffec64 linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+  border-radius: 6px;
+  border: 1px solid #fa2;
+  display: inline-block;
+  cursor: pointer;
+  color: #333;
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fe6;
+}
+
+.btn:hover {
+  background: #ffab23 linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+}

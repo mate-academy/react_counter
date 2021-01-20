@@ -1,1 +1,39 @@
-// styles go here
+body {
+  background-color: grey;
+  font-family: helvetica, sans-serif;
+  padding: 80px;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  margin-left: calc(50% - 200px);
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.button {
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: 600;
+  color: rgb(99, 99, 99);
+  background-color: rgb(255, 255, 255);
+  width: 100px;
+  height: 48px;
+  margin: 10px;
+  transition: 0.4s;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: rgb(99, 99, 99);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+}
+
+.wrapper {
+  margin-top: 180px;
+}

@@ -31,7 +31,7 @@ class App extends React.Component {
       <>
         <h1>
           Count:
-          {this.state.counter}
+          {` ${this.state.counter}`}
         </h1>
         <button type="button" onClick={this.addOne}>
           Increase by 1

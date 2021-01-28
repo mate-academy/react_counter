@@ -20,6 +20,8 @@ class App extends React.Component {
     if (count % 5 === 0) {
       this.add100();
       this.addOne();
+    } else {
+      this.addOne();
     }
   };
 

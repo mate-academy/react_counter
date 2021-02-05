@@ -42,7 +42,7 @@ class App extends React.Component {
           type="button"
           onClick={this.increase}
         >
-          Increase
+          Increase+
         </button>
       </>
     );

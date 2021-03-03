@@ -1,1 +1,14 @@
-// styles go here
+body {
+  text-align: center;
+}
+
+button {
+  padding: 0.3rem 3rem;
+  margin: 0 1rem;
+  border-radius: 50px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 export class Counter extends React.Component {
   state = {
-    addOne: this.props.addOne.bind(this),
-    add100: this.props.add100.bind(this),
-    increase: this.props.increase.bind(this),
+    addOne: this.props.addOne,
+    add100: this.props.add100,
+    increase: this.props.increase,
   }
 
   render() {
@@ -19,9 +19,15 @@ export class Counter extends React.Component {
           {count}
         </h1>
 
-        <button type="button" onClick={() => addOne()}>Add One</button>
-        <button type="button" onClick={() => add100()}>Add 100</button>
-        <button type="button" onClick={() => increase()}>Increase</button>
+        <button type="button" onClick={addOne}>
+          Add One
+        </button>
+        <button type="button" onClick={add100}>
+          Add 100
+        </button>
+        <button type="button" onClick={increase}>
+          Increase
+        </button>
       </>
     );
   }

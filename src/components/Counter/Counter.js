@@ -47,7 +47,7 @@ export class Counter extends React.Component {
         <button
           type="button"
           className="button"
-          onClick={() => this.increase()}
+          onClick={this.increase}
         >
           Increase
         </button>

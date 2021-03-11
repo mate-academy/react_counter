@@ -31,14 +31,13 @@ export class Counter extends React.Component {
     return (
       <>
         <h1>
-          {'Counter: '}
-          {counter}
+          {`Counter: ${counter}`}
         </h1>
 
         <button
           type="button"
-          onClick={(prevState) => {
-            this.addOne(prevState);
+          onClick={() => {
+            this.addOne();
           }}
         >
           Add 1
@@ -46,8 +45,8 @@ export class Counter extends React.Component {
 
         <button
           type="button"
-          onClick={(prevState) => {
-            this.add100(prevState);
+          onClick={() => {
+            this.add100();
           }}
         >
           Add 100
@@ -55,8 +54,8 @@ export class Counter extends React.Component {
 
         <button
           type="button"
-          onClick={(prevState) => {
-            this.increase(prevState);
+          onClick={() => {
+            this.increase();
           }}
         >
           Increase

@@ -17,21 +17,17 @@ export class Counter extends React.Component {
     }));
   }
 
-  smartAdd = () => {
-    window.console.log('before addOne', this.state.count);
+  addWisely = () => {
     this.addOne();
 
     if (this.state.count % 5 === 0) {
-      window.console.log('before add100', this.state.count);
       this.add100();
     }
-
-    window.console.log('---');
   }
 
   render() {
     const { count } = this.state;
-    const { addOne, add100, smartAdd } = this;
+    const { addOne, add100, addWisely: smartAdd } = this;
 
     return (
       <>

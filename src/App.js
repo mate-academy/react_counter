@@ -34,24 +34,29 @@ class App extends React.Component {
         <h1>
           {`Count: ${this.state.count}`}
         </h1>
-        <button
-          type="button"
-          onClick={this.addOne}
-        >
-          Add one
-        </button>
-        <button
-          type="button"
-          onClick={this.add100}
-        >
-          Add 100
-        </button>
-        <button
-          type="button"
-          onClick={this.increase}
-        >
-          Increase
-        </button>
+        <div className="ui buttons">
+          <button
+            type="button"
+            onClick={this.addOne}
+            className="ui red basic button"
+          >
+            Add one
+          </button>
+          <button
+            type="button"
+            onClick={this.add100}
+            className="ui blue basic button"
+          >
+            Add 100
+          </button>
+          <button
+            type="button"
+            onClick={this.increase}
+            className="ui green basic button"
+          >
+            Increase
+          </button>
+        </div>
       </>
     );
   }

@@ -1,0 +1,29 @@
+.app {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #dfd880;
+  color: #3f1d14;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+
+  &__button {
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid #5d5e46;
+    border-radius: 5px;
+    background-color: #55633d;
+    cursor: pointer;
+    outline: none;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 1s;
+
+    &:hover {
+      background-color: #cba338;
+    }
+
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Counter = ({ number, addOne, add100 }) => (
+export const Counter = ({ number, addOne, add100, increase }) => (
   <>
     <h1>
       Count:
@@ -23,13 +23,7 @@ export const Counter = ({ number, addOne, add100 }) => (
 
     <button
       type="button"
-      onClick={number % 5 === 0
-        ? () => {
-          addOne();
-          add100();
-        }
-        : addOne
-        }
+      onClick={increase}
     >
       Increase
     </button>

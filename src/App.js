@@ -19,7 +19,13 @@ class App extends React.Component {
     }));
   };
 
-  increase = () => {};
+  increase = () => {
+    if (this.state.number % 5 === 0) {
+      this.add100();
+    }
+
+    this.addOne();
+  };
 
   render() {
     const { number } = this.state;
@@ -29,6 +35,8 @@ class App extends React.Component {
         number={number}
         addOne={this.addOne}
         add100={this.add100}
+        increase={this.increase}
+
       />
     );
   }

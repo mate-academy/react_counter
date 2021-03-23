@@ -1,1 +1,14 @@
-// styles go here
+button {
+  background: rgb(203, 240, 240);
+  border-radius: 5px;
+  border: 1px solid rgb(50, 19, 107);
+
+  &:hover {
+    background-color: aqua;
+    transition: all 2s ease;
+  }
+}
+
+.header {
+  color: rgb(50, 19, 107);
+}

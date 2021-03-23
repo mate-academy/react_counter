@@ -1,1 +1,11 @@
-// styles go here
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+body {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_f1Z1CN3T_ig5RjXyWcCaQ6dQxmB-ZXn_tg&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

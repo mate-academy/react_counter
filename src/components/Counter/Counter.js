@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Counter = ({ count, addOne, add100 }) => (
+export const Counter = ({ count, addOne, add100, increase }) => (
   <>
     <h1>
       Counter:
@@ -21,13 +21,7 @@ export const Counter = ({ count, addOne, add100 }) => (
     </button>
     <button
       type="button"
-      onClick={count % 5 === 0
-        ? () => {
-          addOne();
-          add100();
-        }
-        : addOne
-      }
+      onClick={increase}
     >
       Add 1 or 101
     </button>
@@ -38,4 +32,5 @@ Counter.propTypes = {
   count: PropTypes.number.isRequired,
   addOne: PropTypes.func.isRequired,
   add100: PropTypes.func.isRequired,
+  increase: PropTypes.func.isRequired,
 };

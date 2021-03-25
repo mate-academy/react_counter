@@ -32,8 +32,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>
-          Count:
-          {` ${count}`}
+          {`Count: ${count}`}
         </h1>
         <div className="buttons">
           <button

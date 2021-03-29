@@ -1,1 +1,64 @@
-// styles go here
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.counter {
+  width: 250px;
+  padding: 20px 15px;
+  font-family: Montserrat, sans-serif;
+  background-color: hsl(140, 68%, 77%);
+  height: 170px;
+  border-radius: 8px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+
+  &__title {
+    margin-bottom: 40px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+      0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: rgb(240, 234, 234);
+    border-radius: 8px;
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+  }
+
+  &__btn {
+    width: 100px;
+    height: 30px;
+    text-transform: uppercase;
+    justify-self: center;
+    border: none;
+    background-color: hsl(68, 12%, 61%);
+    border-radius: 8px;
+    color: hsl(48, 100%, 93%);
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+      0 10px 10px rgba(0, 0, 0, 0.22);
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: scale(0.99);
+    }
+  }
+}

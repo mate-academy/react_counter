@@ -1,1 +1,26 @@
 // styles go here
+.container {
+  text-align: center;
+};
+
+.title {
+  color: rgb(78, 46, 46);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+}
+
+.btn {
+  width: 90px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(45deg, #30cfd0, #330867);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 20px;
+   &:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+   }
+}

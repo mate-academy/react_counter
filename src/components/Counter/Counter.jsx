@@ -23,12 +23,11 @@ export class Counter extends React.Component {
   };
 
   increase = () => {
-    if (this.state.counter % 5 !== 0) {
-      this.addOne();
-    } else {
-      this.addOne();
+    if (this.state.counter % 5 === 0) {
       this.add100();
     }
+
+    this.addOne();
   };
 
   render() {

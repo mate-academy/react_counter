@@ -1,1 +1,15 @@
-// styles go here
+.counter {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 100px auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.btn {
+  width: 100px;
+  margin: auto;
+}

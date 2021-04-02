@@ -1,0 +1,12 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin: 100px auto;
+
+  &__heading {
+    font-weight: 400;
+  }
+}

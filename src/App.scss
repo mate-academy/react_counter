@@ -1,1 +1,21 @@
-// styles go here
+.App {
+  border: 1px solid gray;
+  border-radius: 15px;
+  margin: 30px;
+  background-color: rgb(235, 215, 243);
+  width: 200px;
+}
+
+h1 {
+  margin-left: 10px;
+}
+
+button {
+  display: block;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+button:focus {
+  outline: none;
+}

@@ -19,7 +19,9 @@ class App extends React.Component {
   };
 
   increase = () => {
-    if (this.state.counter % 5 === 0 && this.state.counter !== 0) {
+    const { counter } = this.state;
+
+    if (counter % 5 === 0 && counter !== 0) {
       this.addOne();
       this.add100();
     } else {
@@ -34,12 +36,14 @@ class App extends React.Component {
   };
 
   render() {
+    const { counter } = this.state;
+
     return (
       <>
         <div className="counter">
           <h1 className="title">
             Count:&nbsp;
-            {this.state.counter}
+            {counter}
           </h1>
           <button
             type="button"

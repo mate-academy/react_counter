@@ -3,7 +3,6 @@ import './Counter.scss';
 
 export class Counter extends React.Component {
   state = {
-    countIncrease: 0,
     count: 0,
   }
 
@@ -20,17 +19,11 @@ export class Counter extends React.Component {
   };
 
   increase = () => {
-    if (this.state.countIncrease === 5) {
-      this.setState(state => ({
-        count: state.count + 100,
-        countIncrease: state.countIncrease * 0,
-      }));
+    if (this.state.count % 5 === 0) {
+      this.add100();
     }
 
-    this.setState(state => ({
-      count: state.count + 1,
-      countIncrease: state.countIncrease + 1,
-    }));
+    this.addOne();
   };
 
   render() {

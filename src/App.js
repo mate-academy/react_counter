@@ -12,7 +12,7 @@ export class App extends React.Component {
     }));
   };
 
-  add100 = () => {
+  addHunred = () => {
     this.setState(prevState => ({
       count: prevState.count + 100,
     }));
@@ -22,7 +22,7 @@ export class App extends React.Component {
     const { count } = this.state;
 
     if (count % 5 === 0) {
-      this.add100();
+      this.addHunred();
     }
 
     this.addOne();
@@ -41,21 +41,21 @@ export class App extends React.Component {
           <button
             type="button"
             className="btn rounded btn-danger m-2"
-            onClick={() => this.addOne()}
+            onClick={this.addOne}
           >
             Add 1
           </button>
           <button
             type="button"
             className="btn rounded btn-success m-2"
-            onClick={() => this.add100()}
+            onClick={this.addHunred}
           >
             Add 100
           </button>
           <button
             type="button"
             className="btn rounded btn-warning m-2"
-            onClick={() => this.increase()}
+            onClick={this.increase}
           >
             Increase
           </button>

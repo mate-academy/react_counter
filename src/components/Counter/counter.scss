@@ -1,0 +1,79 @@
+$duration: 0.5s;
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(200, 238, 202);
+}
+
+.counter {
+  margin: 0 auto;
+  width: 600px;
+  
+
+  &__title {
+    text-align: center;
+    color: rgb(114, 112, 8);
+    margin: 20px auto;
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+  }
+
+  &__button {
+    width: 120px;
+    padding: 5px;
+    font-size: 18px;
+    border: 2px solid rgb(115, 134, 4);
+    border-radius: 15px;
+    color: #fff;
+    background-color: rgb(6, 184, 255);
+    transition: transform $duration,
+    background-color $duration;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px;
+    }
+
+    &:focus {
+      outline: none;
+      transform: scale(1.05);
+    }
+  }
+
+  &__button-1 {
+
+    &:hover {
+      color: rgb(191, 250, 53);
+      background-color: rgb(31, 126, 86);
+    }
+  }
+
+  &__button-100 {
+
+    &:hover {
+      color: rgb(241, 187, 9);
+      background-color: rgb(31, 126, 86);
+    }
+  }
+
+  &__button-increase {
+
+    &:hover {
+      color: rgb(241, 9, 241);
+      background-color: rgb(31, 126, 86);
+    }
+  }
+
+  &__button-clear {
+
+    &:hover {
+      color: rgb(255, 0, 0);
+      background-color: rgb(31, 126, 86);
+    }
+  }
+}

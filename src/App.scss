@@ -1,1 +1,15 @@
-// styles go here
+.count {
+  text-align: center;
+
+  &__button {
+    margin: 15px;
+    padding: 15px 20px;
+    background-color: #d3f865;
+    border-radius: 5px;
+    transition: 0.5s background;
+
+    &:hover {
+      background-color: #a3d313;
+    }
+  }
+}

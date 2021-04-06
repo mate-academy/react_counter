@@ -1,1 +1,16 @@
-// styles go here
+.counter {
+  text-align: center;
+
+  &__title {
+    color: mediumblue;
+    margin-bottom: 30px;
+  }
+  
+  &__buttons {
+  display: grid;
+  grid-template-rows: 50px 50px 50px;
+  grid-template-columns: 200px;
+  gap: 10px;
+  justify-content: center;
+  }
+}

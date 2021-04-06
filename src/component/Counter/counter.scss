@@ -1,0 +1,46 @@
+.counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid green;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgb(199, 236, 199);
+  width: 300px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: rgb(23, 3, 112);
+    font-size: 35px;
+  }
+
+  &__number {
+    color: rgb(202, 121, 14);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 30px;
+  }
+
+  &__btn {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    font-weight: bold;
+    color: green;
+    transition: background-color 300ms, color 300ms;
+    border: 2px solid rgb(99, 95, 95);
+    box-shadow: 0 0 10px rgba(22, 58, 21, 0.5);
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(38, 148, 38);
+      color: honeydew;
+    }
+  }
+}

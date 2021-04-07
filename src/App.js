@@ -20,10 +20,7 @@ class App extends React.Component {
   };
 
   increase = () => {
-    const countArr = this.state.count.toString().split('');
-    const lastDigit = countArr[countArr.length - 1];
-
-    if (+lastDigit === 5 || +lastDigit === 0) {
+    if (this.state.count % 5 === 0) {
       this.addOne();
       this.add100();
     } else {

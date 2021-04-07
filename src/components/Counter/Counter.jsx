@@ -4,8 +4,7 @@ import Proptypes from 'prop-types';
 export const Counter = ({ count, addOne, add100, increase }) => (
   <>
     <h1>
-      Count:&nbsp;
-      {count}
+      {`Count: ${count}`}
     </h1>
     <button
       type="button"

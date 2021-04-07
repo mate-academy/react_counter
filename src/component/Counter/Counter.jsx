@@ -3,52 +3,44 @@ import './counter.scss';
 
 export class Counter extends React.Component {
   state = {
-    result: 0,
     count: 0,
   }
 
   addOne = () => {
     this.setState(prevState => ({
-      result: prevState.result + 1,
+      count: prevState.count + 1,
     }));
   };
 
   add100 = () => {
     this.setState(prevState => ({
-      result: prevState.result + 100,
+      count: prevState.count + 100,
     }));
   };
 
-  resetResult = () => {
+  resetCount = () => {
     this.setState({
-      result: 0,
+      count: 0,
     });
   }
 
   increase = () => {
-    this.setState(prevState => ({
-      count: prevState.count + 1,
-    }));
+    this.addOne();
 
     if (this.state.count % 5 === 0) {
-      this.addOne();
       this.add100();
-    } else {
-      this.addOne();
     }
   };
 
   render() {
-    const { result } = this.state;
+    const { count } = this.state;
 
     return (
       <section className="counter">
         <h1 className="counter__title">
           Count:
-          {' '}
-          {' '}
           <span className="counter__number">
-            {result}
+            {count}
           </span>
         </h1>
         <div className="counter__wrapper">
@@ -74,7 +66,7 @@ export class Counter extends React.Component {
             Increase
           </button>
           <button
-            onClick={this.resetResult}
+            onClick={this.resetCount}
             className="counter__btn"
             type="button"
           >

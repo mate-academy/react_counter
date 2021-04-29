@@ -1,0 +1,15 @@
+.counter {
+  &__title {
+    text-align: center;
+  }
+
+  &__buttons {
+    text-align: center;
+  }
+
+  &__button {
+    padding: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}

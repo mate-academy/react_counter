@@ -1,0 +1,16 @@
+.btn {
+  background-color: wheat;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 16px;
+  padding: 0.5em 0.75em;
+  box-shadow: 2px 2px 5px lightgray;
+}
+
+.btn:hover {
+  background-color: antiquewhite;
+}
+
+.btn:not(:last-child) {
+  margin-right: 10px;
+}

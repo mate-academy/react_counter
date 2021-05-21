@@ -29,6 +29,7 @@ class App extends React.Component {
     if (this.increaseCount === 5) {
       this.increaseCount = 0;
       this.add100();
+      this.addOne();
     } else {
       this.addOne();
     }

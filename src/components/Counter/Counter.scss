@@ -1,0 +1,20 @@
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+
+  &__button {
+    margin: 10px;
+    height: 30px;
+    width: max-content;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: rgba($color: #77e41285, $alpha: 1);
+
+  }
+
+  &__button:active {
+    background-color: rgba($color: #00ff0d, $alpha: 1);
+  }
+}

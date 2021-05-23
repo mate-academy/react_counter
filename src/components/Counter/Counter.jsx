@@ -19,12 +19,10 @@ export class Counter extends React.Component {
   };
 
   increase = () => {
-    this.setState(({ count }) => {
       this.addOne();
-      if (count % 5 === 0) {
+      if (this.state.count % 5 === 0) {
         this.add100();
       }
-    });
   };
 
   render() {
@@ -49,7 +47,7 @@ export class Counter extends React.Component {
           type="button"
           onClick={this.add100}
         >
-          +3
+          +100
         </button>
         <button
           className="title__button"

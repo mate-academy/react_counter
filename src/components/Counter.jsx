@@ -6,24 +6,22 @@ export class Counter extends React.Component {
   }
 
   addOne = () => {
-    this.setState(state => ({
-      counter: state.counter + 1,
+    this.setState(({ counter }) => ({
+      counter: counter + 1,
     }));
   };
 
   add100 = () => {
-    this.setState(state => ({
-      counter: state.counter + 100,
+    this.setState(({ counter }) => ({
+      counter: counter + 100,
     }));
   };
 
   increase = () => {
-    this.setState((state) => {
-      if (state.counter % 5 === 0) {
-        this.addOne();
+    this.setState(({ counter }) => {
+      this.addOne();
+      if (counter % 5 === 0) {
         this.add100();
-      } else {
-        this.addOne();
       }
     });
   };

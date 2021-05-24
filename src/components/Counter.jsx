@@ -20,7 +20,8 @@ class Counter extends React.Component {
   increase = () => {
     this.addOne();
 
-    return (this.state.count % 5 === 0) && this.add100();
+    // eslint-disable-next-line
+    (this.state.count % 5 === 0) && this.add100();
   };
 
   render() {

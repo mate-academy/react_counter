@@ -1,0 +1,33 @@
+.Count {
+  max-width: 300px;
+  margin: 200px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  border: 1px solid #333;
+  box-shadow: 4px 4px 8px #333;
+
+  &__title {
+    margin-top: 0;
+    color: #333;
+    text-transform: uppercase;
+  }
+
+  &__buttonsWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #1784cc;
+    color: #eee;
+  }
+}

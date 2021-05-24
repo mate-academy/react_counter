@@ -17,6 +17,7 @@ class Counter extends React.Component {
     this.setState((prev) => {
       if (prev.count % 5 === 0) {
         this.add100();
+        this.addOne();
       } else {
         this.addOne();
       }

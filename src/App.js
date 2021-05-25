@@ -14,7 +14,14 @@ class App extends React.Component {
     this.setState(prevState => ({ number: prevState.number + 100 }));
   };
 
-  increase = () => {};
+  increase = () => {
+    this.setState((prevState) => {
+      this.addOne();
+      if (prevState.number > 0 && prevState.number % 5 === 0) {
+        this.add100();
+      }
+    });
+  };
 
   render() {
     const { number } = this.state;
@@ -23,6 +30,7 @@ class App extends React.Component {
       <div className="app">
         <h1>
           Count:
+          {' '}
           {number}
         </h1>
         <button
@@ -46,11 +54,7 @@ class App extends React.Component {
         <button
           type="button"
           onClick={() => {
-            this.addOne();
-
-            if (number % 5 === 0) {
-              this.add100();
-            }
+            this.increase();
           }}
         >
           Increase

@@ -1,1 +1,21 @@
-// styles go here
+.field {
+  margin: 20px auto;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: rgb(222, 241, 176);
+}
+
+.button {
+  margin-right: 5px;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  &:hover {
+    color: white;
+    background-color: rgb(139, 126, 126);
+    box-shadow: 2px 2px 3px rgb(88, 85, 85);
+  }
+}

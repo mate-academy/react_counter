@@ -1,1 +1,17 @@
-// styles go here
+.wrap {
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+  border: 3px double #b5b5b5;
+  padding: 20px;
+  background-color: #27a59d;
+}
+
+.button {
+  padding: 5px;
+  margin: 10px;
+
+  &:hover {
+    background-color: aquamarine;
+  }
+}

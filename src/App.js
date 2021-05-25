@@ -25,7 +25,7 @@ class App extends React.Component {
           prev.counter + 101
         )
         : (
-          prev.counter + 1
+          this.addOne
         ),
     }));
   };

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 export class Counter extends React.Component {
   state = {
@@ -7,19 +6,15 @@ export class Counter extends React.Component {
   };
 
   addOne = () => {
-    this.setState((state) => {
-      return {
-        count: state.count + 1,
-      };
-    });
+    this.setState(state => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    this.setState((state) => {
-      return {
-        count: state.count + 100
-      };
-    });
+    this.setState(state => ({
+      count: state.count + 100,
+    }));
   };
 
   addMixed = () => {
@@ -35,7 +30,10 @@ export class Counter extends React.Component {
 
     return (
       <>
-        <h1>Count: {count}</h1>
+        <h1>
+          Count:
+          {count}
+        </h1>
         <button
           type="button"
           onClick={this.addOne}
@@ -55,6 +53,6 @@ export class Counter extends React.Component {
           Add mixed
         </button>
       </>
-    )
+    );
   }
 }

@@ -3,9 +3,7 @@ import './App.scss';
 import { Counter } from './components/Counter';
 
 const App = () => (
-  <h1>
-    <Counter />
-  </h1>
+  <Counter />
 );
 
 export default App;

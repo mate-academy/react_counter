@@ -19,13 +19,11 @@ class App extends React.Component {
   };
 
   increase = () => {
-    this.setState(({ count }) => {
-      this.addOne();
+    this.addOne();
 
-      if (count % 5 === 0 && count !== 0) {
-        this.add100();
-      }
-    });
+    if (this.state.count % 5 === 0 && this.state.count !== 0) {
+      this.add100();
+    }
   };
 
   render() {

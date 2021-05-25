@@ -1,4 +1,5 @@
 import React from 'react';
+import { Counter } from './components/Counter';
 import './App.scss';
 
 class App extends React.Component {
@@ -10,7 +11,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <h1>Count: 0</h1>
+      <Counter />
     );
   }
 }

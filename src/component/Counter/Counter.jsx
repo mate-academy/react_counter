@@ -14,12 +14,11 @@ export class Counter extends React.Component {
   };
 
   increase = () => {
-    this.setState(({ count }) => {
-      this.addOne();
-      if (count % 5 === 0) {
-        this.add100();
-      }
-    });
+    this.addOne();
+    
+    if (this.state.count % 5 === 0) {
+      this.add100();
+    }
   };
 
   render() {

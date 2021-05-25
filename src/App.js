@@ -7,8 +7,9 @@ class App extends React.Component {
   };
 
   addOne = () => {
-    this.setState(state => (
-      { number: state.number + 1 }));
+    this.setState(state => ({
+      number: state.number + 1,
+    }));
   };
 
   add100 = () => {
@@ -34,9 +35,7 @@ class App extends React.Component {
     return (
       <div className="container">
         <h1 className="title">
-          Count:
-          {' '}
-          {number}
+          {`Count: ${number}`}
         </h1>
 
         <button

@@ -1,0 +1,36 @@
+.counter {
+  border: 15px outset red;
+  padding: 10px;
+  width: fit-content;
+  background-color: rgb(255, 215, 82);
+}
+
+.title {
+  color: red;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.button {
+  margin-right: 10px;
+  border: 10px outset red;
+  background-color: rgb(255, 131, 131);
+  color: white;
+  outline: none;
+  padding: 5px;
+  font-size: 30px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 66ms;
+
+  &:hover {
+    background-color: transparent;
+    color: red;
+  }
+
+  &:active {
+    border-color: transparent;
+    transform: translateY(-15px);
+  }
+
+}

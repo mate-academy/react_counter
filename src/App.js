@@ -3,38 +3,27 @@ import './App.scss';
 
 class App extends React.Component {
   state = {
-    value: 0,
     count: 0,
-    num: 1,
   }
 
   addOne = () => {
     this.setState(prevValue => ({
-      value: prevValue.value + 1,
-      num: prevValue.num + 1,
+      count: prevValue.count + 1,
     }));
-
-    if (this.state.num === 5) {
-      this.setState(prevCount => ({
-        num: 1,
-        count: prevCount.count + 5,
-      }));
-    }
   };
 
   add100 = () => {
     this.setState(prevValue => ({
-      value: prevValue.value + 100,
       count: prevValue.count + 100,
     }));
   };
 
   increase = () => {
-    const { value, count } = this.state;
+    const { count } = this.state;
 
     this.addOne();
 
-    if ((value / count) === 1) {
+    if (count % 5 === 0) {
       this.add100();
     }
   };
@@ -45,7 +34,7 @@ class App extends React.Component {
         <h1>
           Count:
           {' '}
-          {this.state.value}
+          {this.state.count}
         </h1>
 
         <button

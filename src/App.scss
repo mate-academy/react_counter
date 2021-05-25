@@ -1,1 +1,26 @@
-// styles go here
+.App {
+  border: 2px dotted #82c8a0;
+  padding: 20px;
+  width: 450px;
+  &-title {
+    color: #6191c2;
+  }
+}
+
+.button {
+  background-color: #82c8a0;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  width: 100px;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 10px;
+  transition: background-color, 0.3s;
+  &:hover {
+    background-color: #cb99c5;
+  }
+}

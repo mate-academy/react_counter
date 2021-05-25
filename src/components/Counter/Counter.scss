@@ -1,0 +1,17 @@
+.add {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+
+  &__button {
+    height: 20px;
+    border-radius: 2px;
+    border: 0.5px solid grey;
+
+    &:hover {
+      background: #0000ff30;
+      border: 0.5px solid grey;
+      border-radius: 2px;
+    }
+  }
+}

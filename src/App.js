@@ -15,12 +15,11 @@ class App extends React.Component {
   };
 
   increase = () => {
-    this.setState((prevState) => {
-      this.addOne();
-      if (prevState.number > 0 && prevState.number % 5 === 0) {
-        this.add100();
-      }
-    });
+    this.addOne();
+
+    if (this.state.number > 0 && this.state.number % 5 === 0) {
+      this.add100();
+    }
   };
 
   render() {

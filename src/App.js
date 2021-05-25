@@ -1,16 +1,16 @@
 import React from 'react';
+import Counter from './components/Counter';
 import './App.scss';
 
 class App extends React.Component {
-  addOne = () => {};
-
-  add100 = () => {};
-
-  increase = () => {};
+  constructor(props) {
+    super(props);
+    this.props = props;
+  }
 
   render() {
     return (
-      <h1>Count: 0</h1>
+      <Counter />
     );
   }
 }

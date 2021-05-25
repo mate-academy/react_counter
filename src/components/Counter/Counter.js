@@ -1,42 +1,60 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Counter = ({ param }) => (
-  <>
-    <h1>
-      Count:
-      {param.state.count}
-    </h1>
-    <button
-      type="button"
-      onClick={param.addOne}
-    >
-      addOne
-    </button>
-    <button
-      type="button"
-      onClick={param.add100}
-    >
-      add100
-    </button>
-    <button
-      type="button"
-      onClick={param.increase}
-    >
-      increase
-    </button>
-  </>
-);
+class Counter extends React.Component {
+  state = {
+    count: 0,
+  }
 
-Counter.propTypes = {
-  param: PropTypes.shape({
-    state: PropTypes.shape({
-      count: PropTypes.number.isRequired,
-    }).isRequired,
-    addOne: PropTypes.func.isRequired,
-    add100: PropTypes.func.isRequired,
-    increase: PropTypes.func.isRequired,
-  }).isRequired,
-};
+  addOne = () => {
+    this.setState(prev => ({
+      count: prev.count + 1,
+    }));
+  }
+
+  add100 = () => {
+    this.setState(prev => ({
+      count: prev.count + 100,
+    }));
+  }
+
+  increase = () => {
+    this.setState((prev) => {
+      if (prev.count % 5 === 0) {
+        this.add100();
+      }
+
+      this.addOne();
+    });
+  }
+
+  render() {
+    return (
+      <>
+        <h1>
+          Count:
+          {this.state.count}
+        </h1>
+        <button
+          type="button"
+          onClick={this.addOne}
+        >
+          addOne
+        </button>
+        <button
+          type="button"
+          onClick={this.add100}
+        >
+          add100
+        </button>
+        <button
+          type="button"
+          onClick={this.increase}
+        >
+          increase
+        </button>
+      </>
+    );
+  }
+}
 
 export default Counter;

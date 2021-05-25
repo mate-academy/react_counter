@@ -1,1 +1,17 @@
-// styles go here
+body {
+  background-color: rgb(136, 149, 179);
+}
+
+.App {
+  text-align: center;
+  margin-top: 20%;
+
+  &__button {
+    width: 70px;
+    margin-right: 10px;
+    border: 0;
+    color: darkgreen;
+    background-color: rgb(187, 173, 255);
+    cursor: pointer;
+  }
+}

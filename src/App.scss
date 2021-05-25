@@ -1,1 +1,101 @@
-// styles go here
+.App {
+  text-align: center;
+
+  &__title {
+    font-family: sans-serif;
+    font-size: 48px;
+    color: #4f91c7;
+    letter-spacing: 4px;
+    word-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    display: inline-block;
+    padding: 21px;
+    border-radius: 20px;
+    background: #f0fcfb;
+  }
+
+  &__button {
+    &-addsOne {
+      margin: 10px;
+      padding: 6px 24px;
+
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 0 -1px 0 #5b6178;
+
+      box-shadow: 0 1px 0 0 #f0f7fa;
+      background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+      background-color: #33bdef;
+      border-radius: 6px;
+      border: 1px solid #057fd0;
+      cursor: pointer;
+      color: #fff;
+      &:hover {
+        background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+        background-color: #019ad2;
+      }
+      &:active {
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    &-addsHundred {
+      margin: 10px;
+      padding: 6px 24px;
+
+      box-shadow: inset 0 1px 0 0 #97c4fe;
+      background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+      background-color: #3d94f6;
+      border-radius: 6px;
+      border: 1px solid #337fed;
+      display: inline-block;
+      cursor: pointer;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #1570cd;
+      &:hover {
+        background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+        background-color: #1e62d0;
+      }
+      &:active {
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    &-increase {
+      margin: 10px;
+      padding: 6px 24px;
+
+      box-shadow: inset 0 1px 0 0 #97c4fe;
+      background: linear-gradient(to bottom, #f63d56 5%, #c0313d 100%);
+      background-color: #3d94f6;
+      border-radius: 6px;
+      border: 1px solid #ed337a;
+      display: inline-block;
+      cursor: pointer;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #1570cd;
+      &:hover {
+        background: linear-gradient(to bottom, #c0313d 5%, #f63d56 100%);
+        background-color: #1e62d0;
+      }
+      &:active {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+}

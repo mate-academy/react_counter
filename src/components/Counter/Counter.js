@@ -4,7 +4,6 @@ import './Counter.scss';
 export class Counter extends React.Component {
   state = {
     count: 0,
-    cklicks: 0,
   }
 
   addOne = () => {
@@ -20,19 +19,13 @@ export class Counter extends React.Component {
   };
 
   increase = () => {
-    if (this.state.cklicks < 5 && this.state.cklicks !== 0) {
-      this.setState(prevState => ({
-        cklicks: prevState.cklicks + 1,
-      }));
+    this.setState(({ count }) => {
       this.addOne();
-    } else {
-      this.setState({
-        cklicks: 1,
-      });
-      this.addOne();
-      this.add100();
-    }
-  }
+      if (count % 5 === 0 && count !== 0) {
+        this.add100();
+      }
+    });
+  };
 
   render() {
     const { count } = this.state;

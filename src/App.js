@@ -33,9 +33,9 @@ class App extends React.Component {
         <h1>
           {`Count: ${counter}`}
         </h1>
-        <button type="button" onClick={this.addOne}>button1</button>
-        <button type="button" onClick={this.add100}>button2</button>
-        <button type="button" onClick={this.increase}>button3</button>
+        <button type="button" onClick={this.addOne}>+ 1</button>
+        <button type="button" onClick={this.add100}>+ 100</button>
+        <button type="button" onClick={this.increase}>Increase</button>
       </>
     );
   }

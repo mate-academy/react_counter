@@ -33,9 +33,11 @@ class App extends React.Component {
   };
 
   increase = () => {
-    this.setState(state => ({
-      count: state.count + 101,
-    }));
+    if (this.state.count % 5 === 0 && this.state.count !== 0) {
+      this.add100();
+    }
+
+    this.addOne();
   };
 
   reset = () => {
@@ -66,22 +68,13 @@ class App extends React.Component {
           </div>
 
           <div className="button-wrapper">
-            <button
-              type="button"
-              className="button"
-              onClick={count % 5 === 0 && count !== 0
-                ? this.increase : this.addOne}
-            >
-              {count % 5 === 0 ? 101 : 1}
+            <button type="button" className="button" onClick={this.increase}>
+              {count % 5 === 0 && count !== 0 ? 101 : 1}
             </button>
           </div>
 
           <div className="button-wrapper">
-            <button
-              type="button"
-              className="button"
-              onClick={this.reset}
-            >
+            <button type="button" className="button" onClick={this.reset}>
               Reset
             </button>
           </div>

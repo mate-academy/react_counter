@@ -1,1 +1,28 @@
 // styles go here
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(144,196,216);
+}
+
+.container {
+  margin: 100px auto;
+  padding-top: 10px;
+  height: 150px;
+  width: 250px;
+  border-radius: 20px;
+  text-align: center;
+  color: rgb(144,196,216);
+  background-color: white;
+
+  button {
+    outline: none;
+    border: none;
+    margin-left: 5px;
+    line-height: 25px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(144,196,216);
+    color: white;
+    cursor: pointer;
+  }
+}

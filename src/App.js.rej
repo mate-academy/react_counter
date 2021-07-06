@@ -1,0 +1,4 @@
+diff a/src/App.js b/src/App.js	(rejected hunks)
+@@ -42 +42 @@ class App extends React.Component {
+-    )
++    );

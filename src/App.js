@@ -1,18 +1,12 @@
 import React from 'react';
+import 'semantic-ui-css/semantic.min.css';
 import './App.scss';
+import { CounterClass } from './components/CounterClass/CounterClass';
+import { CounterFunction } from './components/CounterFunction/CounterFunction';
 
-class App extends React.Component {
-  addOne = () => {};
-
-  add100 = () => {};
-
-  increase = () => {};
-
-  render() {
-    return (
-      <h1>Count: 0</h1>
-    );
-  }
-}
-
-export default App;
+export const App = () => (
+  <div className="app">
+    <CounterClass />
+    <CounterFunction />
+  </div>
+);

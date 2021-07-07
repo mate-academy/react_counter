@@ -1,1 +1,46 @@
-// styles go here
+html {
+  background-color: #eee;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container {
+
+  &__heading {
+    color: #0f3460;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 40px;
+  }
+
+  &__button {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    margin: 10px 0 0 40px;
+    background-color: #91d18b;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 250ms ease-in-out,
+      transform 150ms ease;
+
+    &:hover {
+      border: 1px solid black;
+      background-color: #ea5455;
+    }
+
+    &:focus {
+      background-color: #ea5455;
+      outline: 1px solid #fff;
+      outline-offset: -4px;
+    }
+
+    &:active {
+      transform: scale(0.99);
+    }
+  }
+}

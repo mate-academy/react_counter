@@ -1,1 +1,32 @@
-// styles go here
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__heading {
+    font-family: monospace;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 50px;
+
+    background-color: rgb(100, 100, 231);
+    color: white;
+
+    border: transparent;
+    border-radius: 8px;
+    outline: none;
+
+    transition: transform 300ms;
+
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

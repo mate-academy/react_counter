@@ -6,25 +6,11 @@ export class Button extends Component {
     return (
       <>
         <button
-          onClick={this.props.parentAddOne}
+          onClick={this.props.action}
           className=""
           type="button"
         >
-          Add 1
-        </button>
-        <button
-          onClick={this.props.parentAdd100}
-          className=""
-          type="button"
-        >
-          Add 100
-        </button>
-        <button
-          onClick={this.props.parentIncrease}
-          className=""
-          type="button"
-        >
-          Increase
+          {this.props.text}
         </button>
       </>
     );
@@ -32,7 +18,6 @@ export class Button extends Component {
 }
 
 Button.propTypes = {
-  parentAddOne: PropTypes.func.isRequired,
-  parentAdd100: PropTypes.func.isRequired,
-  parentIncrease: PropTypes.func.isRequired,
+  action: PropTypes.func.isRequired,
+  text: PropTypes.string.isRequired,
 };

@@ -34,9 +34,16 @@ export class Counter extends Component {
           {this.state.count}
         </h1>
         <Button
-          parentAddOne={this.addOne}
-          parentAdd100={this.add100}
-          parentIncrease={this.increase}
+          action={this.addOne}
+          text="Add 1"
+        />
+        <Button
+          action={this.add100}
+          text="Add 100"
+        />
+        <Button
+          action={this.increase}
+          text="Increase"
         />
       </>
     );

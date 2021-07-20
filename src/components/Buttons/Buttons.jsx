@@ -1,30 +1,15 @@
 import React from 'react';
 import { counterPropTypes } from '../counterPropTypes';
+import './Button.scss';
 
-const Button = ({ add100, addOne, increase }) => (
-  <>
-    <button
-      className="calculate__add-one"
-      onClick={addOne}
-      type="button"
-    >
-      Add 1
-    </button>
-    <button
-      className="calculate__add-one_hundred"
-      onClick={add100}
-      type="button"
-    >
-      Add 100
-    </button>
-    <button
-      className="calculate__add-increase"
-      onClick={increase}
-      type="button"
-    >
-      Increase
-    </button>
-  </>
+const Button = ({ name, callback }) => (
+  <button
+    className="button"
+    type="button"
+    onClick={callback}
+  >
+    {name}
+  </button>
 );
 
 Button.propTypes = counterPropTypes;

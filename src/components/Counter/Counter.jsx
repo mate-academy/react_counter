@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../Buttons/Buttons';
+import './Counter.scss';
 
 class Counter extends React.Component {
   state = {
@@ -34,11 +35,20 @@ class Counter extends React.Component {
            x
           }
         </h1>
-        <Button
-          addOne={this.addOne}
-          add100={this.add100}
-          increase={this.increase}
-        />
+        <div className="calculate__container-button">
+          <Button
+            callback={this.addOne}
+            name="add one"
+          />
+          <Button
+            callback={this.add100}
+            name="add 100"
+          />
+          <Button
+            callback={this.increase}
+            name="increse"
+          />
+        </div>
       </div>
     );
   }

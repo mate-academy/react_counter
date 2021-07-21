@@ -4,48 +4,45 @@ import './Counter.scss';
 
 class Counter extends React.Component {
   state = {
-    x: 0,
+    count: 0,
   }
 
   addOne = () => {
-    this.setState(state => ({ x: state.x + 1 }));
+    this.setState(state => ({ count: state.count + 1 }));
   };
 
   add100 = () => {
-    this.setState(state => ({ x: state.x + 100 }));
+    this.setState(state => ({ count: state.count + 100 }));
   };
 
   increase = () => {
-    if (this.state.x % 5 === 0) {
-      this.addOne();
+    if (this.state.count % 5 === 0) {
       this.add100();
-    } else {
-      this.addOne();
     }
+
+    this.addOne();
   };
 
   render() {
-    const { x } = this.state;
+    const { count } = this.state;
 
     return (
       <div className="calculate">
         <h1>
           Count:
-          {
-           x
-          }
+          {` ${count} `}
         </h1>
         <div className="calculate__container-button">
           <Button
-            callback={this.addOne}
+            onCLick={this.addOne}
             name="add one"
           />
           <Button
-            callback={this.add100}
+            onCLick={this.add100}
             name="add 100"
           />
           <Button
-            callback={this.increase}
+            onCLick={this.increase}
             name="increse"
           />
         </div>

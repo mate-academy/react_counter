@@ -1,22 +1,41 @@
 import React from 'react';
-import propTypes from 'prop-types';
 import { Button } from './Button';
 
-export const Counter = ({ count, add1, add100, increase }) => (
-  <>
-    <h1>
-      Count:
-      {count}
-    </h1>
-    <Button action={add1} text="Add 1" />
-    <Button action={add100} text="Add 100" />
-    <Button action={increase} text="increase" />
-  </>
-);
+export class Counter extends React.Component {
+  state = {
+    count: 0,
+  }
 
-Counter.propTypes = {
-  count: propTypes.number.isRequired,
-  add1: propTypes.func.isRequired,
-  add100: propTypes.func.isRequired,
-  increase: propTypes.func.isRequired,
-};
+  addOne = () => {
+    this.setState(state => ({
+      count: state.count + 1,
+    }));
+  };
+
+  add100 = () => {
+    this.setState(state => ({
+      count: state.count + 100,
+    }));
+  };
+
+  increase = () => {
+    this.addOne();
+    if (this.state.count % 5 === 0) {
+      this.add100();
+    }
+  };
+
+  render() {
+    return (
+      <>
+        <h1>
+          Count:
+          {this.state.count}
+        </h1>
+        <Button action={this.addOne} text="Add 1" />
+        <Button action={this.add100} text="Add 100" />
+        <Button action={this.increase} text="increase" />
+      </>
+    );
+  }
+}

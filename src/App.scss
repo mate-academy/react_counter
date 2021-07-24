@@ -1,1 +1,17 @@
-// styles go here
+.title {
+  margin-left: 32px;
+  letter-spacing: 8px;
+}
+
+.button {
+  margin: 12px;
+  padding: 12px;
+
+  background-color: rgb(144, 228, 65);
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.count {
+  color: red;
+}

@@ -1,16 +1,70 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card, Button, ButtonGroup } from 'react-bootstrap';
 import './App.scss';
 
 class App extends React.Component {
-  addOne = () => {};
+  state = {
+    count: 0,
+  }
 
-  add100 = () => {};
+  addOne(arg) {
+    this.setState(prevSate => ({
+      count: prevSate.count + arg,
+    }));
+  }
 
-  increase = () => {};
+  add100(arg) {
+    this.setState(prevSate => ({
+      count: prevSate.count + arg,
+    }));
+  }
+
+  increase() {
+    if (this.state.count % 5) {
+      this.setState(prevState => ({
+        count: prevState.count + 1,
+      }));
+    } else {
+      this.setState(prevState => ({
+        count: prevState.count + 100,
+      }));
+    }
+  }
 
   render() {
     return (
-      <h1>Count: 0</h1>
+      <Card style={{ width: '20rem' }}>
+        <Card.Body>
+          <Card.Title>
+            <h1>
+              Count:
+              {' '}
+              {this.state.count}
+            </h1>
+          </Card.Title>
+          <ButtonGroup>
+            <Button
+              variant="success"
+              onClick={() => this.addOne(1)}
+            >
+              Add 1
+            </Button>
+            <Button
+              variant="secondary"
+              onClick={() => this.add100(100)}
+            >
+              Add 100
+            </Button>
+            <Button
+              variant="danger"
+              onClick={() => this.increase()}
+            >
+              Increase
+            </Button>
+          </ButtonGroup>
+        </Card.Body>
+      </Card>
     );
   }
 }

@@ -18,8 +18,6 @@ export class Counter extends React.Component {
     }));
   };
 
-  increase = () => {};
-
   render() {
     const { counter } = this.state;
 

@@ -18,11 +18,10 @@ export class Counter extends React.Component {
   };
 
   increase = () => {
-    this.setState(state => (
-      (state.count % 5 === 0)
-        ? this.add100()
-        : this.addOne()
-    ));
+    this.addOne();
+    if (this.state.count % 5 === 0) {
+      this.add100();
+    }
   };
 
   render() {

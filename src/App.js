@@ -27,7 +27,7 @@ class App extends React.Component {
       }));
     } else {
       this.setState(prevState => ({
-        count: prevState.count + 100,
+        count: prevState.count + 101,
       }));
     }
   }

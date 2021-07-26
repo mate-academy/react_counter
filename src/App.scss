@@ -1,1 +1,19 @@
-// styles go here
+.head {
+  color: #6767e4;
+  margin-left: 80px;
+
+  &__button {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(211, 211, 178);
+    box-shadow: blue;
+    color: rgb(112, 112, 226);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 1s;
+  }
+
+  &__button:hover {
+    transform: scale(1.2);
+  }
+}

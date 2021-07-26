@@ -1,0 +1,33 @@
+.button-container {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  width: 100;
+  height: 50px;
+  border-radius: 10px;
+
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.4s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    outline: none;
+  }
+
+  &--one {
+    background-color: tomato;
+  }
+
+  &--hundred {
+    background-color: wheat;
+  }
+
+  &--increase {
+    background-color: chartreuse;
+  }
+}

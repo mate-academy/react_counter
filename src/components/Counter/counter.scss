@@ -1,0 +1,12 @@
+.Counter {
+  padding: 50px;
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__button-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+}

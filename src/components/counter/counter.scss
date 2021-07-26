@@ -1,0 +1,40 @@
+.container {
+  border: 5px solid rgb(255, 252, 66);
+}
+
+.title {
+  text-align: center;
+}
+
+.button-container {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.add-one {
+  width: 20%;
+  padding: 20px;
+}
+
+.add-one:hover {
+  background-color: rgb(147, 233, 97);
+}
+
+.add-hundred {
+  width: 20%;
+}
+
+.add-hundred:hover {
+  background-color: rgb(236, 132, 91);
+}
+
+.add-something {
+  width: 20%;
+}
+
+.add-something:hover {
+  background-color: rgb(97, 224, 233);
+}

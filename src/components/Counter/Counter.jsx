@@ -38,9 +38,7 @@ class Counter extends Component {
         <Card.Body>
           <Card.Title>
             <h1>
-              Count:
-              {' '}
-              {this.state.count}
+              {`Count: ${this.state.count}`}
             </h1>
           </Card.Title>
           <ButtonGroup>

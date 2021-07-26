@@ -1,0 +1,305 @@
+$first-btn-color: #2196f3;
+$second-btn-color: #9521f3;
+$third-btn-color: #f321b4;
+
+body {
+  margin: 0;
+}
+
+.top-side {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+}
+
+.right-side {
+  position: absolute;
+  display: block;
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+}
+
+.down-side {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+}
+
+.left-side {
+  position: absolute;
+  display: block;
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+}
+
+.counter {
+  background: radial-gradient(closest-side, #d13986, #5c0c53, #210e32);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__decor {
+    display: block;
+    background: url(../img/decor-lines.png) center/ cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-size: 200% 200%;
+    animation: bg-1 30s ease infinite;
+  }
+
+  &__block {
+    height: 300px;
+    width: 300px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+  }
+
+  &__display {
+    font-family: "Tourney", cursive;
+    text-shadow: 1px 1px 5px #5c0c53,
+      1px 1px 10px #d13986,
+      1px 1px 15px #d13986,
+      1px 1px 20px #5c0c53,
+      1px 1px 25px #d13986;
+    font-size: 120px;
+    color: #fc92c7;
+    opacity: 0.8;
+    overflow: visible;
+    position: relative;
+    animation: counter-style 10s ease infinite;
+
+    &::before {
+      content: "";
+      display: block;
+      background: url(../img/decor-bottom.png) center/ cover;
+      height: 500px;
+      width: 500px;
+      position: absolute;
+      top: -220px;
+      left: -220px;
+      z-index: 2;
+      animation: bg-2 10s ease infinite;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      background: url(../img/decor-dots.png) center/ cover;
+      height: 500px;
+      width: 500px;
+      position: absolute;
+      top: -220px;
+      left: -220px;
+      z-index: 2;
+      background-size: 200% 200%;
+      animation: bg-2 10s ease infinite;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &__button {
+    margin-top: 100px;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 24px;
+    overflow: hidden;
+    border: none;
+    background-color: transparent;
+    transition: 0.2s;
+    z-index: 3;
+    cursor: pointer;
+
+    &:hover {
+      color: whitesmoke;
+      transition-delay: 1s;
+
+      .top-side {
+        left: 100%;
+        transition: left 0.5s ease;
+      }
+
+      .right-side {
+        top: 100%;
+        transition: top 0.5s ease;
+        transition-delay: 0.25s;
+      }
+
+      .down-side {
+        right: 100%;
+        transition: right 0.5s ease;
+        transition-delay: 0.5s;
+      }
+
+      .left-side {
+        bottom: 100%;
+        transition: bottom 0.5s ease;
+        transition-delay: 0.75s;
+      }
+    }
+
+    &-first {
+      color: $first-btn-color;
+
+      &:hover {
+        background-color: $first-btn-color;
+        box-shadow: 0 0 10px $first-btn-color,
+          0 0 40px $first-btn-color,
+          0 0 80px $first-btn-color;
+      }
+
+      &-top-side {
+        background: linear-gradient(90deg, transparent, $first-btn-color);
+      }
+
+      &-right-side {
+        background: linear-gradient(180deg, transparent, $first-btn-color);
+      }
+
+      &-down-side {
+        background: linear-gradient(270deg, transparent, $first-btn-color);
+      }
+
+      &-left-side {
+        background: linear-gradient(360deg, transparent, $first-btn-color);
+      }
+    }
+
+    &-second {
+      color: $second-btn-color;
+
+      &:hover {
+        background-color: $second-btn-color;
+        box-shadow: 0 0 10px $second-btn-color,
+          0 0 40px $second-btn-color,
+          0 0 80px $second-btn-color;
+      }
+
+      &-top-side {
+        background: linear-gradient(90deg, transparent, $second-btn-color);
+      }
+
+      &-right-side {
+        background: linear-gradient(180deg, transparent, $second-btn-color);
+      }
+
+      &-down-side {
+        background: linear-gradient(270deg, transparent, $second-btn-color);
+      }
+
+      &-left-side {
+        background: linear-gradient(360deg, transparent, $second-btn-color);
+      }
+    }
+
+    &-third {
+      color: $third-btn-color;
+
+      &:hover {
+        background-color: $third-btn-color;
+        box-shadow: 0 0 10px $third-btn-color,
+          0 0 40px $third-btn-color,
+          0 0 80px $third-btn-color;
+      }
+
+      &-top-side {
+        background: linear-gradient(90deg, transparent, $third-btn-color);
+      }
+
+      &-right-side {
+        background: linear-gradient(180deg, transparent, $third-btn-color);
+      }
+
+      &-down-side {
+        background: linear-gradient(270deg, transparent, $third-btn-color);
+      }
+
+      &-left-side {
+        background: linear-gradient(360deg, transparent, $third-btn-color);
+      }
+    }
+
+    &-decor {
+      position: absolute;
+      display: block;
+    }
+  }
+}
+
+@keyframes bg-1 {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 20% 70%;
+  }
+  50% {
+    background-position: 10% 100%;
+  }
+  75% {
+    background-position: -10% 30%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes bg-2 {
+  0% {
+    background-position: 0 0;
+    opacity: 0.7;
+  }
+  50% {
+    background-position: 10% 50%;
+    opacity: 0.5;
+  }
+  75% {
+    background-position: -10% 100%;
+    opacity: 0.7;
+  }
+  100% {
+    background-position: 0 0;
+    opacity: 1;
+  }
+}
+
+@keyframes counter-style {
+  0% {
+    color: #fc92c7;
+  }
+  50% {
+    color: #c777fc;
+  }
+  75% {
+    color: #ff188c;
+  }
+  100% {
+    color: #fc92c7;
+  }
+}

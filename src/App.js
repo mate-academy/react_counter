@@ -2,12 +2,9 @@ import React from 'react';
 import './App.scss';
 
 class App extends React.Component {
-  constructor(prop) {
-    super(prop);
-    this.state = {
-      count: 0,
-    };
-  }
+  state = {
+    count: 0,
+  };
 
   addOne = () => {
     this.setState(state => ({

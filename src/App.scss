@@ -1,1 +1,17 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: beige;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 100px;
+}

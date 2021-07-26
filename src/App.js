@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { Button } from './components/Button';
+import { Counter } from './components/Counter';
 
 class App extends React.Component {
   state = {
@@ -28,14 +28,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <h1 className="title">{this.state.counter}</h1>
-        <div className="buttons">
-          <Button text="add one" callback={this.addOne} />
-          <Button text="add 100" callback={this.add100} />
-          <Button text="increase" callback={this.increase} />
-        </div>
-      </div>
+      <Counter
+        counter={this.state.counter}
+        addOne={this.addOne}
+        add100={this.add100}
+        increase={this.increase}
+      />
     );
   }
 }

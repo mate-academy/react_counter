@@ -1,1 +1,16 @@
-// styles go here
+.App {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 400px;
+
+  &__title {
+    margin: 0 auto;
+    font-family: "Righteous", cursive;
+  }
+
+  &__buttons {
+    position: relative;
+    top: 3px;
+  }
+}

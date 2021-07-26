@@ -1,1 +1,40 @@
-// styles go here
+.calculate {
+    border: 2px solid grey;
+    display: inline-block;
+    padding: 2%;
+    border-radius: 5px;
+    background: greenyellow;
+
+    &__add-one {
+      width: 80px;
+      margin-right: 10px;
+      transition: 0.1s;
+      &:hover {
+        background: rgb(238, 152, 152);
+        border: 1px solid grey;
+        transition: 0.1s;
+    }
+    }
+
+    &__add-one_hundred {
+        width: 80px;
+        margin-right: 10px;
+        transition: 0.1s;
+        &:hover {
+            background: rgb(238, 152, 152);
+            border: 1px solid grey;
+            transition: 0.1s;
+        }
+    }
+
+    &__add-increase {
+        width: 80px;
+        margin-right: 10px;
+        transition: 0.1s;
+        &:hover {
+            transition: 0.1s;
+            background: rgb(238, 152, 152);
+            border: 1px solid grey;
+        }
+    }
+}

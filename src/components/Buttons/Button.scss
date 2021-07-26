@@ -1,0 +1,14 @@
+.button {
+  color: white;
+  border-color: brown;
+  background: brown;
+  padding: 5px;
+  &:hover {
+    transform: scale(1.1);
+    &:focus {
+        background: rgb(240, 60, 60);
+        border-color: rgb(240, 60, 60);;
+        
+    }
+  }
+}

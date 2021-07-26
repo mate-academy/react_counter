@@ -1,0 +1,10 @@
+.calculate {
+  background: rgb(255, 149, 149);
+  display: inline-block;
+  padding: 20px 60px;
+  border-radius: 10px;
+  &__container-button {
+    display: flex;
+    gap: 20px;
+  }
+}

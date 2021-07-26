@@ -9,25 +9,25 @@ export function Counter({ count, addOne, add100, increase, reset }) {
       <div className="buttons-container">
         <Button
           variant="outline-primary"
-          onClick={() => addOne()}
+          onClick={addOne}
         >
           + 1
         </Button>
         <Button
           variant="outline-primary"
-          onClick={() => add100()}
+          onClick={add100}
         >
           + 100
         </Button>
         <Button
           variant="outline-primary"
-          onClick={() => increase()}
+          onClick={increase}
         >
           Increase
         </Button>
         <Button
           variant="outline-danger"
-          onClick={() => reset()}
+          onClick={reset}
         >
           Reset
         </Button>

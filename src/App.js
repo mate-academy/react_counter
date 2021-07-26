@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import './App.scss';
 
 class App extends React.Component {
@@ -48,7 +49,13 @@ class App extends React.Component {
           </button>
           <button
             type="button"
-            className="button is-primary"
+            className={
+              classNames(
+                'button',
+                { 'is-primary': (count) % 5 !== 0 },
+                { 'is-link': (count) % 5 === 0 },
+              )
+            }
             onClick={this.increase}
           >
             1 or 100

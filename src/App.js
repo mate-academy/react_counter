@@ -58,7 +58,7 @@ class App extends React.Component {
             }
             onClick={this.increase}
           >
-            1 or 100
+            1 or 101
           </button>
         </div>
       </div>

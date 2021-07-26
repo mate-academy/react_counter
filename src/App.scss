@@ -1,1 +1,23 @@
-// styles go here
+.container {
+  padding: 20px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: max-content;
+  background-color: red;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+
+  & >:nth-child(n) {
+    background-color: yellowgreen
+  }
+}
+
+.title {
+  text-align: center;
+  color: blue;
+}

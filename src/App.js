@@ -22,10 +22,9 @@ class App extends React.Component {
     this.setState((state) => {
       if (state.count % 5 === 0) {
         this.add100();
-        this.addOne();
-      } else {
-        this.addOne();
       }
+
+      this.addOne();
     });
   }
 

@@ -4,7 +4,6 @@ import './App.scss';
 class App extends React.Component {
   state = {
     count: 0,
-    increaseCount: 0,
   };
 
   addOne = () => {
@@ -20,14 +19,11 @@ class App extends React.Component {
   };
 
   increase = () => {
-    if (this.state.increaseCount % 5 === 0) {
+    if (this.state.count % 5 === 0) {
       this.add100();
     }
 
     this.addOne();
-    this.setState(prevState => ({
-      increaseCount: prevState.increaseCount + 1,
-    }));
   };
 
   render() {

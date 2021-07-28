@@ -27,18 +27,21 @@ class App extends React.Component {
   };
 
   render() {
+    const { add100, addOne, increase } = this;
+    const { count } = this.state;
+
     return (
       <>
         <h1>
-          {`Count: ${this.state.count}`}
+          {`Count: ${count}`}
         </h1>
-        <button type="button" onClick={this.addOne}>
+        <button type="button" onClick={addOne}>
           addOne
         </button>
-        <button type="button" onClick={this.add100}>
+        <button type="button" onClick={add100}>
           add100
         </button>
-        <button type="button" onClick={this.increase}>
+        <button type="button" onClick={increase}>
           increase
         </button>
       </>

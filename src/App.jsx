@@ -29,15 +29,17 @@ class App extends React.Component {
   };
 
   render() {
+    const { addOne, add100, increase } = this;
+
     return (
       <>
         <Counter
           count={this.state.count}
         />
         <Button
-          addOne={this.addOne}
-          add100={this.add100}
-          increase={this.increase}
+          addOne={addOne}
+          add100={add100}
+          increase={increase}
         />
       </>
     );

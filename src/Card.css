@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+.dog {
+  background-image: url(./images/dog.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 341px;
+  height: 365px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+  display: flex;
+  align-self: flex-end;
+  margin-left: 20px;
+}

@@ -1,45 +1,113 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
-import { Counter } from './Counter';
+import { Card } from './Card';
 
-class App extends React.Component {
-  state = {
-    count: 0,
-  }
+const App = () => {
+  const [data, setData] = useState({});
+  const BASE_URL = 'https://run.mocky.io/v3';
+  const request = endpoint => fetch(`${BASE_URL}${endpoint}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`${response.status} - ${response.statusText}`);
+      }
 
-  addOne = () => {
-    this.setState(prevState => ({
-      count: prevState.count + 1,
-    }));
+      return response.json();
+    });
+
+  const petsData = () => request('/4b20aa37-9e1a-4155-82e0-386d171cb1f0');
+  const foodData = () => request('/b0e78282-d457-4790-97f0-d5c0642bee4d');
+  const plantsData = () => request('10a827d5-13b5-4cd6-a2d0-9f22dd7738d1');
+
+  const handleClickForPets = async() => {
+    const dataFromServer = await petsData()
+      .then((pets) => {
+      });
+
+    const searchedData = {
+      id: dataFromServer.id,
+      title: dataFromServer.title,
+      description: dataFromServer.description,
+      image: dataFromServer.image,
+      created: dataFromServer.created,
+      advID: dataFromServer.advID,
+    };
+
+    setData(searchedData);
   };
 
-  add100 = () => {
-    this.setState(prevState => ({
-      count: prevState.count + 100,
-    }));
+  const handleClickForFood = async() => {
+    const dataFromServer = await foodData()
+      .then((food) => {
+      });
+
+    const searchedData = {
+      id: dataFromServer.id,
+      title: dataFromServer.title,
+      description: dataFromServer.description,
+      image: dataFromServer.image,
+      created: dataFromServer.created,
+      advID: dataFromServer.advID,
+    };
+
+    setData(searchedData);
   };
 
-  increase = () => {
-    if (this.state.count % 5 === 0) {
-      this.add100();
-    }
+  const handleClickForPlants = async() => {
+    const dataFromServer = await plantsData()
+      .then((plants) => {
+      });
 
-    this.addOne();
+    const searchedData = {
+      id: dataFromServer.id,
+      title: dataFromServer.title,
+      description: dataFromServer.description,
+      image: dataFromServer.image,
+      created: dataFromServer.created,
+      advID: dataFromServer.advID,
+    };
+
+    setData(searchedData);
   };
 
-  render() {
-    return (
-      <div className="app">
-        <Counter
-          count={this.state.count}
-          addOne={this.addOne}
-          addOneHundred={this.add100}
-          increase={this.increase}
-        />
+  return (
+    <>
+      <div className="button--container">
+        <button
+          className="button  first"
+          type="button"
+          onClick={handleClickForPets}
+        >
+          PETS
+        </button>
+        <button
+          type="button"
+          className="button"
+          onClick={handleClickForFood}
+        >
+          FOOD
+        </button>
+        <button
+          type="button"
+          className="button"
+          onClick={handleClickForPlants}
+        >
+          PLANTS
+        </button>
       </div>
-
-    );
-  }
-}
+      <container className="container">
+        {data && (
+          <Card
+            id={data.id}
+            title={data.title}
+            description={data.description}
+            image={data.image}
+            created={data.created}
+            advID={data.advID}
+          />
+        )}
+      </container>
+    </>
+  );
+};
 
 export default App;

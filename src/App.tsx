@@ -6,7 +6,7 @@ interface State {
   count: number,
 }
 
-class App extends React.Component {
+class App extends React.Component<{}, State> {
   state: State = {
     count: 0,
   };

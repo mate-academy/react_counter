@@ -3,28 +3,30 @@ import './App.scss';
 import { Counter } from './components/Counter';
 
 interface State {
-  count: number,
+  counter: number;
 }
 
 class App extends React.Component<{}, State> {
   state: State = {
-    count: 0,
+    counter: 0,
   };
 
-  addOne = () => (
-    this.setState((previousState: State) => (
-      { count: previousState.count + 1 }))
-  );
+  addOne = () => {
+    this.setState((previousState) => ({
+      counter: previousState.counter + 1,
+    }));
+  };
 
-  add100 = () => (
-    this.setState((previousState: State) => (
-      { count: previousState.count + 100 }))
-  );
+  add100 = () => {
+    this.setState((previousState) => ({
+      counter: previousState.counter + 100,
+    }));
+  };
 
   increase = () => {
-    const { count } = this.state;
+    const { counter } = this.state;
 
-    if (count % 5 === 0) {
+    if (counter % 5 === 0) {
       this.add100();
     }
 
@@ -34,7 +36,7 @@ class App extends React.Component<{}, State> {
   render() {
     return (
       <Counter
-        count={this.state.count}
+        counter={this.state.counter}
         addOne={this.addOne}
         add100={this.add100}
         increase={this.increase}

@@ -3,20 +3,20 @@ import React from 'react';
 import './Counter.scss';
 
 interface Props {
-  count: number,
-  addOne: () => void,
-  add100: () => void,
-  increase: () => void,
+  counter: number;
+  addOne: () => void;
+  add100: () => void;
+  increase: () => void;
 }
 
 export const Counter: React.FC<Props> = ({
-  count,
+  counter,
   addOne,
   add100,
   increase,
 }) => (
   <div className="counter">
-    <h1>{`Count: ${count}`}</h1>
+    <h1>{`Count: ${counter}`}</h1>
     <button
       className="counter__button"
       type="button"

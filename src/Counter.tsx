@@ -1,49 +1,34 @@
-import React, { Props } from 'react';
+import React from 'react';
 import { Button } from './Button';
 import './Counter.scss';
 
-export class Counter extends React.Component<Props<State>, State> {
+export class Counter extends React.Component<{}, State> {
   state: State = {
     count: 0,
   };
 
   addOne = () => {
-    this.state.count += 1;
-
-    this.setState((prevState: State) => {
-      return {
-        count: prevState.count,
-      };
-    });
+    this.setState((prevState: State) => ({
+      count: prevState.count + 1,
+    }));
   };
 
   add100 = () => {
-    this.state.count += 100;
-
-    this.setState((prevState: State) => {
-      return {
-        count: prevState.count,
-      };
-    });
+    this.setState((prevState: State) => ({
+      count: prevState.count + 100,
+    }));
   };
 
   increase = () => {
-    this.addOne();
-
-    if ((this.state.count - 1) % 5 === 0) {
+    if ((this.state.count) % 5 === 0) {
       this.add100();
     }
 
-    this.setState((prevState: State) => {
-      return {
-        count: prevState.count,
-      };
-    });
+    this.addOne();
   };
 
   render() {
     const { count } = this.state;
-    const { addOne, add100, increase } = this;
 
     return (
       <div className="Counter">
@@ -52,15 +37,15 @@ export class Counter extends React.Component<Props<State>, State> {
         </h1>
         <div className="Counter__buttons">
           <Button
-            action={addOne}
+            action={this.addOne}
             text="Add 1"
           />
           <Button
-            action={add100}
+            action={this.add100}
             text="Add 100"
           />
           <Button
-            action={increase}
+            action={this.increase}
             text="Increase"
           />
         </div>

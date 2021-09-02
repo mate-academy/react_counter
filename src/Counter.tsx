@@ -44,27 +44,34 @@ export class Counter extends React.Component<Props<State>, State> {
     const { count } = this.state;
 
     return (
-      <>
-        <h1>{`Count: ${count}`}</h1>
-        <button
-          type="button"
-          onClick={this.addOne}
-        >
-          Add 1
-        </button>
-        <button
-          type="button"
-          onClick={this.add100}
-        >
-          Add 100
-        </button>
-        <button
-          type="button"
-          onClick={this.increase}
-        >
-          Increase
-        </button>
-      </>
+      <div className="Counter">
+        <h1 className="Counter__title">
+          {`Count: ${count}`}
+        </h1>
+        <div className="Counter__buttons">
+          <button
+            type="button"
+            onClick={this.addOne}
+            className="Counter__button"
+          >
+            Add 1
+          </button>
+          <button
+            type="button"
+            onClick={this.add100}
+            className="Counter__button"
+          >
+            Add 100
+          </button>
+          <button
+            type="button"
+            onClick={this.increase}
+            className="Counter__button"
+          >
+            Increase
+          </button>
+        </div>
+      </div>
     );
   }
 }

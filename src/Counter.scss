@@ -1,1 +1,16 @@
-// styles go here
+.Counter {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__button {
+    padding: 5px;
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Counter.scss';
+import { Button } from './Button';
 
 type State = {
   counter: number;
@@ -37,29 +38,20 @@ export class Counter extends React.Component<{}, State> {
       <section>
         <h1>{`Count: ${counter}`}</h1>
 
-        <button
-          type="button"
-          className="btn btn-outline-success"
-          onClick={this.addOne}
-        >
-          Add 1
-        </button>
+        <Button
+          name="Add 1"
+          action={this.addOne}
+        />
 
-        <button
-          type="button"
-          className="btn btn-outline-success"
-          onClick={this.add100}
-        >
-          Add 100
-        </button>
+        <Button
+          name="Add 100"
+          action={this.add100}
+        />
 
-        <button
-          type="button"
-          className="btn btn-outline-success"
-          onClick={this.increase}
-        >
-          Increase
-        </button>
+        <Button
+          name="Increase"
+          action={this.increase}
+        />
       </section>
     );
   }

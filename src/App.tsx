@@ -6,12 +6,14 @@ type State = {
 };
 
 class App extends React.Component<{}, State> {
-  state = {
+  state: State = {
     count: 0,
   };
 
   increase = (increaseValue: number) => {
-    this.setState((state) => ({ count: state.count + increaseValue }));
+    this.setState((state: State) => (
+      { count: state.count + increaseValue }
+    ));
   };
 
   addOne = () => {

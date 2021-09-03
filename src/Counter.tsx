@@ -10,19 +10,19 @@ export class Counter extends React.Component<{}, State> {
   };
 
   add1 = () => {
-    this.setState((prevState: State): State => {
+    this.setState((prevState) => {
       return { count: prevState.count + 1 };
     });
   };
 
   add100 = () => {
-    this.setState((prevState: State): State => {
+    this.setState((prevState) => {
       return { count: prevState.count + 100 };
     });
   };
 
   weirdAdd = () => {
-    this.setState((prevState: State): State => {
+    this.setState((prevState) => {
       const { count } = prevState;
       const newCount = count % 5 === 0 ? count + 101 : count + 1;
 

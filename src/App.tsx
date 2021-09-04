@@ -1,7 +1,11 @@
 import React from 'react';
 import './App.scss';
 
-class App extends React.Component {
+type State = {
+  num: number,
+};
+
+class App extends React.Component<{}, State> {
   state = {
     num: 0,
   };

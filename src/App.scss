@@ -1,1 +1,32 @@
-// styles go here
+.App {
+  font-family: Arial, sans-serif;
+  
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin: auto;
+
+    background-color: rgb(245, 207, 207);
+    border: 3px solid rgb(250, 170, 183);
+    border-radius: 20px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  &__button {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 50px;
+
+    background-color: rgb(255, 116, 139);
+    border: transparent;
+    border-radius: 15px;
+  }
+}

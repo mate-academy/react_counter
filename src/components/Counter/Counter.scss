@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color:thistle;
+}
+
+.container {
+  background-color:deepskyblue;
+  width: 330px;
+  height: 150px;
+  font-family: cursive;
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+}
+
+.button {
+  background-color:gold;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  margin: 5px;
+}

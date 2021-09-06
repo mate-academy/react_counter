@@ -41,9 +41,9 @@ class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="App">
-        <div className="container">
-          <h1 className="title">
+      <div className="App bg-warning vh-100 p-3">
+        <div className="container text-center">
+          <h1 className="title mb-4">
             Count:
             {' '}
             {count}
@@ -52,7 +52,7 @@ class App extends React.Component<{}, State> {
           <div className="row">
             <button
               type="button"
-              className="button col p-2 p-xl-3"
+              className="button col p-2 p-xl-3 btn btn-success rounded-pill"
               onClick={this.addOne}
             >
               Add One
@@ -60,7 +60,7 @@ class App extends React.Component<{}, State> {
 
             <button
               type="button"
-              className="button col p-2 p-xl-3"
+              className="button col p-2 p-xl-3 btn btn-success mx-4 rounded-pill"
               onClick={this.add100}
             >
               Add 100
@@ -68,7 +68,7 @@ class App extends React.Component<{}, State> {
 
             <button
               type="button"
-              className="button col p-2 p-xl-3"
+              className="button col p-2 btn btn-success p-xl-3 rounded-pill"
               onClick={this.increase}
             >
               Increase

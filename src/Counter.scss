@@ -1,0 +1,31 @@
+.Counter {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.count {
+  margin: 20px auto;
+}
+
+.Counter,
+.count,
+.buttons {
+  width: max-content;
+}
+
+.buttons {
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.button {
+  background-color: antiquewhite;
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid black;
+  }
+}

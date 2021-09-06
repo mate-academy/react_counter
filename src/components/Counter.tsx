@@ -16,7 +16,7 @@ export const Counter: React.FC<Props> = (props) => {
   } = props;
 
   return (
-    <div className="col align-self-center">
+    <div className="col">
       <h1 className="text-center">
         {`Count: ${count}`}
       </h1>

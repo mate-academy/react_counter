@@ -1,4 +1,6 @@
 import React from 'react';
+import { Counter } from './component/Counter';
+
 import './App.scss';
 
 type State = {
@@ -11,14 +13,14 @@ class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((prevState) => ({
-      count: prevState.count + 1,
+    this.setState((currentState) => ({
+      count: currentState.count + 1,
     }));
   };
 
   add100 = () => {
-    this.setState((prevState) => ({
-      count: prevState.count + 100,
+    this.setState((currentState) => ({
+      count: currentState.count + 100,
     }));
   };
 
@@ -34,37 +36,12 @@ class App extends React.Component<{}, State> {
 
   render() {
     return (
-      <>
-        <div className="App">
-          <h1>
-            <b>Count: </b>
-            {this.state.count}
-          </h1>
-          <div className="App__button">
-            <button
-              type="button"
-              className="btn btn-dark"
-              onClick={this.addOne}
-            >
-              add 1
-            </button>
-            <button
-              type="button"
-              className="btn btn-dark"
-              onClick={this.add100}
-            >
-              add 100
-            </button>
-            <button
-              type="button"
-              className="btn btn-dark"
-              onClick={this.increase}
-            >
-              increase
-            </button>
-          </div>
-        </div>
-      </>
+      <Counter
+        count={this.state.count}
+        addOne={this.addOne}
+        add100={this.add100}
+        increase={this.increase}
+      />
     );
   }
 }

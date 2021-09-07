@@ -35,9 +35,7 @@ class App extends React.Component<{}, State> {
       <div className="App">
         <div className="App__wrapper">
           <h1 className="App__title">
-            Count:
-            {' '}
-            {this.state.count}
+            {`Count: ${this.state.count}`}
           </h1>
           <div className="App__buttons">
             <button

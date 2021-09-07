@@ -37,8 +37,7 @@ class App extends React.Component<{}, State> {
     return (
       <div className="d-flex flex-column justify-content-center align-items-center">
         <h1 className="col">
-          Count:
-          {' '}
+          {'Count: '}
           {count}
         </h1>
 

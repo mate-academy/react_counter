@@ -8,6 +8,8 @@ type Props = {
 
 export const Button: React.FC<Props> = (props) => {
   const { buttonName, action } = props;
+  // eslint-disable-next-line
+  console.log('Button');
 
   return (
     <button

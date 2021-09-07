@@ -22,12 +22,10 @@ export class Counter extends React.Component<{}, State> {
   };
 
   weirdAdd = () => {
-    this.setState((prevState) => {
-      const { count } = prevState;
-      const newCount = count % 5 === 0 ? count + 101 : count + 1;
-
-      return { count: newCount };
-    });
+    this.add1();
+    if (this.state.count % 5 === 0) {
+      this.add100();
+    }
   };
 
   render() {

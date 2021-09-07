@@ -1,0 +1,17 @@
+.Counter {
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  &__button {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 50px;
+
+    background-color: rgb(255, 116, 139);
+    border: transparent;
+    border-radius: 15px;
+  }
+}

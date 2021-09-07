@@ -11,14 +11,14 @@ export class Counter extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((state) => ({
-      counter: state.counter + 1,
+    this.setState((currentState) => ({
+      counter: currentState.counter + 1,
     }));
   };
 
   add100 = () => {
-    this.setState((state) => ({
-      counter: state.counter + 100,
+    this.setState((currentState) => ({
+      counter: currentState.counter + 100,
     }));
   };
 
@@ -37,13 +37,13 @@ export class Counter extends React.Component<{}, State> {
           Count:
           {this.state.counter}
         </h1>
-        <button type="submit" className="addButton" onClick={() => this.addOne()}>
+        <button type="submit" className="addButton" onClick={this.addOne}>
           Add 1
         </button>
-        <button type="submit" className="addButton" onClick={() => this.add100()}>
+        <button type="submit" className="addButton" onClick={this.add100}>
           Add 100
         </button>
-        <button type="submit" className="addButton" onClick={() => this.increase()}>
+        <button type="submit" className="addButton" onClick={this.increase}>
           Add 1 ***
         </button>
       </>

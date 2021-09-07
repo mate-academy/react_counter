@@ -14,22 +14,3 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
-
-.button {
-  width: 100px;
-  height: 40px;
-  padding: 10px;
-
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
-
-  &:hover {
-    background-color: rgb(231, 227, 227);
-    cursor: pointer;
-  }
-}
-
-.buttons {
-  margin-top: 10px;
-}

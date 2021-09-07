@@ -40,7 +40,7 @@ export const Counter: React.FC<Props> = (props) => {
           className="btn btn-outline-secondary"
           onClick={increase}
         >
-          Add 1 or 100
+          Increase
         </button>
       </div>
     </div>

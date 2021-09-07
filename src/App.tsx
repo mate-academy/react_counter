@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Counter } from './Counter';
 import './App.scss';
 
 type State = {
@@ -12,14 +12,14 @@ class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((state) => ({
-      count: state.count + 1,
+    this.setState((currentState) => ({
+      count: currentState.count + 1,
     }));
   };
 
   add100 = () => {
-    this.setState((state) => ({
-      count: state.count + 100,
+    this.setState((currentState) => ({
+      count: currentState.count + 100,
     }));
   };
 
@@ -36,37 +36,12 @@ class App extends React.Component<{}, State> {
 
     return (
       <main className="main">
-        <h1>
-          {'Count: '}
-          {count}
-        </h1>
-        <div
-          className="btn-group"
-          role="group"
-          aria-label="Basic mixed styles example"
-        >
-          <button
-            type="button"
-            className="btn btn-danger"
-            onClick={this.addOne}
-          >
-            Add 1
-          </button>
-          <button
-            type="button"
-            className="btn btn-warning"
-            onClick={this.add100}
-          >
-            Add 100
-          </button>
-          <button
-            type="button"
-            className="btn btn-success"
-            onClick={this.increase}
-          >
-            Some magic
-          </button>
-        </div>
+        <Counter
+          count={count}
+          addOne={this.addOne}
+          add100={this.add100}
+          increase={this.increase}
+        />
       </main>
     );
   }

@@ -1,1 +1,38 @@
-// styles go here
+html {
+  font-family: Arial;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-btn-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn {
+    width: 150px;
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lighten(green, 10%);
+    }
+  }
+}

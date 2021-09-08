@@ -15,7 +15,7 @@ export const Counter: React.FC<Props> = ({
   increase,
 }) => (
   <>
-    <h1>
+    <h1 className="mb-3">
       {`Count: ${count}`}
     </h1>
     <div>

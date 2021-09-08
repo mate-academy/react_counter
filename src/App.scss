@@ -1,1 +1,23 @@
-// styles go here
+.card {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(0, 238, 255);
+}
+
+.card-button {
+  margin-right: 20px;
+  background-color: coral;
+  border: 1px solid coral;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+
+  &:active {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 2px 1px rgb(163, 127, 113);
+  }
+}

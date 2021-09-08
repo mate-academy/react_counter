@@ -1,0 +1,32 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+
+  &__title {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__button {
+    padding: 20px 35px;
+    border: 1px solid #a9a9a9;
+    transition: box-shadow 0.3s, background-color 0.3s;
+
+    &:hover {
+      box-shadow: 1px -1px 14px -1px rgba(46, 52, 64, 0.2);
+    }
+
+    &:active {
+      background-color: #ffa500;
+    }
+  }
+}

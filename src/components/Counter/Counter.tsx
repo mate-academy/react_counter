@@ -38,7 +38,7 @@ export class Counter extends React.Component<{}, State> {
   render() {
     return (
       <div className="container-fluid">
-        <h1 className="alert alert-info">
+        <h1 className="alert alert-info align-items-center">
           Count:
           {' '}
           {this.state.counter}

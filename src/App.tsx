@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 type State = {
   counter: number;
@@ -36,11 +37,13 @@ class App extends React.Component<{}, State> {
       <>
         <h1>
           Count:
+          {' '}
           {counter}
         </h1>
 
         <button
           type="button"
+          className="btn btn-danger"
           onClick={this.addOne}
         >
           Add 1
@@ -48,6 +51,7 @@ class App extends React.Component<{}, State> {
 
         <button
           type="button"
+          className="btn btn-warning"
           onClick={this.add100}
         >
           Add 100
@@ -55,6 +59,7 @@ class App extends React.Component<{}, State> {
 
         <button
           type="button"
+          className="btn btn-success"
           onClick={this.increase}
         >
           Increase

@@ -1,5 +1,4 @@
 import React from 'react';
-import './counter.scss';
 
 type State = {
   count: number;
@@ -42,8 +41,20 @@ export class Counter extends React.Component<{}, State> {
           {count}
         </h1>
         <div className="container">
-          <button type="button" onClick={this.addOne} className="btn btn-primary me-3">Add 1</button>
-          <button type="button" onClick={this.add100} className="btn btn-primary me-3">Add 100</button>
+          <button
+            type="button"
+            onClick={this.addOne}
+            className="btn btn-primary me-3"
+          >
+            Add 1
+          </button>
+          <button
+            type="button"
+            onClick={this.add100}
+            className="btn btn-primary me-3"
+          >
+            Add 100
+          </button>
           <button
             type="button"
             onClick={() => {

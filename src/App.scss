@@ -1,1 +1,28 @@
-// styles go here
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: aqua;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: red;
+}
+
+.button {
+  width: 200px;
+  height: 50px;
+  background-color: sandybrown;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  transition: transform 1s;
+}
+
+.button:hover {
+  transform: scale(1.2);
+}
+

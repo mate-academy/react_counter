@@ -11,28 +11,23 @@ class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((state) => {
-      return {
-        counter: state.counter + 1,
-      };
-    });
+    this.setState((state) => ({ counter: state.counter + 1 }));
   };
 
   add100 = () => {
-    this.setState((state) => {
-      return {
-        counter: state.counter + 100,
-      };
-    });
+    this.setState((state) => ({ counter: state.counter + 100 }));
   };
 
   increase = () => {
     this.setState((state) => {
       const { counter } = state;
 
-      return {
-        counter: counter + (counter % 5 === 0 && counter !== 0 ? 101 : 1),
-      };
+      if (counter % 5 === 0 && counter !== 0) {
+        this.add100();
+        this.addOne();
+      } else {
+        this.addOne();
+      }
     });
   };
 

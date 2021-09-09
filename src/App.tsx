@@ -27,11 +27,10 @@ class App extends React.Component<{}, State> {
     this.setState((currentState) => {
       const currentCount = currentState.count;
 
-      if (currentCount % 5 === 0 && currentCount !== 0) {
+      this.addOne();
+
+      if (currentCount % 5 === 0) {
         this.add100();
-        this.addOne();
-      } else {
-        this.addOne();
       }
 
       return { count: currentCount };

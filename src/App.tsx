@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './App.scss';
 
 type State = {
@@ -40,30 +41,34 @@ class App extends React.Component<{}, State> {
 
   render() {
     return (
-      <>
-        <h1>
+      <div className="block">
+        <h1 className="title">
           Count:
+          {' '}
           {this.state.counter}
         </h1>
         <button
           type="button"
+          className="button btn btn-outline-info color-active"
           onClick={this.addOne}
         >
           Add 1
         </button>
         <button
           type="button"
+          className="button btn btn-outline-info color-active"
           onClick={this.add100}
         >
           Add 100
         </button>
         <button
           type="button"
+          className="button btn btn-outline-primary"
           onClick={this.increase}
         >
           Increase
         </button>
-      </>
+      </div>
     );
   }
 }

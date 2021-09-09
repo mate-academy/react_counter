@@ -10,35 +10,23 @@ export class Counter extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((prevState) => {
-      return {
-        count: prevState.count + 1,
-      };
-    });
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
+    }));
   };
 
   add100 = () => {
-    this.setState((prevState) => {
-      return {
-        count: prevState.count + 100,
-      };
-    });
+    this.setState((prevState) => ({
+      count: prevState.count + 100,
+    }));
   };
 
   increase = () => {
-    if (this.state.count % 5 === 0) {
-      this.setState((prevState) => {
-        return {
-          count: prevState.count + 100,
-        };
-      });
-    }
+    this.addOne();
 
-    this.setState((prevState) => {
-      return {
-        count: prevState.count + 1,
-      };
-    });
+    if (this.state.count % 5 === 0) {
+      this.add100();
+    }
   };
 
   render() {

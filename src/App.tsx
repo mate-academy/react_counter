@@ -35,15 +35,12 @@ class App extends React.Component<{}, State> {
   };
 
   increase = () => {
-    this.setState((currentState) => {
-      let { number } = currentState;
-
-      number += number % 5 ? 1 : 100;
-
-      return {
-        number,
-      };
-    });
+    if (this.state.number % 5) {
+      this.addOne();
+    } else {
+      this.addOne();
+      this.add100();
+    }
   };
 
   render() {
@@ -59,6 +56,7 @@ class App extends React.Component<{}, State> {
         >
           add 1
         </button>
+        {' '}
         <button
           type="button"
           className="button is-success is-focused"
@@ -66,6 +64,7 @@ class App extends React.Component<{}, State> {
         >
           add 100
         </button>
+        {' '}
         <button
           type="button"
           className="button is-success is-focused"

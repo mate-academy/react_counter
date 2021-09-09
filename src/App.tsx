@@ -3,41 +3,31 @@ import './App.scss';
 
 type State = {
   sum: number,
-  counter: number,
 };
 
 class App extends React.Component<{}, State> {
   state = {
     sum: 0,
-    counter: 5,
   };
 
   addOne = () => {
-    this.setState(state => ({
-      sum: state.sum + 1,
+    this.setState(currentState => ({
+      sum: currentState.sum + 1,
     }));
   };
 
   add100 = () => {
-    this.setState(state => ({
-      sum: state.sum + 100,
+    this.setState(currentState => ({
+      sum: currentState.sum + 100,
     }));
   };
 
   increase = () => {
-    this.setState((state) => {
-      if (state.counter !== 1) {
-        return {
-          sum: state.sum + 1,
-          counter: state.counter - 1,
-        };
-      }
-
-      return {
-        sum: state.sum + 5,
-        counter: state.counter + 5,
-      };
-    });
+    if (this.state.sum % 5 > 0 || this.state.sum === 0) {
+      this.addOne();
+    } else {
+      this.add100();
+    }
   };
 
   render() {

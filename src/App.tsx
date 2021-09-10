@@ -33,12 +33,14 @@ class App extends React.Component<{}, State> {
 
   render() {
     return (
-      <Counter
-        count={this.state.count}
-        addOne={this.addOne}
-        add100={this.add100}
-        increase={this.increase}
-      />
+      <div className="App">
+        <Counter
+          count={this.state.count}
+          addOne={this.addOne}
+          add100={this.add100}
+          increase={this.increase}
+        />
+      </div>
     );
   }
 }

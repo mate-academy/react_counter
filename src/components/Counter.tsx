@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Counter.scss';
+
 type Props = {
   count: number;
   addOne: () => void;
@@ -17,11 +19,13 @@ export const Counter: React.FC<Props> = (props) => {
 
   return (
     <>
-      <h1>{`Count: ${count}`}</h1>
+      <h1 className="title">
+        {`Count: ${count}`}
+      </h1>
 
       <button
         type="button"
-        className="button buttonOne"
+        className="button"
         onClick={addOne}
       >
         Add One
@@ -29,7 +33,7 @@ export const Counter: React.FC<Props> = (props) => {
 
       <button
         type="button"
-        className="button buttonOne"
+        className="button"
         onClick={add100}
       >
         Add One hundred
@@ -37,7 +41,7 @@ export const Counter: React.FC<Props> = (props) => {
 
       <button
         type="button"
-        className="button buttonOne"
+        className="button"
         onClick={increase}
       >
         Button with secret

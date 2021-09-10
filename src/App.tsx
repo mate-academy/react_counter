@@ -12,33 +12,23 @@ class App extends React.Component<{}, State> {
 
   addOne = () => {
     this.setState((currentState) => {
-      let { number } = currentState;
-
-      number += 1;
-
       return {
-        number,
+        number: currentState.number + 1,
       };
     });
   };
 
   add100 = () => {
     this.setState((currentState) => {
-      let { number } = currentState;
-
-      number += 100;
-
       return {
-        number,
+        number: currentState.number + 100,
       };
     });
   };
 
   increase = () => {
-    if (this.state.number % 5) {
-      this.addOne();
-    } else {
-      this.addOne();
+    this.addOne();
+    if (this.state.number % 5 === 0) {
       this.add100();
     }
   };

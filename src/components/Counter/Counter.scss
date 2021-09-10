@@ -1,0 +1,31 @@
+.Counter {
+  border: 3px solid gainsboro;
+  border-radius: 15px;
+  padding: 25px 30px;
+}
+
+.Counter__title {
+  text-align: center;
+}
+
+.Counter__Add_1_Button,
+.Counter__Add_100_Button {
+  margin-right: 25px;
+}
+
+.Counter__Add_1_Button,
+.Counter__Add_100_Button,
+.Counter__Add_1or100_Button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+
+  &:hover {
+    background-color: lightgray;
+  }
+
+  &:active {
+    background-color: slategrey;
+  }
+
+}

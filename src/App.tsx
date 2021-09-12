@@ -5,19 +5,19 @@ type AppState = {
   count: number;
 };
 
-class App extends React.Component {
+class App extends React.Component<{}, AppState> {
   state: AppState = {
     count: 0,
   };
 
   addOne = () => {
-    this.setState((state: AppState): AppState => ({
+    this.setState((state) => ({
       count: state.count + 1,
     }));
   };
 
   add100 = () => {
-    this.setState((state: AppState): AppState => ({
+    this.setState((state) => ({
       count: state.count + 100,
     }));
   };

@@ -1,0 +1,11 @@
+.title {
+  background-color: aliceblue;
+  width: 200px;
+}
+
+.button {
+  padding: 10px;
+  background-color: chocolate;
+  margin: 5px;
+  color: azure;
+}

@@ -1,14 +1,35 @@
 import React from 'react';
 import './Style.css';
 
-type Props = {
+type State = {
   count: number,
-  addOne: () => void,
-  add100: () => void,
-  increase: () => void,
 };
 
-export class Counter extends React.PureComponent<Props> {
+export class Counter extends React.PureComponent<{}, State> {
+  state = {
+    count: 0,
+  };
+
+  addOne = () => {
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
+    }));
+  };
+
+  add100 = () => {
+    this.setState((prevState) => ({
+      count: prevState.count + 100,
+    }));
+  };
+
+  increase = () => {
+    if (this.state.count % 5 === 0) {
+      this.add100();
+    }
+
+    this.addOne();
+  };
+
   render() {
     return (
       <>
@@ -16,27 +37,27 @@ export class Counter extends React.PureComponent<Props> {
           <h1>
             Count:
             {' '}
-            {this.props.count}
+            {this.state.count}
           </h1>
         </div>
         <button
           type="button"
           className="button"
-          onClick={this.props.addOne}
+          onClick={this.addOne}
         >
           addOne
         </button>
         <button
           type="button"
           className="button"
-          onClick={this.props.add100}
+          onClick={this.add100}
         >
           add100
         </button>
         <button
           type="button"
           className="button"
-          onClick={this.props.increase}
+          onClick={this.increase}
         >
           increase
         </button>

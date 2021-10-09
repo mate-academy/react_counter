@@ -1,1 +1,23 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(241, 77, 247, 0.637);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(94, 94, 94);
+  font-size: 20px;
+}

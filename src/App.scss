@@ -1,1 +1,23 @@
-// styles go here
+.button {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  text-align: center;
+  color: rgb(160, 160, 255);
+}
+
+.color-active:hover {
+  color: white;
+}

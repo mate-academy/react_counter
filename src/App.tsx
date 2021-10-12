@@ -3,13 +3,11 @@ import './App.scss';
 
 interface State {
   number: number,
-  count: number,
 }
 
 class App extends React.Component<{}, State> {
   state = {
     number: 0,
-    count: 0,
   };
 
   addOne = () => {
@@ -29,21 +27,11 @@ class App extends React.Component<{}, State> {
   };
 
   increase = () => {
-    this.setState((state) => {
-      return {
-        count: state.count + 1,
-      };
-    });
-
-    if (this.state.count % 5 === 0) {
-      this.setState((state) => {
-        return {
-          number: state.number + 100,
-        };
-      });
+    if (this.state.number % 5 === 0) {
+      this.add100();
     }
 
-    return this.addOne();
+    this.addOne();
   };
 
   reset = () => {

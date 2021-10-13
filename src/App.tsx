@@ -58,6 +58,14 @@ class App extends React.Component<{}, State> {
           >
             Increase
           </button>
+          <button
+            type="button"
+            onClick={() => {
+              this.setState({ counter: 0 });
+            }}
+          >
+            Reset
+          </button>
         </div>
       </>
     );

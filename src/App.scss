@@ -1,1 +1,14 @@
-// styles go here
+body {
+  background-color: rgb(233, 109, 233);
+}
+
+.app {
+  text-align: center;
+}
+
+.buttons {
+  &__item {
+    margin: 0 20px;
+    padding: 10px 20px;
+  }
+}

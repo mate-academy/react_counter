@@ -1,0 +1,53 @@
+.Counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+  &__title {
+    font-size: 86px;
+    color: mix(#fff, #81cffc, 85%);
+    text-shadow: -0.01em 0.01em 0 mix(#fff, #3bb7ff, 94%),
+      0.01em 0.01em 0 mix(#fff, #3bb7ff, 60%),
+      0.01em 0.01em 0 mix(#fff, #3bb7ff, 62%),
+      0.01em 0.01em mix(#fff, #3bb7ff, 64%),
+      0.02em 0.02em 0 mix(#fff, #3bb7ff, 66%),
+      0.03em 0.03em 0 mix(#fff, #3bb7ff, 68%),
+      0.03em 0.03em 0 mix(#fff, #3bb7ff, 70%),
+      0.04em 0.04em 0 mix(#fff, #3bb7ff, 72%);
+
+    &-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__button {
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 12px;
+    display: inline-block;
+    background-color: rgba(51, 51, 51, 0.05);
+    border-radius: 8px;
+    border: #81cffc solid 1px;
+    border-width: 0.1px;
+    color: #81cffc;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-family: "Times New Roman", Times, serif;
+
+    &:hover {
+      color: rgb(91, 181, 255);
+      transform: scale(1.05);
+    }
+  }
+}

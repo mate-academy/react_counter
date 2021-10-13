@@ -1,1 +1,15 @@
-// styles go here
+.buttons-block {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  font-size: 20px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: black;
+  }
+}

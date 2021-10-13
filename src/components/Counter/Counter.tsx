@@ -3,7 +3,7 @@ import React from 'react';
 type Props = {
   addOne: () => void,
   add100: () => void,
-  increase: () => void,
+  add: () => void,
   counter: number,
 };
 
@@ -40,12 +40,7 @@ export class Counter extends React.PureComponent<Props> {
         <button
           type="button"
           onClick={() => {
-            if (counter % 5 === 0) {
-              this.props.addOne();
-              this.props.add100();
-            } else {
-              this.props.addOne();
-            }
+            this.props.add();
           }}
         >
           + 1

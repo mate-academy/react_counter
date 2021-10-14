@@ -3,13 +3,16 @@ import './Counter.scss';
 
 interface State {
   counter: number,
-  increaseTimes: number,
 }
+
+interface Style {
+  backgroundColor: string,
+}
+
 
 export default class Count extends React.Component<{}, State> {
   state:State = {
     counter: 0,
-    increaseTimes: 0,
   };
 
   addOne = () => {
@@ -17,37 +20,34 @@ export default class Count extends React.Component<{}, State> {
   };
 
   add100 = () => {
-    if (this.state.increaseTimes < 4) {
-      this.setState(({ counter }) => ({ counter: counter + 100 }));
-    } else {
-      this.setState(({ counter }) => ({ counter: counter + 101 }));
-    }
+    this.setState(({ counter }) => ({ counter: counter + 100 }));
   };
 
   increase = () => {
-    if (this.state.counter === 0) {
+    if (this.state.counter === 0 || this.state.counter % 5 === 0) {
       this.setState(({ counter }) => ({ counter: counter + 101 }));
-    } else if (this.state.increaseTimes < 4) {
-      this.addOne();
-      this.setState(({ increaseTimes}) => ({ increaseTimes: increaseTimes + 1 }));
     } else {
-      this.add100();
-      this.setState({ increaseTimes: 0 });
+      this.addOne();
     }
   };
 
   reset = () => {
-    this.setState({ counter: 0, increaseTimes: 0 });
+    this.setState({ counter: 0 });
   };
 
   render() {
     const { counter } = this.state;
 
+    const style:Style = {
+      backgroundColor: '',
+    }
+
+    this.state.counter % 5 === 0 ? (style.backgroundColor = '#e7912e') : null;
+
     return (
       <div className="counter">
         <h1 className="counter__title" onClick={this.reset} onKeyDown={this.reset}>
-          Count:
-          {counter}
+         Count: {counter}
         </h1>
 
         <button type="button" className="button button__addone" onClick={this.addOne}>
@@ -58,8 +58,8 @@ export default class Count extends React.Component<{}, State> {
           Add 100
         </button>
 
-        <button type="button" className="button button__increase" onClick={this.increase}>
-          Increase
+        <button type="button" style = {{ backgroundColor: style.backgroundColor }}className="button button__increase" onClick={this.increase}>
+          {this.state.counter % 5 === 0  ? `Add 101` : `Increase`}
         </button>
       </div>
     );

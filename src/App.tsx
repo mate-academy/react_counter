@@ -44,10 +44,34 @@ class App extends React.Component<{}, State> {
           {count}
         </h1>
         <div className="buttons">
-          <button className="button" type="button" onClick={this.addOne}>+1</button>
-          <button className="button" type="button" onClick={this.add100}>+100</button>
-          <button className="button" type="button" onClick={this.increase}>Increase</button>
-          <button className="button" type="button" onClick={this.reset}>Reset</button>
+          <button
+            className="button"
+            type="button"
+            onClick={this.addOne}
+          >
+            +1
+          </button>
+          <button
+            className="button"
+            type="button"
+            onClick={this.add100}
+          >
+            +100
+          </button>
+          <button
+            className="button"
+            type="button"
+            onClick={this.increase}
+          >
+            Increase
+          </button>
+          <button
+            className="button"
+            type="button"
+            onClick={this.reset}
+          >
+            Reset
+          </button>
         </div>
       </div>
     );

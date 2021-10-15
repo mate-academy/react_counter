@@ -45,19 +45,19 @@ export class Counter extends React.Component<{}, State> {
             type="button"
             onClick={this.addOne}
           >
-            1
+            Add 1
           </button>
           <button
             type="button"
             onClick={this.add100}
           >
-            2
+            Add 100
           </button>
           <button
             type="button"
             onClick={this.increase}
           >
-            3
+            Add 1 or 100
           </button>
         </div>
       </div>

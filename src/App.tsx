@@ -45,7 +45,6 @@ class App extends React.Component<{}, State> {
           {count}
         </h1>
         <button
-          className="list__button"
           type="button"
           onClick={() => {
             this.addOne();
@@ -54,7 +53,6 @@ class App extends React.Component<{}, State> {
           Add 1
         </button>
         <button
-          className="list__button"
           type="button"
           onClick={() => {
             this.add100();
@@ -63,7 +61,6 @@ class App extends React.Component<{}, State> {
           Add 100
         </button>
         <button
-          className="list__button"
           type="button"
           onClick={() => {
             this.increase();

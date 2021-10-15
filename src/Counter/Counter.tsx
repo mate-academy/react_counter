@@ -22,7 +22,7 @@ export class Counter extends React.Component<{}, { count: number }> {
 
     this.addOne();
 
-    if (!(count % 5) && count !== 0) {
+    if (count % 5 === 0) {
       this.add100();
     }
   };

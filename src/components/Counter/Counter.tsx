@@ -67,7 +67,7 @@ export class Counter extends React.Component<{}, State> {
             onClick={this.increas}
             className="button__item"
           >
-            Pluss 1
+            Increas
           </button>
         </div>
         <button

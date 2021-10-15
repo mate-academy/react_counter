@@ -1,0 +1,20 @@
+.Counter {
+  &__title {
+    color: #4cb;
+    font-size: 80px;
+  }
+
+  &__button {
+    margin: 10px;
+    width: 90px;
+    height: 30px;
+    border: 1px solid white;
+    background-color: white;
+    transition: 0.3s;
+
+    &:hover {
+      border-radius: 5px;
+      background-color: #4cb;
+    }
+  }
+}

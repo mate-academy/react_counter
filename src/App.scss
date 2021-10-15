@@ -1,1 +1,18 @@
-// styles go here
+.buttons {
+  display: flex;
+  gap: 30px;
+
+  &__button {
+    width: 100px;
+    height: 50px;
+    background-color: #add8e6;
+    border: none;
+    border-radius: 8%;
+    transition: border 0.3s;
+    font-size: 16px;
+
+    &:hover {
+      border: 2px solid grey;
+    }
+  }
+}

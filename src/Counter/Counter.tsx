@@ -33,9 +33,7 @@ export class Counter extends React.Component<{}, { count: number }> {
     return (
       <div className="Counter">
         <h1 className="Counter__heading">
-          Count:
-          {' '}
-          {count}
+          {`Count: ${count}`}
         </h1>
         <div className="Counter__buttons">
           <button

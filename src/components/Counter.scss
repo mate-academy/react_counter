@@ -1,0 +1,21 @@
+.Counter {
+  &__title {
+    text-align: center;
+  }
+
+  &__button {
+    width: 33.33%;
+    height: 50px;
+
+    background-color: #711eca;
+    outline: none;
+    border-color: #711eca;
+    border-radius: 10px;
+
+    transition: background-color 0.3s;
+  }
+
+  &__button:hover {
+    background-color: #fff;
+  }
+}

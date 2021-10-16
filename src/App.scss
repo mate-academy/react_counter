@@ -1,1 +1,42 @@
 // styles go here
+h1 {
+  margin: 0;
+}
+
+.App {
+  width: 250px;
+  height: 350px;
+  background: rgb(59, 240, 210);
+  border-radius: 25px;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  &__result {
+    color: chocolate;
+  }
+}
+
+.button {
+  width: 150px;
+  height: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  border-radius: 15px;
+  transition-duration: 1s;
+
+  &:hover {
+    color: rgb(5, 66, 199);
+    background-color: rgb(123, 160, 228);
+    border: 1px solid ;
+  }
+}

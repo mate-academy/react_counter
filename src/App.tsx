@@ -1,16 +1,60 @@
 import React from 'react';
 import './App.scss';
 
-class App extends React.Component {
-  addOne = () => {};
+class App extends React.Component<{}, { year: number }> {
+  state = {
+    year: 0,
+  };
 
-  add100 = () => {};
+  addOne = () => {
+    this.setState((prevYear) => {
+      return {
+        year: prevYear.year + 1,
+      };
+    });
+  };
 
-  increase = () => {};
+  add100 = () => {
+    this.setState((prevYear) => {
+      return {
+        year: prevYear.year + 100,
+      };
+    });
+  };
+
+  increase = () => {
+    if (this.state.year % 5 === 0) {
+      this.add100();
+      this.addOne();
+    } else {
+      this.addOne();
+    }
+  };
 
   render() {
+    const { year } = this.state;
+
     return (
-      <h1>Count: 0</h1>
+      <>
+        <div className="yearCounter">
+          <h1 className="count">
+            Count:
+            {' '}
+            { year }
+          </h1>
+          <div className="yearBlock">
+            <button onClick={this.addOne} type="button" className="yearBlock__button">
+              Add 1
+            </button>
+            <button onClick={this.add100} type="button" className="yearBlock__button">
+              Add 100
+            </button>
+            <button onClick={this.increase} type="button" className="yearBlock__button">
+              Adding 1 or 100
+            </button>
+          </div>
+        </div>
+      </>
     );
   }
 }

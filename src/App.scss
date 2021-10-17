@@ -1,1 +1,32 @@
 // styles go here
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color:rgb(10, 7, 161);
+}
+
+.Button {
+  height: 50px;
+  width: 180px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: rgb(223, 236, 240);
+  border-radius: 8px;
+  border: 1px solid lightblue;
+  background-color: rgb(2, 2, 116);
+  transition: transform 0.3s;
+
+  &:hover {
+    color: red;
+    transform: scale(1.1);
+    background-color: rgb(1, 1, 143);
+    box-shadow: 3px 4px lightblue;
+  }
+}

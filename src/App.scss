@@ -1,1 +1,40 @@
-// styles go here
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.yearCounter {
+  background: linear-gradient(
+    rgb(255, 216, 248),
+    rgb(191, 253, 255),
+    rgb(255, 254, 216),
+    rgb(255, 255, 255)
+  );
+}
+
+.count {
+  width: 200px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  text-align: center;
+  color: rgb(15, 15, 71);
+}
+
+.yearBlock {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  &__button {
+    height: 50px;
+    width: 130px;
+    margin-left: 10px;
+    border-radius: 40%;
+    border: 1px solid rgb(15, 15, 71);
+  }
+
+  &__button:hover {
+    background-color: rgb(188, 255, 194);
+    transition: background-color 0.5s, color 0.3s;
+  }
+}

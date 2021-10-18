@@ -6,7 +6,7 @@ type State = {
 };
 
 class App extends React.Component<{}, State> {
-  state = {
+  state: State = {
     count: 0,
   };
 
@@ -23,15 +23,14 @@ class App extends React.Component<{}, State> {
   };
 
   increase = () => {
-    this.setState((prevState) => ({
-      count: prevState.count % 5 === 0 ? (prevState.count + 101) : (prevState.count + 1),
-    }));
+    this.addOne();
+    if (this.state.count % 5 === 0) {
+      this.add100();
+    }
   };
 
   reset = () => {
-    this.setState((prevState) => ({
-      count: prevState.count * 0,
-    }));
+    this.setState({ count: 0 });
   };
 
   render() {

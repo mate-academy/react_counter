@@ -5,7 +5,7 @@ type State = {
 };
 
 export class Counter extends React.Component<{}, State> {
-  state = {
+  state: State = {
     count: 0,
   };
 
@@ -25,10 +25,9 @@ export class Counter extends React.Component<{}, State> {
     this.setState((state) => {
       if (state.count % 5 === 0) {
         this.add100();
-        this.addOne();
-      } else {
-        this.addOne();
       }
+
+      this.addOne();
     });
   };
 
@@ -38,9 +37,7 @@ export class Counter extends React.Component<{}, State> {
     return (
       <>
         <h1>
-          Count:
-          {' '}
-          {count}
+          {`Count: ${count}`}
         </h1>
 
         <button

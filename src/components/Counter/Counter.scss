@@ -1,0 +1,14 @@
+.Counter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  align-items: center;
+  width: 30vw;
+  margin: 0 auto;
+
+  &-Title {
+    font-size: 48px;
+    color: #fb4a4a;
+  }
+}

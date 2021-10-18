@@ -3,29 +3,31 @@ import './App.scss';
 
 type State = {
   count: number,
+  clickCounter: number,
 };
 
 class App extends React.Component<{}, State> {
   state = {
     count: 0,
+    clickCounter: 0,
   };
 
   addOne = () => {
     this.setState(prevValue => ({ count: prevValue.count + 1 }));
+    this.setState(prevValue => ({ clickCounter: prevValue.clickCounter + 1 }));
   };
 
   add100 = () => {
     this.setState(prevValue => ({ count: prevValue.count + 100 }));
+    this.setState(prevValue => ({ clickCounter: prevValue.clickCounter + 1 }));
   };
 
   increase = () => {
-    this.setState(prevValue => {
-      if (prevValue.count % 5 === 0) {
-        this.add100();
-      } else {
-        this.addOne();
-      }
-    });
+    if (this.state.clickCounter % 5 === 4) {
+      this.add100();
+    } else {
+      this.addOne();
+    }
   };
 
   render() {

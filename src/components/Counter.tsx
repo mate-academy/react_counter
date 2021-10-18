@@ -1,11 +1,11 @@
 import React from 'react';
 
-type States = {
+type State = {
   count: number;
 };
 
-export class Counter extends React.Component<{}, States> {
-  state: States = {
+export class Counter extends React.Component<{}, State> {
+  state: State = {
     count: 0,
   };
 

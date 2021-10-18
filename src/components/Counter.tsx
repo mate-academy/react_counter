@@ -37,7 +37,11 @@ class Counter extends React.Component<{}, State> {
           Current number:
           {this.state.number}
         </h1>
-        <button type="button" className="Counter__button" onClick={this.addOne}>
+        <button
+          type="button"
+          className="Counter__button"
+          onClick={this.addOne}
+        >
           Add 1
         </button>
         <button type="button" className="Counter__button" onClick={this.add100}>

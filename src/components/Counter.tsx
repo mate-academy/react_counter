@@ -12,7 +12,7 @@ class Counter extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((prevState) => ({ number: prevState.number + 1 }));
+    this.setState((currState) => ({ number: currState.number + 1 }));
   };
 
   add100 = () => {
@@ -24,7 +24,6 @@ class Counter extends React.Component<{}, State> {
 
     if (remainder === 0) {
       this.add100();
-
     }
 
     this.addOne();
@@ -44,10 +43,16 @@ class Counter extends React.Component<{}, State> {
         >
           Add 1
         </button>
-        <button type="button" className="Counter__button" onClick={this.add100}>
+        <button type="button"
+          className="Counter__button"
+          onClick={this.add100}
+        >
           Add 100
         </button>
-        <button type="button" className="Counter__button" onClick={this.addOneOr100}>
+        <button type="button"
+          className="Counter__button"
+          onClick={this.addOneOr100}
+        >
           Add 1 or 100
         </button>
       </div>

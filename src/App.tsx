@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import { Button } from './components/Button';
 
 type State = {
   count: number;
@@ -26,42 +27,18 @@ class App extends React.Component<{}, State> {
     }
   };
 
+  reset = () => {
+    this.setState({ count: 0 });
+  };
+
   render() {
     return (
       <>
         <h1>{`Count: ${this.state.count}`}</h1>
-        <button
-          type="button"
-          onClick={() => {
-            this.addOne();
-          }}
-        >
-          Add 1
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            this.add100();
-          }}
-        >
-          Add 100
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            this.increase();
-          }}
-        >
-          Increase
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            this.setState({ count: 0 });
-          }}
-        >
-          Reset
-        </button>
+        <Button name="Add one" clickHandler={this.addOne} />
+        <Button name="Add 100" clickHandler={this.add100} />
+        <Button name="Increase" clickHandler={this.increase} />
+        <Button name="Reset" clickHandler={this.reset} />
       </>
     );
   }

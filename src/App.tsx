@@ -6,7 +6,7 @@ type State = {
 }
 
 class Counter extends Component<{}, State> {
-  state = {
+  state: State = {
     count: 0,
   }
   addOne = () => {

@@ -25,7 +25,6 @@ class Counter extends React.Component<{}, State> {
     if (remainder === 0) {
       this.add100();
 
-      return;
     }
 
     this.addOne();

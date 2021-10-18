@@ -12,7 +12,7 @@ class Counter extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((currState) => ({ number: currState.number + 1 }));
+    this.setState((prevState) => ({ number: prevState.number + 1 }));
   };
 
   add100 = () => {

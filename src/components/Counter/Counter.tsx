@@ -1,29 +1,30 @@
 import React from 'react';
+import { Button } from '../Button';
 import './Counter.scss';
 
 interface State {
-  counter: number,
+  count: number,
 }
 
 export class Counter extends React.Component<{}, State> {
   state: State = {
-    counter: 0,
+    count: 0,
   };
 
   addOne = () => {
     this.setState((state) => ({
-      counter: state.counter + 1,
+      count: state.count + 1,
     }));
   };
 
   add100 = () => {
     this.setState((state) => ({
-      counter: state.counter + 100,
+      count: state.count + 100,
     }));
   };
 
-  increase = () => {
-    if (this.state.counter % 5 === 0) {
+  increase = (count: number) => {
+    if (count % 5 === 0) {
       this.add100();
     }
 
@@ -31,43 +32,31 @@ export class Counter extends React.Component<{}, State> {
   };
 
   clear = () => {
-    this.setState({ counter: 0 });
+    this.setState({ count: 0 });
   };
 
   render() {
-    const { counter } = this.state;
+    const { count } = this.state;
 
     return (
       <div className="Counter">
-        <h1 className="Counter-Title">{`Count: ${counter}`}</h1>
-        <button
-          className="Counter-Button"
-          type="button"
-          onClick={this.addOne}
-        >
-          addOne
-        </button>
-        <button
-          className="Counter-Button"
-          type="button"
-          onClick={this.add100}
-        >
-          add100
-        </button>
-        <button
-          className="Counter-Button"
-          type="button"
-          onClick={this.increase}
-        >
-          increase
-        </button>
-        <button
-          className="Counter-Button"
-          type="button"
-          onClick={this.clear}
-        >
-          clear
-        </button>
+        <h1 className="Counter-Title">{`Count: ${count}`}</h1>
+        <Button
+          name="addOne"
+          callback={this.addOne}
+        />
+        <Button
+          name="add100"
+          callback={this.add100}
+        />
+        <Button
+          name="increase"
+          callback={() => this.increase(count)}
+        />
+        <Button
+          name="clear"
+          callback={this.clear}
+        />
       </div>
     );
   }

@@ -7,7 +7,7 @@ type State = {
 };
 
 class Counter extends React.Component<{}, State> {
-  state = {
+  state: State = {
     number: 0,
   };
 

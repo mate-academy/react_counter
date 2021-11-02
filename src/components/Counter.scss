@@ -1,0 +1,27 @@
+h1 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.buttons {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+button {
+  width: 100px;
+  padding: 10px 0;
+  margin: 15px;
+  border-radius: 5px;
+  border: 2px solid rgb(9, 65, 248);
+  background-color: rgb(96, 132, 253);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+  &:hover {
+    background-color: rgb(136, 247, 179);
+  }
+}

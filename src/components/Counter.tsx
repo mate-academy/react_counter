@@ -8,21 +8,23 @@ export class Counter extends React.Component<Props, State> {
   };
 
   addOne = () => {
-    this.setState((prevNumber) => ({
-      number: prevNumber.number + 1,
+    this.setState((prevState) => ({
+      number: prevState.number + 1,
     }));
   };
 
   add100 = () => {
-    this.setState((prevNumber) => ({
-      number: prevNumber.number + 100,
+    this.setState((prevState) => ({
+      number: prevState.number + 100,
     }));
   };
 
   increase = () => {
-    this.setState((prevNumber) => ({
-      number: prevNumber.number + 101,
-    }));
+    if (this.state.number % 5 === 0 && this.state.number > 0) {
+      this.add100();
+    }
+
+    return this.addOne();
   };
 
   render() {
@@ -50,9 +52,7 @@ export class Counter extends React.Component<Props, State> {
 
         <button
           type="button"
-          onClick={(this.state.number % 5 === 0 && this.state.number > 0)
-            ? this.increase
-            : this.addOne}
+          onClick={this.increase}
         >
           Number 3
         </button>

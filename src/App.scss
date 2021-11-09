@@ -1,1 +1,37 @@
-// styles go here
+:root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color:lemonchiffon;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 90vh;
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__button {
+    width: 100px;
+    height: 30px;
+
+    border-radius: 10px;
+
+    transition: background-color 0.5s, transform 0.5s;
+
+    &:hover {
+      background-color: darksalmon;
+      cursor: pointer;
+
+      transform: scale(1.1);
+    }
+  }
+}

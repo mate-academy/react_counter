@@ -1,16 +1,45 @@
 import React from 'react';
 import './App.scss';
+import { Counter } from './Counter';
 
-class App extends React.Component {
-  addOne = () => {};
+interface State {
+  count: number,
+}
 
-  add100 = () => {};
+class App extends React.Component<{}, State> {
+  state = {
+    count: 0,
+  };
 
-  increase = () => {};
+  incraseValueL = (param:string) => {
+    switch (param) {
+      case 'addOne':
+        this.setState((state) => ({ count: state.count + 1 }));
+        break;
+
+      case 'add100':
+        this.setState((state) => ({ count: state.count + 100 }));
+        break;
+
+      case 'increase':
+        this.setState((state) => (
+          { count: state.count % 5 === 0 ? state.count + 100 + 1 : state.count + 1 }
+        ));
+        break;
+
+      default:
+        break;
+    }
+  };
 
   render() {
     return (
-      <h1>Count: 0</h1>
+      <Counter
+        counter={this.state.count}
+        incraseValue={(param:string) => {
+          this.incraseValueL(param);
+        }}
+      />
     );
   }
 }

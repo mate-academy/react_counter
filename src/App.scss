@@ -1,1 +1,43 @@
-// styles go here
+body {
+  background-color: #dbe8d8;
+  font-family: "Slabo 27px", serif;
+}
+
+.counter {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 24px auto;
+  background-color: #0a7029;
+  border-radius: 10px;
+
+  &__title {
+    text-align: center;
+    font-size: 46px;
+    color: #c8df52;
+  }
+
+  .counter__button-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .counter__button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Slabo 27px", serif;
+    font-size: 16px;
+    background-color: #ffa701;
+    color: #006400;
+
+    &--reset {
+      margin: 40px auto;
+      width: 150px;
+      background-color: #c8df52;
+    }
+  }
+}

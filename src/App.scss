@@ -1,1 +1,26 @@
-// styles go here
+.counter {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 24px auto;
+  background-color: teal;
+
+  &__title {
+    text-align: center;
+  }
+
+  .counter__button-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .counter__button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffa701;
+  }
+}

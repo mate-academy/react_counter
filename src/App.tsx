@@ -43,24 +43,28 @@ class App extends React.Component<{}, State> {
       <div>
         <h1>
           Count:
+          {' '}
           {count}
         </h1>
         <button
-          onClick={() => this.addOne()}
+          className="button"
+          onClick={this.addOne}
           type="button"
         >
           add one
         </button>
 
         <button
-          onClick={() => this.add100()}
+          className="button"
+          onClick={this.add100}
           type="button"
         >
           add 100
         </button>
 
         <button
-          onClick={() => this.increase()}
+          className="button"
+          onClick={this.increase}
           type="button"
         >
           increase

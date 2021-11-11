@@ -16,10 +16,13 @@ class App extends React.Component<{}, State> {
     { age: prevState.age + 100 }
   ));
 
-  increase = () => (
-    this.state.age % 5 === 0
-      ? (this.add100(), this.addOne())
-      : this.addOne());
+  increase = () => {
+    if (this.state.age % 5 === 0) {
+      this.add100();
+    }
+
+    this.addOne();
+  };
 
   render() {
     return (

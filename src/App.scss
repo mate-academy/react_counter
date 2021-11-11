@@ -1,4 +1,3 @@
-// styles go here
 * {
   margin: 0;
   padding: 0;
@@ -10,15 +9,14 @@ body {
   justify-content: center;
   align-items: center;
   background-color: lightblue;
-  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
 }
 
 .counter {
   padding: 3em;
   background-color: lightcyan;
-  // border: 1px solid black;
   border-radius: 1.5em;
-  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
 
   &__title {
     text-align: center;

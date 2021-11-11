@@ -1,1 +1,25 @@
-// styles go here
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #4c4345;
+  min-height: 100vh;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    color: #f3dfa2;
+  }
+  &__button {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+    display: block;
+    cursor: pointer;
+  }
+}

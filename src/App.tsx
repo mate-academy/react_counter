@@ -18,8 +18,8 @@ class App extends React.Component<{}, State> {
 
   increase = () => (
     this.state.age % 5 === 0
-      ? this.setState(this.add100, this.addOne)
-      : this.setState(this.addOne));
+      ? (this.add100(), this.addOne())
+      : this.addOne());
 
   render() {
     return (

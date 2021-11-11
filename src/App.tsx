@@ -5,30 +5,33 @@ interface State {
   count: number;
 }
 
-class App extends React.Component<{}, State> {
+type Props = {};
+
+class App extends React.Component<Props, State> {
   state:State = {
     count: 0,
   };
 
   addOne = () => {
-    let { count } = this.state;
-
-    this.setState({ count: count += 1 });
+    this.setState((prevState) => {
+      return { count: prevState.count + 1 };
+    });
   };
 
   add100 = () => {
-    let { count } = this.state;
-
-    this.setState({ count: count += 100 });
+    this.setState((prevState) => {
+      return { count: prevState.count + 100 };
+    });
   };
 
   increase = () => {
-    let { count } = this.state;
+    this.setState((prevState) => {
+      this.addOne();
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    (count % 5 === 0 && count !== 0)
-      ? this.setState({ count: count += 101 })
-      : this.setState({ count: count += 1 });
+      if (prevState.count % 5 === 0 && prevState.count !== 0) {
+        this.add100();
+      }
+    });
   };
 
   cleaner = () => {

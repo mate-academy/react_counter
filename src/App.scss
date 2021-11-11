@@ -1,1 +1,39 @@
-// styles go here
+body {
+  margin: 0;
+  background-color: honeydew;
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+
+  &__title {
+    background-color: lightblue;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid navy;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  margin: 10px auto;
+  width: 100px;
+  height: 40px;
+  background-color: lavender;
+  border: 1px solid navy;
+  border-radius: 5px;
+
+  transition: all, 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 6px 6px rgb(213, 213, 228);
+    transform: scale(1.1);
+  }
+}

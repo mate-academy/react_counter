@@ -39,17 +39,17 @@ class App extends React.Component<{}, State> {
       <div className="App">
         <h1>
           Count:
-          {' '}
+          {'  '}
           {count}
         </h1>
 
-        <button type="button" onClick={this.addOne} >
+        <button type="button" onClick={this.addOne}>
           adds 1
         </button>
-        <button type="button" onClick={this.add100} >
+        <button type="button" onClick={this.add100}>
           adds 100
         </button>
-        <button type="button" onClick={this.increase} >
+        <button type="button" onClick={this.increase}>
           adds 1 or 100
         </button>
       </div>

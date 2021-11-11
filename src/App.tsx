@@ -51,9 +51,7 @@ class App extends React.Component<{}, State> {
         </button>
         <button
           type="button"
-          onClick={() => {
-            this.increase();
-          }}
+          onClick={this.increase}
         >
           Add
         </button>

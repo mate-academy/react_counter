@@ -1,1 +1,18 @@
-// styles go here
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 30vh;
+  text-align: center;
+
+  background-color: rgb(114, 114, 114);
+}
+
+h1 {
+  font-size: 54px;
+}
+
+button {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}

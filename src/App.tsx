@@ -11,15 +11,15 @@ class App extends React.Component <{}, State> {
   };
 
   addOne = () => {
-    const { result } = this.state;
-
-    this.setState({ result: result + 1 });
+    this.setState((state) => ({
+      result: state.result + 1,
+    }));
   };
 
   add100 = () => {
-    const { result } = this.state;
-
-    this.setState({ result: result + 100 });
+    this.setState((state) => ({
+      result: state.result + 100,
+    }));
   };
 
   increase = () => {

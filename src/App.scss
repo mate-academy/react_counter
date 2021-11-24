@@ -1,1 +1,38 @@
-// styles go here
+body {
+  background-color: antiquewhite;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 36px;
+}
+
+h1 {
+  width: fit-content;
+  margin: 30px auto 0;
+  padding: 15px;
+  text-align: center;
+  border: 2px dotted black;
+  border-radius: 20px;
+}
+
+.Buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+
+  & > button {
+    width: 150px;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: darkorange;
+    border-radius: 20px;
+    font-size: 20px;
+  
+    &:hover {
+      background-color: rgb(255, 102, 0);
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}

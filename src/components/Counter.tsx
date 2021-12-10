@@ -7,24 +7,26 @@ export class Counter extends Component<{}, { count: number }> {
     count: 0,
   };
 
-  addOne = (
-    { currentTarget }: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-  ) => {
+  addOne = () => {
     this.setState((state) => ({
       count: state.count + 1,
     }));
-
-    const checkClass = currentTarget.classList.contains('button--magic');
-
-    if (checkClass && this.state.count % 5 === 0) {
-      this.add100();
-    }
   };
 
   add100 = () => {
     this.setState((state) => ({
       count: state.count + 100,
     }));
+  };
+
+  addOneOr100 = () => {
+    this.setState((state) => ({
+      count: state.count + 1,
+    }));
+
+    if (this.state.count % 5 === 0) {
+      this.add100();
+    }
   };
 
   render() {
@@ -53,9 +55,7 @@ export class Counter extends Component<{}, { count: number }> {
         <button
           className="button button--magic"
           type="button"
-          onClick={(event) => {
-            this.addOne(event);
-          }}
+          onClick={this.addOneOr100}
         >
           Add magic
         </button>

@@ -1,0 +1,37 @@
+$main-color: #275ee0;
+
+.Counter {
+  padding: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  &__content {
+    height: 100vh;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 50px;
+  }
+  &__button {
+    padding: 12px 24px;
+    border: 2px solid $main-color;
+    background-color: #fff;
+
+    color: $main-color;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: background-color 0.2s, color 0.2s;
+
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+}

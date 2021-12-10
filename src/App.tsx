@@ -1,7 +1,12 @@
 import React from 'react';
 import './App.scss';
+import { Counter } from './components/Counter';
 
-class App extends React.Component {
+type State = {
+  currentCount: number,
+};
+
+class App extends React.Component<{}, State> {
   addOne = () => {};
 
   add100 = () => {};
@@ -10,7 +15,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <h1>Count: 0</h1>
+      <Counter />
     );
   }
 }

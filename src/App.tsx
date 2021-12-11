@@ -5,7 +5,7 @@ import './calculator.scss';
 type State = {
   count: number;
   num: string;
-  calcNums: [] | string[] | (number | string)[]
+  calcNums: [] | (number | string)[]
 };
 
 class App extends React.Component<{}, State> {
@@ -17,7 +17,7 @@ class App extends React.Component<{}, State> {
 
   equal = () => {
     this.setState((prevState) => {
-      const result:(number | string)[] = [...prevState.calcNums, Number(prevState.num)];
+      const result = [...prevState.calcNums, Number(prevState.num)];
 
       for (let i = 0; i < result.length; i += 1) {
         if (result[i] === '*') {

@@ -1,1 +1,49 @@
-// styles go here
+@import './normalize.scss';
+@import './utils/variables';
+
+.page {
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+  }
+}
+
+.counter {
+  padding: 50px;
+  border-radius: 15px;
+  background-color: $counter-bgc;
+  width: 500px;
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: $main-color;
+    text-align: center;
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: $main-color;
+    cursor: pointer;
+
+    font-size: 20px;
+    color: #fff;
+
+    transition: background-color $transition-duration;
+
+    &:hover {
+      background-color: $button-color-hover;
+    }
+  }
+}

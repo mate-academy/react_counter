@@ -1,0 +1,33 @@
+.calculator {
+  padding: 15px;
+  border: 2px solid #e6e2e2;
+  border-radius: 10px;
+  max-width: 380px;
+  margin-bottom: 50px;
+
+  &__display {
+    height: 100px;
+    padding: 10px;
+    border: 2px solid #ebebeb;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  &__buttons {
+    display: flex;
+    max-width: 380px;
+    flex-flow: wrap;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  &__numbers {
+    display: flex;
+    flex-flow: wrap;
+    overflow: hidden;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+  }
+}

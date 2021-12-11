@@ -5,7 +5,6 @@ import './calculator.scss';
 type State = {
   count: number;
   num: string;
-  calculateSign: string;
   calcNums: [] | string[] | (number | string)[]
 };
 
@@ -13,7 +12,6 @@ class App extends React.Component<{}, State> {
   state = {
     count: 0,
     num: '',
-    calculateSign: '',
     calcNums: [],
   };
 
@@ -182,7 +180,7 @@ class App extends React.Component<{}, State> {
 
   render() {
     const {
-      count, num, calculateSign, calcNums,
+      count, num, calcNums,
     } = this.state;
     const isFirstEmpty = num.length !== 0;
     const isNumEmpty = num.length === 0;

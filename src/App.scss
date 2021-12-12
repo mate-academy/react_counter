@@ -1,1 +1,33 @@
-// styles go here
+$c-white: rgb(255, 255, 255);
+$c-black: rgb(0, 0, 0);
+$transition-duration: 0.5s;
+
+.Counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+  text-transform: uppercase;
+
+  &__title {
+    &:hover {
+      transform: scale(1.2);
+      transition: all $transition-duration;
+    }
+  }
+
+  &__button {
+    width: 300px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: $c-black;
+    color: $c-white;
+    text-transform: uppercase;
+    transition: all $transition-duration;
+
+    &:hover {
+      background-color: $c-white;
+      color: $c-black;
+    }
+  }
+}

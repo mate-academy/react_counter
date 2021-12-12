@@ -311,7 +311,7 @@ class App extends React.Component<{}, State> {
           </div>
         </div>
 
-        <div>
+        <div className="app__counter">
           <h1 className="app__numbers">
             Count:
             {' '}

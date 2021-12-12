@@ -15,7 +15,12 @@ h1 {
   justify-content: center;
   height: 100vh;
   padding: 20px;
-  // background-color: aliceblue;
+
+  &__counter {
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #ebebeb;
+  }
 
   &__numbers {
     box-sizing: border-box;

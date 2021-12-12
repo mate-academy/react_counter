@@ -290,6 +290,7 @@ class App extends React.Component<{}, State> {
 
             <button
               className="app__button"
+              disabled={isNumEmpty && calcNums.length === 0}
               type="button"
               onClick={() => {
                 this.equal();

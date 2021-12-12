@@ -86,63 +86,9 @@ class App extends React.Component<{}, State> {
     }));
   };
 
-  zero = () => {
+  calcNumb = (numb: string) => {
     this.setState((prev) => ({
-      num: prev.num + 0,
-    }));
-  };
-
-  one = () => {
-    this.setState((prev) => ({
-      num: prev.num + 1,
-    }));
-  };
-
-  two = () => {
-    this.setState((prev) => ({
-      num: prev.num + 2,
-    }));
-  };
-
-  three = () => {
-    this.setState((prev) => ({
-      num: prev.num + 3,
-    }));
-  };
-
-  four = () => {
-    this.setState((prev) => ({
-      num: prev.num + 4,
-    }));
-  };
-
-  five = () => {
-    this.setState((prev) => ({
-      num: prev.num + 5,
-    }));
-  };
-
-  six = () => {
-    this.setState((prev) => ({
-      num: prev.num + 6,
-    }));
-  };
-
-  seven = () => {
-    this.setState((prev) => ({
-      num: prev.num + 7,
-    }));
-  };
-
-  eight = () => {
-    this.setState((prev) => ({
-      num: prev.num + 8,
-    }));
-  };
-
-  nine = () => {
-    this.setState((prev) => ({
-      num: prev.num + 9,
+      num: prev.num + numb,
     }));
   };
 
@@ -202,7 +148,7 @@ class App extends React.Component<{}, State> {
               className="app__button"
               type="button"
               onClick={() => {
-                this.seven();
+                this.calcNumb('7');
               }}
             >
               7
@@ -212,7 +158,7 @@ class App extends React.Component<{}, State> {
               className="app__button"
               type="button"
               onClick={() => {
-                this.eight();
+                this.calcNumb('8');
               }}
             >
               8
@@ -222,7 +168,7 @@ class App extends React.Component<{}, State> {
               className="app__button"
               type="button"
               onClick={() => {
-                this.nine();
+                this.calcNumb('9');
               }}
             >
               9
@@ -243,7 +189,7 @@ class App extends React.Component<{}, State> {
               className="app__button"
               type="button"
               onClick={() => {
-                this.four();
+                this.calcNumb('4');
               }}
             >
               4
@@ -253,7 +199,7 @@ class App extends React.Component<{}, State> {
               className="app__button"
               type="button"
               onClick={() => {
-                this.five();
+                this.calcNumb('5');
               }}
             >
               5
@@ -263,7 +209,7 @@ class App extends React.Component<{}, State> {
               className="app__button"
               type="button"
               onClick={() => {
-                this.six();
+                this.calcNumb('6');
               }}
             >
               6
@@ -284,7 +230,7 @@ class App extends React.Component<{}, State> {
               className="app__button"
               type="button"
               onClick={() => {
-                this.one();
+                this.calcNumb('1');
               }}
             >
               1
@@ -294,7 +240,7 @@ class App extends React.Component<{}, State> {
               className="app__button"
               type="button"
               onClick={() => {
-                this.two();
+                this.calcNumb('2');
               }}
             >
               2
@@ -304,7 +250,7 @@ class App extends React.Component<{}, State> {
               className="app__button"
               type="button"
               onClick={() => {
-                this.three();
+                this.calcNumb('3');
               }}
             >
               3
@@ -326,7 +272,7 @@ class App extends React.Component<{}, State> {
               type="button"
               disabled={isNumEmpty}
               onClick={() => {
-                this.zero();
+                this.calcNumb('0');
               }}
             >
               0

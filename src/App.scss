@@ -1,1 +1,16 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.App {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

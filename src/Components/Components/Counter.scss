@@ -1,0 +1,21 @@
+.counter {
+  &__num {
+    color: #e36ac4;
+  }
+
+  &__button {
+    margin-right: 25px;
+    width: 120px;
+    height: 40px;
+    background-color: #fff;
+    color: #e36ac4;
+    border-style: solid;
+    border-color: #e36ac4;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: #e36ac4;
+      color: #fff;
+    }
+  }
+}

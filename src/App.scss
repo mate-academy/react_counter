@@ -1,1 +1,73 @@
-// styles go here
+html {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+
+body,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+
+  &__counter {
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #ebebeb;
+  }
+
+  &__numbers {
+    box-sizing: border-box;
+    min-width: 196px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid silver;
+  }
+
+  &__buttons {
+    display: flex;
+    max-width: 250px;
+    flex-flow: wrap;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 15px;
+    height: 36px;
+    width: 86px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(95, 128, 160);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(52, 41, 49);
+    }
+
+    &:active {
+      box-shadow: 0 0 5px black;
+    }
+
+    @media (max-width:450px) {
+      width: 66px;
+    }
+
+    @media (max-width:370px) {
+      width: 54px;
+    }
+  }
+}

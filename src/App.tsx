@@ -128,7 +128,6 @@ class App extends React.Component<{}, State> {
     const {
       count, num, calcNums,
     } = this.state;
-    const isFirstEmpty = num.length !== 0;
     const isNumEmpty = num.length === 0;
 
     return (
@@ -177,7 +176,7 @@ class App extends React.Component<{}, State> {
             <button
               className="app__button"
               type="button"
-              disabled={!isFirstEmpty}
+              disabled={isNumEmpty}
               onClick={() => {
                 this.division();
               }}
@@ -218,7 +217,7 @@ class App extends React.Component<{}, State> {
             <button
               className="app__button"
               type="button"
-              disabled={!isFirstEmpty}
+              disabled={isNumEmpty}
               onClick={() => {
                 this.multiplication();
               }}
@@ -259,7 +258,7 @@ class App extends React.Component<{}, State> {
             <button
               className="app__button"
               type="button"
-              disabled={!isFirstEmpty}
+              disabled={isNumEmpty}
               onClick={() => {
                 this.subtraction();
               }}
@@ -290,7 +289,7 @@ class App extends React.Component<{}, State> {
 
             <button
               className="app__button"
-              disabled={isNumEmpty && calcNums.length === 0}
+              disabled={(isNumEmpty || calcNums.length < 2)}
               type="button"
               onClick={() => {
                 this.equal();
@@ -302,7 +301,7 @@ class App extends React.Component<{}, State> {
             <button
               className="app__button"
               type="button"
-              disabled={!isFirstEmpty}
+              disabled={isNumEmpty}
               onClick={() => {
                 this.addition();
               }}

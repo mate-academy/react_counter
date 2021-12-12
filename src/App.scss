@@ -1,1 +1,15 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1 {
+  margin: 0;
+}
+
+.Title {
+  position: relative;
+  width: 240px;
+  top: 30px;
+  left: 50px;
+}

@@ -1,0 +1,79 @@
+.Subtitle {
+  position: absolute;
+  right: 50px;
+  color: rgb(0, 103, 3);
+}
+
+.Container {
+  width: 300px;
+  margin: 0 auto;
+  transform-origin: 50% -70%;
+  animation: move 4s linear infinite alternate -1s;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.Counter {
+  position: relative;
+  padding: 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0 0;
+  height: 360px;
+  width: 360px;
+  border-radius: 50%;
+  box-shadow: 0 1px 20px 3px rgba(79, 78, 78, 0.35);
+  background-color: rgb(194, 2, 2);
+
+  &::before {
+    position: absolute;
+    top: -64%;
+    left: 50%;
+    content: "";
+    z-index: -1;
+    width: 3px;
+    height: 240px;
+    background-color: rgb(1, 1, 1);
+    box-shadow: 0 1px 3px 1px rgba(79, 78, 78, 0.3);
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    height: 28px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: rgb(225, 200, 200);
+    border: black dotted 1px;
+    transition: transform 0.3s;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(18deg);
+  }
+
+  50% {
+    transform: rotate(-18deg);
+  }
+
+  100% {
+    transform: rotate(18deg);
+  }
+}

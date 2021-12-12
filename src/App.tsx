@@ -1,18 +1,12 @@
 import React from 'react';
 import './App.scss';
+import { Counter } from './components/Counter';
 
-class App extends React.Component {
-  addOne = () => {};
-
-  add100 = () => {};
-
-  increase = () => {};
-
-  render() {
-    return (
-      <h1>Count: 0</h1>
-    );
-  }
-}
+const App: React.FC = () => (
+  <>
+    <h1 className="Title">Sweetheart, how much money you need?</h1>
+    <Counter />
+  </>
+);
 
 export default App;

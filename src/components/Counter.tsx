@@ -23,44 +23,50 @@ export class Counter extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="Container">
-        <div className="Counter">
-          <h1 className="Counter__title">
-            Count:
-            {' '}
-            {this.state.count}
-          </h1>
-          <div className="Counter__buttons">
-            <button
-              className="Counter__button"
-              type="button"
-              onClick={this.addOne}
-            >
-              add 1
-            </button>
-            <button
-              className="Counter__button"
-              type="button"
-              onClick={this.add100}
-            >
-              add 100
-            </button>
-            <button
-              className="Counter__button"
-              type="button"
-              onClick={() => {
-                if (count % 5 === 0) {
-                  this.add100();
-                }
+      <>
+        {count >= 200 && (
+          <h2 className="Subtitle">You are so forward!</h2>
+        )}
+        <div className="Container">
+          <div className="Counter">
+            <h2 className="Counter__title">
+              Count:
+              {' '}
+              {this.state.count}
+              $
+            </h2>
+            <div className="Counter__buttons">
+              <button
+                className="Counter__button"
+                type="button"
+                onClick={this.addOne}
+              >
+                1$
+              </button>
+              <button
+                className="Counter__button"
+                type="button"
+                onClick={this.add100}
+              >
+                100$
+              </button>
+              <button
+                className="Counter__button"
+                type="button"
+                onClick={() => {
+                  if (count % 5 === 0) {
+                    this.add100();
+                  }
 
-                this.addOne();
-              }}
-            >
-              surprise
-            </button>
+                  this.addOne();
+                }}
+              >
+                $$$
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

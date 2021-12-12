@@ -1,5 +1,11 @@
+.Subtitle {
+  position: absolute;
+  right: 50px;
+  color: rgb(0, 103, 3);
+}
+
 .Container {
-  width: 400px;
+  width: 300px;
   margin: 0 auto;
   transform-origin: 50% -70%;
   animation: move 4s linear infinite alternate -1s;
@@ -11,12 +17,12 @@
 
 .Counter {
   position: relative;
-  padding: 50px;
+  padding: 60px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  margin: 180px 0 0;
+  margin: 100px 0 0;
   height: 360px;
   width: 360px;
   border-radius: 50%;
@@ -25,12 +31,12 @@
 
   &::before {
     position: absolute;
-    top: -55%;
+    top: -64%;
     left: 50%;
     content: "";
     z-index: -1;
     width: 3px;
-    height: 220px;
+    height: 240px;
     background-color: rgb(1, 1, 1);
     box-shadow: 0 1px 3px 1px rgba(79, 78, 78, 0.3);
   }

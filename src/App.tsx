@@ -58,30 +58,9 @@ class App extends React.Component<{}, State> {
     this.setState({ calcNums: [], num: '' });
   };
 
-  addition = () => {
+  operation = (operation: string) => {
     this.setState((prev) => ({
-      calcNums: [...prev.calcNums, Number(prev.num), '+'],
-      num: '',
-    }));
-  };
-
-  subtraction = () => {
-    this.setState((prev) => ({
-      calcNums: [...prev.calcNums, Number(prev.num), '-'],
-      num: '',
-    }));
-  };
-
-  multiplication = () => {
-    this.setState((prev) => ({
-      calcNums: [...prev.calcNums, Number(prev.num), '*'],
-      num: '',
-    }));
-  };
-
-  division = () => {
-    this.setState((prev) => ({
-      calcNums: [...prev.calcNums, Number(prev.num), '/'],
+      calcNums: [...prev.calcNums, Number(prev.num), operation],
       num: '',
     }));
   };
@@ -178,7 +157,7 @@ class App extends React.Component<{}, State> {
               type="button"
               disabled={isNumEmpty}
               onClick={() => {
-                this.division();
+                this.operation('/');
               }}
             >
               ÷
@@ -219,7 +198,7 @@ class App extends React.Component<{}, State> {
               type="button"
               disabled={isNumEmpty}
               onClick={() => {
-                this.multiplication();
+                this.operation('*');
               }}
             >
               X
@@ -260,7 +239,7 @@ class App extends React.Component<{}, State> {
               type="button"
               disabled={isNumEmpty}
               onClick={() => {
-                this.subtraction();
+                this.operation('-');
               }}
             >
               -
@@ -303,7 +282,7 @@ class App extends React.Component<{}, State> {
               type="button"
               disabled={isNumEmpty}
               onClick={() => {
-                this.addition();
+                this.operation('+');
               }}
             >
               +

@@ -1,1 +1,21 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-image: url(https://cdn.dribbble.com/users/3735110/screenshots/14021736/media/02fb4c423c1f7227b6d53dd3a7d114db.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

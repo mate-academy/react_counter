@@ -36,11 +36,11 @@ export class Counter extends React.Component<{}, State> {
     return (
       <div className="counter">
         <p className="counter__description">
-          Count sheeps to sleep!
+          Count sheep to sleep!
         </p>
 
         <h1 className="counter__title">
-          {`Sheeps count: ${count}`}
+          {`Sheep count: ${count}`}
         </h1>
 
         <div className="counter__buttons">

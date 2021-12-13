@@ -18,8 +18,8 @@ export class Counter extends React.Component<{}, State> {
   };
 
   add100 = () => {
-    this.setState((currentState) => ({
-      counter: currentState.counter + 100,
+    this.setState(({ counter }) => ({
+      counter: counter + 100,
     }));
   };
 
@@ -36,34 +36,27 @@ export class Counter extends React.Component<{}, State> {
       <>
         <h1 className="counter">
           Count:
-          {' '}
-          {this.state.counter}
+          {` ${this.state.counter}`}
         </h1>
 
         <div className="buttons">
           <Button
             variant="outline-success"
-            onClick={() => {
-              this.addOne();
-            }}
+            onClick={this.addOne}
           >
             Add one
           </Button>
 
           <Button
             variant="outline-success"
-            onClick={() => {
-              this.add100();
-            }}
+            onClick={this.add100}
           >
             Add 100
           </Button>
 
           <Button
             variant="outline-success"
-            onClick={() => {
-              this.increase();
-            }}
+            onClick={this.increase}
           >
             Increase
           </Button>

@@ -1,1 +1,29 @@
-// styles go here
+html {
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #fef5ed;
+
+  &__wrapper {
+    width: 540px;
+  }
+}

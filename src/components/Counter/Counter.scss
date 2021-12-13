@@ -1,0 +1,32 @@
+.count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 80px;
+  gap: 40px;
+
+  background-color: #adc2a9;
+  color: #fef5ed;
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__button {
+    padding: 16px;
+    border-radius: 4px;
+    border: 0;
+    background-color: #99a799;
+    color: #fef5ed;
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #d3e4cd;
+    }
+  }
+}

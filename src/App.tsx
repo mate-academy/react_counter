@@ -22,7 +22,12 @@ class App extends React.Component<{}, State> {
     }));
   };
 
-  increase = () => {};
+  increase = () => {
+    this.addOne();
+    if (this.state.counter % 5 === 0) {
+      this.add100();
+    }
+  };
 
   render() {
     return (
@@ -53,10 +58,7 @@ class App extends React.Component<{}, State> {
           <button
             type="button"
             onClick={() => {
-              this.addOne();
-              if (this.state.counter % 5 === 0) {
-                this.add100();
-              }
+              this.increase();
             }}
           >
             Special Counter

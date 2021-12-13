@@ -1,0 +1,13 @@
+.Counter {
+  display: grid;
+  grid-gap: 12px;
+
+  &__title {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  &__button {
+    font-size: 20px;
+  }
+}

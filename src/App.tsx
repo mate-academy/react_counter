@@ -1,16 +1,43 @@
 import React from 'react';
 import './App.scss';
 
-class App extends React.Component {
-  addOne = () => {};
+type State = {
+  num: number
+};
 
-  add100 = () => {};
+class App extends React.Component<{}, State> {
+  state = {
+    num: 0,
+  };
 
-  increase = () => {};
+  addOne = () => {
+    this.setState(prevState => ({ num: prevState.num + 1 }));
+  };
+
+  add100 = () => {
+    this.setState(prevState => ({ num: prevState.num + 100 }));
+  };
+
+  increase = () => {
+    this.setState(prevState => {
+      if (!(prevState.num % 5)) {
+        this.add100();
+      }
+
+      this.addOne();
+    });
+  };
 
   render() {
+    const { num } = this.state;
+
     return (
-      <h1>Count: 0</h1>
+      <div className="counter-card">
+        <h1 className="counter-card__counter">{`Count: ${num}`}</h1>
+        <button type="button" onClick={this.addOne}>Add one</button>
+        <button type="button" onClick={this.add100}>Add 100</button>
+        <button type="button" onClick={this.increase}>Magic button</button>
+      </div>
     );
   }
 }

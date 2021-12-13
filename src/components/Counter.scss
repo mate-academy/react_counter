@@ -1,0 +1,28 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-size: 36px;
+    color: firebrick;
+  }
+}
+
+.button {
+  width: 80px;
+  height: 40px;
+  margin-right: 8px;
+
+  background-color: rgb(247, 192, 174);
+  border-radius: 8px;
+  border: rgb(163, 103, 83) 1px solid;
+  box-shadow: -5px -5px 5px -4px rgba(34, 60, 80, 0.6) inset;
+
+  font-family: "Fredoka One", cursive;
+  color: rgb(46, 45, 45);
+  &:hover {
+    background-color: rgb(241, 154, 125);
+  }
+}

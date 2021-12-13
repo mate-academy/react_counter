@@ -1,1 +1,32 @@
 // styles go here
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.button {
+  display: flex;
+  gap: 10px;
+  
+  &__item {
+    height: 100px;
+    width: 150px;
+    background-color: pink;
+    border-radius: 20px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: blueviolet;
+    }
+  }
+}

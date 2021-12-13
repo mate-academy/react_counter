@@ -1,1 +1,36 @@
-// styles go here
+html {
+  box-sizing: border-box;
+  background-color: #2d1e2f;
+  color: #fcf6b1;
+  font-size: 30px;
+}
+
+.App {
+  border-radius: 8px;
+  border: 3px solid #fcf6b1;
+  margin: auto;
+  margin-top: 10%;
+  padding: 50px;
+  width: 50%;
+}
+
+h1 {
+  text-align: center;
+  line-height: 30px;
+}
+
+button {
+  background-color: #a9e5bb;
+  border: none;
+  border-radius: 8px;
+  height: 38px;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242331;
+}
+
+.button__box {
+  margin-top: 62px;
+  display: flex;
+  justify-content: space-between;
+}

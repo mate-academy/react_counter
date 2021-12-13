@@ -31,35 +31,38 @@ class App extends React.Component<{}, State> {
           Count:
           {this.state.counter}
         </h1>
-        <button
-          type="button"
-          onClick={() => {
-            this.add100();
-          }}
-        >
-          Add 100
-        </button>
-
-        <button
-          type="button"
-          onClick={() => {
-            this.addOne();
-          }}
-        >
-          Add One
-        </button>
-
-        <button
-          type="button"
-          onClick={() => {
-            this.addOne();
-            if (this.state.counter % 5 === 0) {
+        <div className="button__box">
+          <button
+            type="button"
+            onClick={() => {
               this.add100();
-            }
-          }}
-        >
-          Special Counter
-        </button>
+            }}
+          >
+            Add 100
+          </button>
+
+          <button
+            type="button"
+            onClick={() => {
+              this.addOne();
+            }}
+          >
+            Add One
+          </button>
+
+          <button
+            type="button"
+            onClick={() => {
+              this.addOne();
+              if (this.state.counter % 5 === 0) {
+                this.add100();
+              }
+            }}
+          >
+            Special Counter
+          </button>
+
+        </div>
       </div>
     );
   }

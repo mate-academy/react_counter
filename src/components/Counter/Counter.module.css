@@ -1,0 +1,23 @@
+.count {
+  width: 400px;
+  height: 150px;
+  background-color: darkgray;
+  border: 1px solid darkgray;
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+  color: blueviolet;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 2px solid blueviolet;
+  border-radius: 15px;
+}

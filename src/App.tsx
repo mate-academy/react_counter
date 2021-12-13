@@ -25,10 +25,10 @@ class App extends React.Component<{}, State> {
   increase = () => {
     this.setState(state => {
       if (state.count % 5 === 0) {
-        return this.add100();
+        this.add100();
       }
 
-      return this.addOne();
+      this.addOne();
     });
   };
 
@@ -39,21 +39,21 @@ class App extends React.Component<{}, State> {
         <button
           type="button"
           className="App__btn"
-          onClick={() => this.addOne()}
+          onClick={this.addOne}
         >
           Add One
         </button>
         <button
           type="button"
           className="App__btn"
-          onClick={() => this.add100()}
+          onClick={this.add100}
         >
           Add 100
         </button>
         <button
           type="button"
           className="App__btn"
-          onClick={() => this.increase()}
+          onClick={this.increase}
         >
           Increase
         </button>

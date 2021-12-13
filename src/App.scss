@@ -1,1 +1,13 @@
-// styles go here
+* {
+  margin: 0;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: antiquewhite;
+}

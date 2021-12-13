@@ -1,0 +1,43 @@
+h1 {
+  color: #f1c40f;
+  font-size: 4rem;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  margin-top: 100px;
+}
+
+.button-conteiner {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 40px 40px #e74c3c inset;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .button-conteiner  {
+    flex-direction: column;
+  }
+}

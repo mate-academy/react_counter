@@ -12,16 +12,16 @@ export class Counter extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((prevState) => {
-      return { counter: prevState.counter + 1 };
-    });
+    this.setState((prevState) => ({
+      counter: prevState.counter + 1,
+    }));
   };
 
   add100 = () => {
-    this.setState((prevState) => {
-      return { counter: prevState.counter + 100 };
-    });
-  };
+    this.setState((prevState) => ({
+     counter: prevState.counter + 100,
+   }));
+ };
 
   increase = () => {
     this.addOne();

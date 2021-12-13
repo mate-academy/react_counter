@@ -1,0 +1,29 @@
+.counter {
+  width: 40%;
+  text-align: center;
+  padding: 50px 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  &__description {
+    margin: 0;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #93ca53b2;
+    font-family: inherit;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #698845;
+    }
+  }
+}

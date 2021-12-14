@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.scss';
-import { State } from './State';
+
+interface State {
+  sum: number;
+}
 
 class App extends React.Component {
   state = {
@@ -20,11 +23,10 @@ class App extends React.Component {
   };
 
   increase = () => {
+    this.addOne();
+
     if (this.state.sum % 5 === 0) {
-      this.addOne();
       this.add100();
-    } else {
-      this.addOne();
     }
   };
 

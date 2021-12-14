@@ -1,1 +1,31 @@
-// styles go here
+* {
+  margin: 0;
+}
+
+.counter {
+  border: black 4px solid;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+  padding: 20px;
+
+  &__result {
+    padding-bottom: 24px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    margin: 10px;
+    color: snow;
+    border-radius: 5px;
+    background-color: black;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

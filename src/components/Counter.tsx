@@ -10,8 +10,8 @@ export class Counter extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((state) => ({
-      counter: state.counter + 1,
+    this.setState(({ counter }) => ({
+      counter: counter + 1,
     }));
   };
 

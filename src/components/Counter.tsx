@@ -16,8 +16,8 @@ export class Counter extends React.Component<{}, State> {
   };
 
   add100 = () => {
-    this.setState((state) => ({
-      counter: state.counter + 100,
+    this.setState(({ counter }) => ({
+      counter: counter + 100,
     }));
   };
 

@@ -1,1 +1,16 @@
-// styles go here
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__buttons {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+}

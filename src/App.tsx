@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.scss';
 
+interface State {
+  count: number,
+}
+
 export default class App extends React.Component<{}, State> {
   state: State = {
     count: 0,

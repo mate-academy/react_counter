@@ -18,20 +18,18 @@ export default class App extends React.Component<{}, State> {
   };
 
   increase = () => {
-    this.setState((state) => {
-      if (state.count % 5 === 0) {
-        this.add100();
-      }
+    if (this.state.count % 5 === 0) {
+      this.add100();
+    }
 
-      this.addOne();
-    });
+    this.addOne();
   };
 
   render() {
     return (
       <>
         <h1>{`Count: ${this.state.count}`}</h1>
-        <button type="button" onClick={this.addOne}>Add onde</button>
+        <button type="button" onClick={this.addOne}>Add one</button>
         <button type="button" onClick={this.add100}>Add 100</button>
         <button type="button" onClick={this.increase}>Increase</button>
       </>

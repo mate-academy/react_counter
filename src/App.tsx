@@ -24,11 +24,10 @@ class App extends React.Component<{}, State> {
   };
 
   increase = () => {
-    if (this.state.counter % 5 === 0 || this.state.counter === 0) {
-      this.addOne();
+    this.addOne();
+
+    if (this.state.counter % 5 === 0) {
       this.add100();
-    } else {
-      this.addOne();
     }
   };
 
@@ -59,7 +58,6 @@ class App extends React.Component<{}, State> {
             >
               increase
             </Button>
-
           </div>
         </div>
       </div>

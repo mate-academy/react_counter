@@ -3,13 +3,11 @@ import './App.scss';
 
 interface State {
   count: number,
-  clicked: number,
 }
 
 export class App extends React.Component<{}, State> {
   state: State = {
     count: 0,
-    clicked: 0,
   };
 
   addOne = () => {
@@ -27,11 +25,9 @@ export class App extends React.Component<{}, State> {
   increase = () => {
     this.addOne();
 
-    if (this.state.clicked % 5 === 0) {
+    if (this.state.count % 5 === 0) {
       this.add100();
     }
-
-    this.state.clicked += 1;
   };
 
   render() {

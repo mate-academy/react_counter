@@ -31,6 +31,7 @@
     box-shadow: 7px 7px 0 0 rgba(0, 0, 0, 0.692);
     border-right: 2px solid rgb(221, 17, 17);
     transition: opacity 0.3s, color 0.3s;
+    cursor: grabbing;
 
     &:hover {
       opacity: 0.9;
@@ -40,6 +41,7 @@
     &:active {
       transform: translate(7px, 7px);
       box-shadow: 5px 5px 5px 0 rgba(255, 0, 0, 0.541) inset;
+      cursor: grab;
     }
 
     &--1 {

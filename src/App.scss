@@ -1,1 +1,28 @@
-// styles go here
+.App {
+  display: flex;
+
+  &__counter {
+    margin: auto;
+  }
+}
+
+.counter {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 0 12px 12px;
+  width: 400px;
+
+  &__button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.button {
+  width: 100px;
+}

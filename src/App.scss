@@ -1,1 +1,15 @@
-// styles go here
+.App {
+  display: flex;
+
+  &__counter {
+    margin: auto;
+    margin-top: 50px;
+  }
+}
+
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

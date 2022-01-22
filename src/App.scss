@@ -1,1 +1,26 @@
 // styles go here
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/elements/button.sass";
+
+.content {
+  margin: 0 auto;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #ccc;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    &:hover {
+      box-shadow: 3px 3px 3px #ccc;
+    }
+  }
+}

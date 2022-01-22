@@ -1,1 +1,17 @@
-// styles go here
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css";
+
+* {
+  margin: 50px;
+}
+.card {
+  width: 400px;
+  height: 200px;
+}
+
+.is-focused {
+  margin-left: 8px;
+}
+
+.title {
+  margin: 10px 100px;
+}

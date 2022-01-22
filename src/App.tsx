@@ -51,7 +51,7 @@ class App extends React.Component<{}, State> {
           <button
             type="button"
             className="button is-success is-focused"
-            onClick={this.increase}
+            onClick={this.add100}
           >
             Add 100
           </button>
@@ -59,7 +59,7 @@ class App extends React.Component<{}, State> {
           <button
             type="button"
             className="button is-info is-focused"
-            onClick={this.add100}
+            onClick={this.increase}
           >
             Increase
           </button>

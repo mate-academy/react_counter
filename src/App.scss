@@ -1,1 +1,43 @@
-// styles go here
+body {
+  background-color: lightsteelblue;
+  text-align: center;
+}
+
+.button {
+  position: relative;
+  margin: 5px;
+  padding: 20px;
+  width: 100px;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  background-color: #16a085;
+  color: #fff;
+  box-shadow: 0 5px 15px #193047;
+
+  border: none;
+  border-radius: 4px;
+
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+  &:hover {
+    background: #fff;
+    box-shadow: 0px 2px 10px 5px #1abc9c;
+    color: #000;
+  }
+
+  &:active {
+    top: 2px;
+  }
+
+  &--resetButton {
+    background-color: #DC143C;
+    &:hover {
+      box-shadow: 0px 2px 10px 5px #DC143C;
+    }
+  }
+}
+

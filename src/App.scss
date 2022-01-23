@@ -1,1 +1,42 @@
-// styles go here
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+
+body {
+  font-family: "Julius Sans One", sans-serif;
+  background-color: rgb(245, 239, 220);
+}
+
+.button {
+  font-family: "Julius Sans One", sans-serif;
+  padding: 15px 40px;
+  background-color: #4099ff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  transition: background-color 0.5s, box-shadow 0.5s;
+  box-shadow: #959da533 0 8px 24px;
+
+  &:hover {
+    background-color: #0b53a5;
+    box-shadow: #1f53b366 0 5px,
+      #19588b4d 0 10px,
+      #2e7cf033 0 15px,
+      #2e52f01a 0 20px,
+      #2e6bf00d 0 25px;
+  }
+
+  &:focus {
+    box-shadow: #393db6 0 0 0 3px, #0011fd 0 0 0 4px;
+  }
+}
+
+.father {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}

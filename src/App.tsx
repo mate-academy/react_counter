@@ -34,25 +34,23 @@ class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <>
-        <div className="page-container">
-          <h1 className="title">
-            Count:
-            { count }
-          </h1>
-          <div className="button-container">
-            <button type="button" className="knopka01" onClick={this.addOne}>
-              Add 1
-            </button>
-            <button type="button" className="knopka01" onClick={this.add100}>
-              Add 100
-            </button>
-            <button type="button" className="knopka01" onClick={this.increase}>
-              Increase
-            </button>
-          </div>
+      <div className="page-container">
+        <h1 className="title">
+          Count:
+          { count }
+        </h1>
+        <div className="button-container">
+          <button type="button" className="knopka01" onClick={this.addOne}>
+            Add 1
+          </button>
+          <button type="button" className="knopka01" onClick={this.add100}>
+            Add 100
+          </button>
+          <button type="button" className="knopka01" onClick={this.increase}>
+            Increase
+          </button>
         </div>
-      </>
+      </div>
     );
   }
 }

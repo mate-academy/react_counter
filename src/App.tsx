@@ -27,7 +27,8 @@ class App extends React.Component<{}, State> {
       count: state.count + 1,
     }));
 
-    if (this.state.count % 5 === 0) {
+    if (this.state.count % 5 === 0
+      && this.state.count > 0) {
       this.setState((state) => ({
         count: state.count + 100,
       }));

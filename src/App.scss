@@ -1,1 +1,21 @@
-// styles go here
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: #eee3ca;
+  background-color: #ab784e;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  margin-bottom: 20px;
+  padding: 6px 10px;
+  font-size: 30px;
+  color: #66544b;
+  background-color: #eee3ca;
+  border-radius: 8px;
+}

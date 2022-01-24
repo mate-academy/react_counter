@@ -1,16 +1,16 @@
 import React from 'react';
-import './App.scss';
+import 'bulma/css/bulma.min.css';
+
+import { Counter } from './components/Counter';
 
 class App extends React.Component {
-  addOne = () => {};
-
-  add100 = () => {};
-
-  increase = () => {};
+  state = {};
 
   render() {
     return (
-      <h1>Count: 0</h1>
+      <div className="box">
+        <Counter />
+      </div>
     );
   }
 }

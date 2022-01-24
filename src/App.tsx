@@ -31,9 +31,7 @@ class App extends React.Component<{}, State> {
   };
 
   resetCounter = () => {
-    this.setState((state) => ({
-      count: state.count * 0,
-    }));
+    this.setState({ count: 0 });
   };
 
   render() {

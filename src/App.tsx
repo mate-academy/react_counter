@@ -6,7 +6,7 @@ type State = {
 };
 
 class App extends React.Component<{}, State> {
-  state = {
+  state: State = {
     count: 0,
   };
 
@@ -24,14 +24,10 @@ class App extends React.Component<{}, State> {
 
   increase = () => {
     if (this.state.count % 5 === 0) {
-      this.setState(() => {
-        return this.add100();
-      });
+      this.add100();
     }
 
-    this.setState(() => {
-      return this.addOne();
-    });
+    this.addOne();
   };
 
   resetCounter = () => {

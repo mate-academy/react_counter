@@ -22,11 +22,13 @@ export class App extends React.Component<{}, State> {
     }));
   };
 
-  increase = () => (
-    this.state.count % 5 === 0
-      ? (this.add100(), this.addOne())
-      : this.addOne()
-  );
+  increase = () => {
+    if (this.state.count % 5 === 0) {
+      this.add100();
+    }
+
+    this.addOne();
+  };
 
   render() {
     const { count } = this.state;

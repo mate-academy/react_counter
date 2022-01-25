@@ -10,19 +10,15 @@ class Counter extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((prevSate) => {
-      return {
-        counter: prevSate.counter + 1,
-      };
-    });
+    this.setState((prevSate) => ({
+      counter: prevSate.counter + 1,
+    }));
   };
 
   add100 = () => {
-    this.setState((prevSate) => {
-      return {
-        counter: prevSate.counter + 100,
-      };
-    });
+    this.setState((prevSate) => ({
+      counter: prevSate.counter + 100,
+    }));
   };
 
   increase = () => {
@@ -59,7 +55,7 @@ class Counter extends React.Component<{}, State> {
           type="button"
           onClick={this.increase}
         >
-          addOne
+          Increase
         </button>
       </>
     );

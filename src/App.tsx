@@ -6,24 +6,20 @@ type State = {
 };
 
 class App extends React.Component<{}, State> {
-  state:State = {
+  state: State = {
     count: 0,
   };
 
-  addToCounter = (num = 1):void => {
-    this.setState(({ count }) => (
-      {
-        count: count + num,
-      }
-    ));
+  addToCounter = (num = 1) => {
+    this.setState(({ count }) => ({
+      count: count + num,
+    }));
   };
 
   increase = () => {
-    this.setState(({ count }) => (
-      {
-        count: count + (count % 5 === 0 ? 101 : 1),
-      }
-    ));
+    this.setState(({ count }) => ({
+      count: count + (count % 5 === 0 ? 101 : 1),
+    }));
   };
 
   render() {

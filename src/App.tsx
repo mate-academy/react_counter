@@ -41,7 +41,6 @@ class App extends React.Component<{}, State> {
       <div>
         <h1>
           Count:
-          {' '}
           {count}
         </h1>
         <button type="submit" onClick={this.addOne}>1</button>

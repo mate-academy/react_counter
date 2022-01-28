@@ -2,11 +2,11 @@ import React from 'react';
 import './App.scss';
 
 type State = {
-  count: number;
+  count: number,
 };
 
 class App extends React.Component<{}, State> {
-  state: State = {
+  state = {
     count: 0,
   };
 
@@ -23,7 +23,7 @@ class App extends React.Component<{}, State> {
   };
 
   increase = () => {
-    if (this.state.count % 3 === 0) {
+    if (this.state.count % 5 === 0) {
       this.add100();
     }
 
@@ -31,19 +31,28 @@ class App extends React.Component<{}, State> {
   };
 
   render() {
+    const { count } = this.state;
+
     return (
-      <>
-        <h1>{`Count: ${this.state.count}`}</h1>
+      <div className="App">
+        <h1>
+          Count:
+          {' '}
+          {count}
+        </h1>
+
         <button type="button" onClick={this.addOne}>
           Add 1
         </button>
+
         <button type="button" onClick={this.add100}>
           Add 100
         </button>
+
         <button type="button" onClick={this.increase}>
           Increase
         </button>
-      </>
+      </div>
     );
   }
 }

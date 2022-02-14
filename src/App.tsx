@@ -24,7 +24,7 @@ class App extends React.Component<{}, State> {
 
   increase = () => {
     this.setState((state) => {
-      if (state.counter % 5 === 0 && state.counter !== 0) {
+      if (state.counter % 5 === 0) {
         this.add100();
       }
 

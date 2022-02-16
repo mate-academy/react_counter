@@ -44,9 +44,7 @@ class App extends React.Component<{}, Counter> {
         <button
           className={btnClass}
           type="button"
-          onClick={() => {
-            this.addOne();
-          }}
+          onClick={this.addOne}
         >
           add One
         </button>

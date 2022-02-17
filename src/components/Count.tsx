@@ -23,13 +23,11 @@ export class Count extends React.Component<{}, State> {
   };
 
   increase = () => {
-    this.setState(({ count }) => {
-      if (count % 5 === 0) {
-        this.add100();
-      }
+    if (this.state.count % 5 === 0) {
+      this.add100();
+    }
 
-      this.addOne();
-    });
+    this.addOne();
   };
 
   clear = () => {

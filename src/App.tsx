@@ -74,7 +74,7 @@ class App extends React.Component<{}, State> {
             type="button"
             onClick={this.reset}
           >
-            increase
+            reset
           </button>
         </div>
       </>

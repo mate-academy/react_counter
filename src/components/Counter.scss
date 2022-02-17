@@ -1,0 +1,9 @@
+.counter {
+  margin-left: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+  }
+}

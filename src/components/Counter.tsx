@@ -13,14 +13,14 @@ class Counter extends React.Component<Props, State> {
   };
 
   addOne = () => {
-    this.setState((prevState) => ({
-      counter: prevState.counter + 1,
+    this.setState((state) => ({
+      counter: state.counter + 1,
     }));
   };
 
   add100 = () => {
-    this.setState((prevState) => ({
-      counter: prevState.counter + 100,
+    this.setState((state) => ({
+      counter: state.counter + 100,
     }));
   };
 

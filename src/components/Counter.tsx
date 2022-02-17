@@ -22,15 +22,14 @@ export class Counter extends React.Component<{}, State> {
   };
 
   increase = () => {
-    const { addOne, add100 } = this;
+    const { addOne, add100, state } = this;
+    const { count } = state;
 
-    this.setState(({ count }) => {
-      addOne();
+    addOne();
 
-      if (count % 5 === 0) {
-        add100();
-      }
-    });
+    if (count % 5 === 0) {
+      add100();
+    }
   };
 
   render() {

@@ -1,0 +1,36 @@
+.Count {
+  margin: 200px auto;
+  position: relative;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  background-color: beige;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    gap: 10px;
+  }
+
+  &__button {
+    font-family: inherit;
+    border-radius: 5px;
+
+    &--clear {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+    }
+  }
+}

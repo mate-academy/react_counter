@@ -34,6 +34,12 @@ class App extends React.Component<{}, State> {
     });
   };
 
+  reset = () => {
+    this.setState((state) => ({
+      count: state.count * 0,
+    }));
+  };
+
   render() {
     const { count } = this.state;
 
@@ -60,6 +66,13 @@ class App extends React.Component<{}, State> {
           <button
             type="button"
             onClick={this.increase}
+          >
+            increase
+          </button>
+
+          <button
+            type="button"
+            onClick={this.reset}
           >
             increase
           </button>

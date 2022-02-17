@@ -37,9 +37,24 @@ export class Counter extends React.Component<{}, State> {
     return (
       <>
         <h1>{`Counter - ${this.state.counter}`}</h1>
-        <button type="button" onClick={this.addOne}>Add One</button>
-        <button type="button" onClick={this.add100}>Add 100</button>
-        <button type="button" onClick={this.increase}>Increase</button>
+        <button
+          type="button"
+          onClick={this.addOne}
+        >
+          Add One
+        </button>
+        <button
+          type="button"
+          onClick={this.add100}
+        >
+          Add 100
+        </button>
+        <button
+          type="button"
+          onClick={this.increase}
+        >
+          Increase
+        </button>
       </>
     );
   }

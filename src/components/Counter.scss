@@ -1,0 +1,13 @@
+.counter {
+  &__title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 36px;
+    margin-left: 20px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 30px;
+  }
+}
+

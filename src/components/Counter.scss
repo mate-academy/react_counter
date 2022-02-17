@@ -1,0 +1,10 @@
+.counter {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 36px;
+  margin-left: 50px;
+
+  &__buttons {
+    display: flex;
+    gap: 30px;
+  }
+}

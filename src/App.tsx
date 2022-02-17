@@ -42,17 +42,15 @@ class App extends React.Component<{}, Counter> {
         <button
           className={btnClass}
           type="button"
-          onClick={() => {
-            this.add100();
-          }}
+          onClick={this.add100}
         >
           add 100
         </button>
         <button
           className={btnClass}
           type="button"
-          onClick={() => (this.state.counter % 5 === 0
-            ? this.add100() : this.addOne())}
+          onClick={this.state.counter % 5 === 0
+            ? this.add100 : this.addOne}
         >
           increase c:
         </button>

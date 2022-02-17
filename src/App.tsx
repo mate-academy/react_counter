@@ -26,15 +26,6 @@ class App extends React.Component<{}, Counter> {
     });
   };
 
-  increase = () => {
-    this.setState(({ counter }) => {
-      const adder = counter % 5 === 0 ? 100 : 1;
-      const result = counter + adder;
-
-      return ({ counter: result });
-    });
-  };
-
   render() {
     const btnClass = 'waves-effect waves-purple btn-large';
 
@@ -62,9 +53,8 @@ class App extends React.Component<{}, Counter> {
         <button
           className={btnClass}
           type="button"
-          onClick={() => {
-            this.increase();
-          }}
+          onClick={() => (this.state.counter % 5 === 0
+            ? this.add100() : this.addOne())}
         >
           increase c:
         </button>

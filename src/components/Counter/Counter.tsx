@@ -6,8 +6,6 @@ type State = {
 };
 
 export class Counter extends React.Component<{}, State> {
-  countClick = 0;
-
   state = {
     counter: 0,
   };

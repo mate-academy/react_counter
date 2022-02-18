@@ -3,13 +3,10 @@ import './App.scss';
 
 import { Counter } from './components/Counter/Counter';
 
-// eslint-disable-next-line
-class App extends React.Component {
-  render() {
-    return (
-      <Counter />
-    );
-  }
-}
+const App: React.FC = () => {
+  return (
+    <Counter />
+  );
+};
 
 export default App;

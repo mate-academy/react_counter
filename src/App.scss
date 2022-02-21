@@ -1,1 +1,43 @@
-// styles go here
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  padding-bottom: 20px;
+  margin: 0;
+  color: white;
+  text-shadow: 4px 4px 8px rgba(34, 60, 80, 0.3);
+}
+
+.container {
+  padding: 20px;
+  background-color: #1b6535;
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.3);
+  border-radius: 20px;
+  width: 350px;
+}
+
+.buttons-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  width: 30%;
+  height: 30px;
+  background-color: #94af5d;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  text-shadow: 4px 4px 8px rgba(34, 60, 80, 0.3);
+  transition: all 0.3s;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #e1dd72;
+    color: black;
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.3);
+  }
+}

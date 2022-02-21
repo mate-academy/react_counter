@@ -23,17 +23,17 @@ class App extends React.Component<{}, State> {
   };
 
   increase = () => {
-    this.addOne();
     this.setState((state) => {
       if (state.count % 5 === 0) {
         this.add100();
       }
     });
+
+    this.addOne();
   };
 
   render() {
     const { count } = this.state;
-    const btnClass = 'waves-effect waves-purple btn-large';
 
     return (
       <>
@@ -42,21 +42,18 @@ class App extends React.Component<{}, State> {
           <button
             type="button"
             onClick={this.addOne}
-            className={btnClass}
           >
             addOne
           </button>
           <button
             type="button"
             onClick={this.add100}
-            className={btnClass}
           >
             add 100
           </button>
           <button
             type="button"
             onClick={this.increase}
-            className={btnClass}
           >
             increase
           </button>

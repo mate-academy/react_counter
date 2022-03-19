@@ -1,0 +1,36 @@
+.Counter {
+  padding: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  &__content {
+    height: 100vh;
+    text-align: center;
+  }
+
+  &__title {
+    color: #cb261e;
+    margin-bottom: 30px;
+    font-size: 50px;
+  }
+  &__button {
+    padding: 12px 24px;
+    border: 2px solid #cb261e;
+    border-radius: 10px;
+    background-color: #fff;
+
+    color: #cb261e;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    &:hover {
+      background-color: #cb261e;
+      color: #fff;
+    }
+  }
+}

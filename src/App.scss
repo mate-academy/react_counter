@@ -1,1 +1,37 @@
-// styles go here
+.App {
+  margin: auto;
+  border: 2px solid green;
+  background-color: lightgoldenrodyellow;
+  border-radius: 10px;
+  padding: 20px;
+  width: max-content;
+
+  &__title {
+    margin: 0 0 20px;
+    text-align: center;
+
+    &--count {
+      border-bottom: 2px solid green;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    background-color: lightgoldenrodyellow;
+    border: 2px solid green;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0 5px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: lightgoldenrodyellow;
+      background-color: green;
+      transform: scale(1.1);
+    }
+  }
+}

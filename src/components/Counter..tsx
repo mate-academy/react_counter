@@ -24,7 +24,7 @@ class Counter extends React.Component<{}, State> {
   render() {
     return (
       <>
-        <h1>{this.state.number}</h1>
+        <h1>{`Count: ${this.state.number}`}</h1>
         <button
           type="button"
           className="button"

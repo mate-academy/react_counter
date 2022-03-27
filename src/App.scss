@@ -1,1 +1,17 @@
-// styles go here
+html {
+  background-color: black;
+  color: aquamarine;
+}
+
+body,
+h1 {
+  margin: 0;
+}
+
+.App {
+  padding: 50px;
+
+  &__header {
+    margin-bottom: 20px;
+  }
+}

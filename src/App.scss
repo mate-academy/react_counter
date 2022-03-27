@@ -3,15 +3,10 @@ html {
   color: aquamarine;
 }
 
-body,
-h1 {
+body {
   margin: 0;
 }
 
 .App {
   padding: 50px;
-
-  &__header {
-    margin-bottom: 20px;
-  }
 }

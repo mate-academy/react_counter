@@ -35,38 +35,28 @@ export class App extends React.Component<{}, State> {
 
     return (
       <div>
-
         <h1>
           Count: &nbsp;
           {count}
         </h1>
-
         <button
           type="button"
-          className="button1"
           onClick={this.addOne}
         >
           addOne
         </button>
-
         <button
           type="button"
-          className="button2"
           onClick={this.add100}
-
         >
           add100
         </button>
-
         <button
           type="button"
-          className="button3"
           onClick={this.increase}
-
         >
           increase
         </button>
-
       </div>
     );
   }

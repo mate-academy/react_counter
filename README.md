@@ -12,3 +12,9 @@ Create component `Counter` that renders `h1` and 3 buttons. Initially `h1` shows
 
 So the third button should count like this:
 `101, 102, 103, 104, 105, 206, 207, 208, 209, 210, 311 ...`
+
+## Requirements
+- `h1` should contain `data-cy="counter"` attribute
+- `Add one` button should contain `data-cy="addOne"` attribute
+- `Add 100` button should contain `data-cy="addOneHungred"` attribute
+- `Increase` button should contain `data-cy="increase"` attribute

@@ -3,7 +3,7 @@ import './App.scss';
 import { Counter } from './Counter';
 
 const App: React.FC = () => (
-  <div className="App">
+  <div className="App App__wrapper">
     <Counter />
   </div>
 );

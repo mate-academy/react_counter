@@ -1,1 +1,12 @@
-// styles go here
+.buttons {
+  display: flex;
+  flex-direction: column;
+
+  &__btn {
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    width: 100px;
+    height: 30px;
+  }
+}

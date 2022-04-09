@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.scss';
 
 type State = {
   counter: number,

@@ -1,1 +1,31 @@
 // styles go here
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  background-color: #01010141;
+}
+
+.title__count {
+  color: #d2691e;
+}
+
+.button__count {
+  box-shadow: 0 10px 14px -7px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 32px;
+  text-shadow: 0 1px 0 #3d768a;
+  border-style: none;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &:hover {
+    background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  }
+}

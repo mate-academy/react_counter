@@ -1,1 +1,13 @@
-// styles go here
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 20px;
+  color: pink;
+  border: 1px pink solid;
+  border-radius: 5px;
+  text-align: center;
+  background-color: aliceblue;
+}

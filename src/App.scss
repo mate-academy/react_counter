@@ -1,1 +1,50 @@
-// styles go here
+body,
+h1,
+div {
+  margin: 0;
+}
+
+body {
+  background-color: #4abdac;
+}
+
+.App {
+  width: 60%;
+  height: 300px;
+  margin: 150px auto;
+
+  border-radius: 8px;
+  background-color: #f7b733;
+
+  &__title {
+    padding: 50px;
+    text-align: center;
+    color: #fc4a1a;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    height: 40px;
+    width: 80px;
+    margin: 20px;
+
+    font-size: 16px;
+    color: #fc4a1a;
+    text-align: center;
+
+    border: 2px transparent solid;
+    border-radius: 8px;
+
+    background-color: #dfdce3;
+    transition: background-color 0.3s color 0.3s;
+
+    &:hover {
+      background-color: #fc4a1a;
+      color: #dfdce3;
+    }
+  }
+}

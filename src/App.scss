@@ -1,1 +1,19 @@
-// styles go here
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 166px;
+  gap: 6px;
+
+  margin: 24px;
+  padding: 6px;
+
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: #ddd;
+}
+
+button {
+  border-radius: 6px;
+  font-size: 1.2em;
+}

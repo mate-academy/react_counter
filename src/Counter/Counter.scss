@@ -1,0 +1,16 @@
+.Counter{
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  &__buttons{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__button{
+    width: 100px;
+    padding: 10px;
+    background-color: fff;
+    border: 1px solid gray;
+    box-shadow: 0 0 5px 2px gray;
+  }
+}

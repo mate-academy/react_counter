@@ -1,1 +1,71 @@
-// styles go here
+@import "./vars";
+@import "./fonts";
+
+html {
+  font-family: "Rye", sans;
+}
+
+body {
+  margin: 0;
+
+  background-color: $green;
+}
+
+.App {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.Count {
+  margin: 0 0 20px;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 100%;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+
+  text-shadow: 8px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.Button {
+  box-sizing: border-box;
+
+  display: block;
+  min-width: 100px;
+  padding: 8px 12px;
+
+  font-family: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 100%;
+  color: $black;
+
+  border: none;
+  background-color: $gray;
+
+  transition-property: background-color;
+  transition-duration: 0.3s;
+
+  &:hover {
+    background-color: $orange;
+  }
+}

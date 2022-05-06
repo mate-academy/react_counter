@@ -1,0 +1,38 @@
+//not empty
+.Counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: violet;
+
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+}
+
+.button__add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid rgb(213, 34, 213);
+  border-radius: 50px;
+  width: 100px;
+  height: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgb(233, 55, 233);
+    color: white;
+    cursor: pointer;
+  }
+}

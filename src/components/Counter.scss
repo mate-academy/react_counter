@@ -1,0 +1,71 @@
+.counter-title {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5em;
+  line-height: 1;
+  text-decoration: none;
+  color: #fff;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+  margin-bottom: 50px;
+  z-index: 3;
+}
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #f17,
+      0 0 70px hsl(334, 68%, 45%),
+      0 0 80px #f17,
+      0 0 100px #f17,
+      0 0 150px #f17;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #f17,
+      0 0 35px #f17,
+      0 0 40px #f17,
+      0 0 50px #f17,
+      0 0 75px #f17;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.button-add {
+  color: #f17;
+  border: 6px solid #f17;
+  border-radius: 15px;
+  padding: 15px 25px;
+  font-size: 30px;
+  letter-spacing: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  filter: drop-shadow(0 0 15px #f17)
+    drop-shadow(0 0 50px #f17) contrast(2) brightness(2);
+  transition: 0.5s;
+  background: transparent;
+
+  &:hover {
+    color: #fff;
+    background-color: #db3eb1;
+    filter: drop-shadow(0 0 20px #db3eb1) contrast(2) brightness(2);
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}

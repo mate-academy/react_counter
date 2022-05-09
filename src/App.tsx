@@ -1,16 +1,13 @@
 import React from 'react';
 import './App.scss';
+import Counter from './Counter';
 
-class App extends React.Component {
-  addOne = () => {};
-
-  add100 = () => {};
-
+class App extends React.Component<Props, State> {
   increase = () => {};
 
   render() {
     return (
-      <h1>Count: 0</h1>
+      <Counter />
     );
   }
 }

@@ -1,1 +1,55 @@
-// styles go here
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+body {
+  height: 100vh;
+  font-family: "Righteous", cursive;
+  margin: 0;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  background: linear-gradient(90deg, #b7f8db 0%, #50a7c2 100%);
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  gap: 10px;
+
+  &__header {
+    margin: 0;
+  }
+
+  &__number {
+    margin: 0;
+    font-size: 100px;
+    font-weight: bold;
+  }
+
+  &__buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  &__button {
+    padding: 15px;
+    font-size: 1.1em;
+    font-family: inherit;
+    background-color: #0000;
+    border: 1px solid black;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: #fcb69ff0;
+    }
+    &:active {
+      background-color: #0000;
+    }
+  }
+}

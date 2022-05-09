@@ -1,1 +1,27 @@
 // styles go here
+body {
+  background-color: rgb(97, 97, 97);
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.App {
+  text-align: center;
+  margin: 200px auto;
+}
+
+.button {
+  border: none;
+  background-color: rgb(163, 163, 163);
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 20px;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(138, 138, 138);
+  }
+}

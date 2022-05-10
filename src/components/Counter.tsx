@@ -21,9 +21,9 @@ class Counter extends React.Component<{}, State> {
   increase = () => {
     if (this.state.count % 5 === 0) {
       this.add100();
-    } else {
-      this.addOne();
     }
+
+    this.addOne();
   };
 
   render() {
@@ -42,21 +42,21 @@ class Counter extends React.Component<{}, State> {
             className="button-add"
             onClick={this.addOne}
           >
-            First button
+            Add (+1)
           </button>
           <button
             type="button"
             className="button-add"
             onClick={this.add100}
           >
-            Second button
+            Add (+100)
           </button>
           <button
             type="button"
             className="button-add"
             onClick={this.increase}
           >
-            Third button
+            Add (+1 or 101)
           </button>
         </div>
       </>

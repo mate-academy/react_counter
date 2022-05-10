@@ -6,7 +6,7 @@ type State = {
 };
 
 class App extends React.Component<{}, State> {
-  times = 0;
+  increaseFiveTimes = 0;
 
   state = {
     count: 0,
@@ -25,20 +25,20 @@ class App extends React.Component<{}, State> {
   };
 
   increase = () => {
-    if (this.times === 5) {
+    if (this.increaseFiveTimes === 5) {
       this.add100();
-      this.times = 0;
+      this.increaseFiveTimes = 0;
     }
 
     this.addOne();
-    this.times += 1;
+    this.increaseFiveTimes += 1;
   };
 
   render() {
     const { count } = this.state;
 
     return (
-      <>
+      <div className="App">
         <h1>
           {`Count: ${count}`}
         </h1>
@@ -66,7 +66,7 @@ class App extends React.Component<{}, State> {
         >
           Increase
         </button>
-      </>
+      </div>
     );
   }
 }

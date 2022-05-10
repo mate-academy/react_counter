@@ -1,1 +1,32 @@
 // styles go here
+body,
+h1 {
+  background-color: #bbb;
+  margin: 0;
+}
+
+.counter {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 5rem;
+  transition: all 0.2s;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+
+  &__button {
+    padding: 20px;
+    border-radius: 20px;
+    transition: all 0.5s;
+
+    &:active {
+      color: #fff;
+      background-color: rgb(100, 60, 110);
+      transform: scale(1.2);
+    }
+  }
+}

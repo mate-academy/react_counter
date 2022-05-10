@@ -1,1 +1,36 @@
-// styles go here
+.app {
+  width: 50%;
+  margin: 0 auto;
+  padding: 5px;
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  text-align: center;
+
+  border: 1px solid lightgray;
+  border-radius: 5px;
+
+  &__count {
+    margin: 0 auto;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__button {
+    font-size: 1.5em;
+    border: 1px solid lightgray;
+    background-color: #f4f4f4;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 7px 10px 19px -7px rgba(0,0,0,0.75);
+    }
+
+    &:active {
+      box-shadow: 7px 10px 19px -7px rgba(0,0,0,0.75) inset;
+    }
+  }
+}

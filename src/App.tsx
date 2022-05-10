@@ -1,16 +1,74 @@
 import React from 'react';
 import './App.scss';
 
-class App extends React.Component {
-  addOne = () => {};
+type State = {
+  count: number;
+};
 
-  add100 = () => {};
+class App extends React.Component<{}, State> {
+  state: State = {
+    count: 0,
+  };
 
-  increase = () => {};
+  addOne = () => {
+    this.setState(({ count }) => (
+      {
+        count: count + 1,
+      }
+    ));
+  };
+
+  add100 = () => {
+    this.setState(({ count }) => (
+      {
+        count: count + 100,
+      }
+    ));
+  };
+
+  increase = () => {
+    const { count } = this.state;
+
+    if (count % 5 === 0) {
+      this.add100();
+    }
+
+    this.addOne();
+  };
 
   render() {
+    const { count } = this.state;
+
     return (
-      <h1>Count: 0</h1>
+      <div className="app">
+        <h1 className="app__count">
+          Count:
+          {count}
+        </h1>
+        <div className="app__buttons">
+          <button
+            className="app__button"
+            type="button"
+            onClick={this.addOne}
+          >
+            add 1
+          </button>
+          <button
+            className="app__button"
+            type="button"
+            onClick={this.add100}
+          >
+            add 100
+          </button>
+          <button
+            className="app__button"
+            type="button"
+            onClick={this.increase}
+          >
+            add some
+          </button>
+        </div>
+      </div>
     );
   }
 }

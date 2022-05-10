@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import { Counter } from './components/Counter';
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
     <Counter />
   );

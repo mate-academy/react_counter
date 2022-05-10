@@ -1,1 +1,77 @@
-// styles go here
+body {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+
+  background-color: #182130;
+  background-image: url("./img/voda-padaiushchaia-zvezda-nebo-noch.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__count {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto Slab", serif;
+    text-transform: uppercase;
+    font-size: 84px;
+    color: #fcf7fb;
+    text-align: end;
+
+    text-shadow: 0 0 21px rgba(223, 206, 228, 0.5),
+      0 0 10px rgba(223, 206, 228, 0.4),
+      0 0 2px #2a153c;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 150px;
+  }
+
+  &__button {
+    width: 150px;
+    text-decoration: none;
+    padding: 7px;
+    color: #a675b3;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 20px;
+    font-size: 17px;
+    display: block;
+    margin: 20px auto;
+
+    &:not(.active) {
+      box-shadow: inset 0 1px 1px rgba(111, 55, 125, 0.8),
+        0 9px 16px 0 rgba(0, 0, 0, 0.3),
+        0 4px 3px 0 rgba(0, 0, 0, 0.3),
+        0 0 0 1px #150a1e;
+      background-image: linear-gradient(#3b2751, #271739);
+      text-shadow: 0 0 21px rgba(223, 206, 228, 0.5),
+        0 -1px 0 #311d47;
+    }
+
+    &:not(:hover) {
+      transition: 0.6s;
+    }
+
+    &:not(.active):hover {
+      transition: color 200ms linear, text-shadow 500ms linear;
+      color: #fff;
+      text-shadow: 0 0 21px rgba(223, 206, 228, 0.5),
+        0 0 10px rgba(223, 206, 228, 0.4),
+        0 0 2px #2a153c;
+    }
+  }
+}

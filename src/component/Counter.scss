@@ -1,0 +1,36 @@
+.button {
+  width: 90px;
+  height: 40px;
+  padding: 5px;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(169, 57, 161);
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #c497c3;
+  }
+
+  &__counter {
+    padding: 20px;
+    background-color: rgb(123, 228, 228);
+  }
+
+  &__output {
+    display: flex;
+    justify-content: center;
+    color: brown;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__clear {
+    margin-top: 20px;
+    background-color: rgb(165, 39, 58);
+  }
+}

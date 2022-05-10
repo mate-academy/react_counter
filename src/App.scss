@@ -1,1 +1,38 @@
-// styles go here
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #452884;
+}
+
+.App {
+  width: 600px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+
+.button-wrapper {
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button {
+  border-radius: 20px;
+  padding: 20px 50px;
+  margin-bottom: 20px;
+  width: 300px;
+  transition: transform 0.5s;
+  background-color: #f1b3a2;
+  color: white;
+  font-size: 20px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

@@ -43,6 +43,7 @@ class App extends React.Component<{}, State> {
       <div className="app">
         <h1 className="app__count">
           Count:
+          {' '}
           {count}
         </h1>
         <div className="app__buttons">

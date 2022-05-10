@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import sound from './sheep.mp3';
 
 type State = {
   count: number;
@@ -10,16 +11,26 @@ class App extends React.Component<{}, State> {
     count: 0,
   };
 
+  play = () => {
+    const audio = new Audio(sound);
+
+    audio.play();
+  };
+
   addOne = () => {
     this.setState((state) => ({
       count: state.count + 1,
     }));
+
+    this.play();
   };
 
   add100 = () => {
     this.setState((state) => ({
       count: state.count + 100,
     }));
+
+    this.play();
   };
 
   increase = () => {
@@ -30,6 +41,7 @@ class App extends React.Component<{}, State> {
     }
 
     this.addOne();
+    this.play();
   };
 
   render() {

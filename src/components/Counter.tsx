@@ -37,7 +37,11 @@ class Counter extends React.Component<{}, State> {
           {count}
         </h1>
         <div className="wrapper">
-          <button type="button" className="button-add" onClick={this.addOne}>
+          <button
+            type="button"
+            className="button-add"
+            onClick={this.addOne}
+          >
             First button
           </button>
           <button

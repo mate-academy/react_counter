@@ -1,1 +1,47 @@
-// styles go here
+
+.app {
+  margin: 0;
+  font-family: cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    border: 3px solid mediumaquamarine;
+    border-radius: 18px;
+    box-shadow: 0 0 25px mediumturquoise;
+  }
+
+  &__title {
+    margin: 0;
+    border-bottom: 3px solid mediumaquamarine;
+    width: 264px;
+    text-align: center;
+    padding-bottom: 5px;
+  }
+
+  &__button {
+    font-family: cursive;
+    height: 50px;
+    width: 100px;
+    font-size: 19px;
+    border-radius: 20px;
+    border: 3px solid mediumaquamarine;
+    transition: all 0.5s;
+    box-shadow: 0 0 25px mediumturquoise;
+
+    &:hover {
+      border-radius: 13px;
+      transform: scale(1.2);
+      box-shadow: 0 0 25px red;
+    }
+  }
+}

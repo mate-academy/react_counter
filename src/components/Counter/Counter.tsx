@@ -35,7 +35,7 @@ export class Counter extends React.Component<{}, State> {
 
     return (
       <div className="counter">
-        <h1 className="counter__title">Count:</h1>
+        <h1 className="counter__title">COUNT#</h1>
 
         <span className="counter__number">{counter}</span>
 

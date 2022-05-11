@@ -1,12 +1,13 @@
 import React from 'react';
-import './App.scss';
 import sound from './sheep.mp3';
+import './App.scss';
+import { Counter } from './components/Counter';
 
 type State = {
   count: number;
 };
 
-class App extends React.Component<{}, State> {
+export class App extends React.Component<{}, State> {
   state = {
     count: 0,
   };
@@ -45,39 +46,15 @@ class App extends React.Component<{}, State> {
   };
 
   render() {
-    const { count } = this.state;
-
     return (
       <div className="App">
-        <h1 className="Title">
-          {`Count: ${count}`}
-        </h1>
-        <div className="Buttons">
-          <button
-            type="button"
-            className="Button"
-            onClick={this.addOne}
-          >
-            ADD ONE
-          </button>
-          <button
-            type="button"
-            className="Button"
-            onClick={this.add100}
-          >
-            ADD 100
-          </button>
-          <button
-            type="button"
-            className="Button"
-            onClick={this.increase}
-          >
-            INCREASE
-          </button>
-        </div>
+        <Counter
+          count={this.state.count}
+          addOne={this.addOne}
+          add100={this.add100}
+          increase={this.increase}
+        />
       </div>
     );
   }
 }
-
-export default App;

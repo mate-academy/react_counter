@@ -62,7 +62,6 @@ export class Counter extends React.Component<{}, State> {
           </button>
         </div>
       </div>
-
     );
   }
 }

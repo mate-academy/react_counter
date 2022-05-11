@@ -1,16 +1,17 @@
 import React from 'react';
-import './App.scss';
+import { Counter } from './components/Counter';
 
-class App extends React.Component {
-  addOne = () => {};
+type State = {
+  count: number,
+};
 
-  add100 = () => {};
-
-  increase = () => {};
-
-  render() {
+// eslint-disable-next-line react/prefer-stateless-function
+class App extends React.Component<{}, State> {
+  render(): React.ReactNode {
     return (
-      <h1>Count: 0</h1>
+      <div className="app">
+        <Counter />
+      </div>
     );
   }
 }

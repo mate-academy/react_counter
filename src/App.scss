@@ -1,1 +1,29 @@
-// styles go here
+html {
+  background-image: url(./sheeps.png);
+  background-size: cover;
+  font-family: "Chango", cursive;
+}
+
+body {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.App {
+  width: 450px;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  background: rgba(0,0,0, 0.9);
+  border: 1px solid black;
+  border-radius: 25px;
+}

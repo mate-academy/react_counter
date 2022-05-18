@@ -7,28 +7,28 @@ type StateType = {
 
 class App extends React.Component<{}, StateType> {
   state = {
-    counter: 0
-  }
+    counter: 0,
+  };
 
-  addOne = () => (this.setState((state) => ({ counter: state.counter + 1 })));
+  addOne = () => (this.setState((state) => ({ counter: state.counter + 1 })))
 
-  add100 = () => (this.setState((state) => ({ counter: state.counter + 100 })));
+  add100 = () => (this.setState((state) => ({ counter: state.counter + 100 })))
 
-  increase = () => {
-    return this.setState((state) => {
-      if (state.counter % 5 === 0) {
-        this.add100();
-        this.addOne();
-      } else {
-        this.addOne();
-      }
-    });
+  increase = (): void => {
+    if (this.state.counter % 5 === 0) {
+      this.add100();
+    }
+
+    this.addOne();
   }
 
   render() {
     return (
       <>
-        <h1 className="counter">Count: {this.state.counter}</h1>
+        <h1 className="counter">
+          Count:
+          {this.state.counter}
+        </h1>
         <button
           type="button"
           className="button button--add1"

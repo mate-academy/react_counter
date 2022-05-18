@@ -20,7 +20,7 @@ class App extends React.Component<{}, StateType> {
     }
 
     this.addOne();
-  }
+  };
 
   render() {
     return (
@@ -46,7 +46,7 @@ class App extends React.Component<{}, StateType> {
         <button
           type="button"
           className="button button--increase"
-          onClick={() => this.setState(() => this.increase())}
+          onClick={() => this.increase()}
         >
           Increase
         </button>

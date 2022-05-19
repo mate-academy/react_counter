@@ -1,1 +1,40 @@
-// styles go here
+body {
+  background-color: blue;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    padding: 100px;
+    text-transform: uppercase;
+    color: yellow;
+  }
+
+  &__button-block {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__button {
+    font-size: 20px;
+    height: 100px;
+    width: 100px;
+    color: blue;
+    background-color: yellow;
+    border: 1px solid blue;
+    border-radius: 50%;
+    transition: all 0.5s;
+
+    &:hover {
+      cursor: pointer;
+      height: 150px;
+      width: 100px;
+      background-color: white;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      transform: scale(1.2);
+    }
+  }
+}

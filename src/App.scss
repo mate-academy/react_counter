@@ -1,1 +1,17 @@
-// styles go here
+body {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+
+  background-color: #182130;
+  background-image: url("./img/voda-padaiushchaia-zvezda-nebo-noch.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,16 +1,12 @@
 import React from 'react';
 import './App.scss';
+import Counter from './components/Counter/Counter';
 
-class App extends React.Component {
-  addOne = () => {};
-
-  add100 = () => {};
-
-  increase = () => {};
-
+// eslint-disable-next-line react/prefer-stateless-function
+class App extends React.Component<{}, {}> {
   render() {
     return (
-      <h1>Count: 0</h1>
+      <Counter />
     );
   }
 }

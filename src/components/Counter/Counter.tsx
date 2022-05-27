@@ -2,11 +2,13 @@ import React from 'react';
 
 type State = {
   count: number,
+  clickCount: number,
 };
 
 class Counter extends React.Component<{}, State> {
   state = {
     count: 0,
+    clickCount: 0,
   };
 
   addOne = () => {
@@ -22,11 +24,19 @@ class Counter extends React.Component<{}, State> {
   };
 
   increase = () => {
-    if (this.state.count % 5 === 0) {
-      this.add100();
-    } else {
-      this.addOne();
-    }
+    this.setState((prevState) => {
+      if (prevState.clickCount === 5) {
+        return {
+          count: prevState.count + 101,
+          clickCount: 0,
+        };
+      }
+
+      return {
+        count: prevState.count + 1,
+        clickCount: prevState.clickCount + 1,
+      };
+    });
   };
 
   render() {

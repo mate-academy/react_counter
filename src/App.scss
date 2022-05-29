@@ -1,1 +1,22 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  margin: 10px 20px;
+}
+
+.btn {
+  font-size: 15px;
+
+  padding: 10px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}

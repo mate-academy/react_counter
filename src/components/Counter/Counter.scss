@@ -1,0 +1,42 @@
+.counter {
+
+  &__add {
+    margin-bottom: 15px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
+
+.add__button {
+  background-color: bisque;
+  margin-bottom: 15px;
+
+  &:hover {
+    background-color: rgb(241, 205, 162);
+  }
+
+  &:active {
+    background-color: rgb(168, 150, 129);
+    border: 1px solid red;
+  }
+}
+
+.random__button {
+  height: 40px;
+  background-color: rgb(230, 199, 19);
+
+  &:hover {
+    background-color: rgb(222, 208, 129);
+  }
+
+  &:active {
+    background-color: rgb(231, 238, 40);
+    border: 1px solid red;
+  }
+}

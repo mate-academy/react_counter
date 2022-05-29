@@ -1,16 +1,15 @@
 import React from 'react';
 import './App.scss';
+import { Counter } from './components/Counter';
 
-class App extends React.Component {
-  addOne = () => {};
+type Props = {};
 
-  add100 = () => {};
-
-  increase = () => {};
-
+class App extends React.PureComponent<Props> {
   render() {
     return (
-      <h1>Count: 0</h1>
+      <div className="container">
+        <Counter />
+      </div>
     );
   }
 }

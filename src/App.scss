@@ -1,1 +1,16 @@
-// styles go here
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 25px auto 0;
+  width: 350px;
+  height: 250px;
+
+  text-align: center;
+
+  border: 1px solid black;
+  border-radius: 10px;
+
+  background-color: rgb(107, 236, 236);
+}

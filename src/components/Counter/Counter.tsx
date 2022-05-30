@@ -12,7 +12,7 @@ export const Counter:React.FC<Props> = ({
   count, addOne, add100, increase,
 }) => {
   const buttonGenerator = (text:string, method:() => void) => (
-    <button type="button" onClick={() => method()}>
+    <button type="button" onClick={method}>
       {text}
     </button>
   );

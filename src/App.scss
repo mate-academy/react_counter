@@ -1,1 +1,43 @@
-// styles go here
+.count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 100px;
+  padding-bottom: 20px;
+  width: 300px;
+  gap: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: antiquewhite;
+
+  &__title {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    color: blue;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: aliceblue;
+  }
+
+  &__button {
+    cursor: pointer;
+    font-size: 18px;
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: plum;
+
+    &:hover {
+      border-radius: 20px;
+      transform: scale(1.2);
+      box-shadow: 0 0 25px blue;
+      color: red;
+      text-transform: uppercase;
+    }
+  }
+}

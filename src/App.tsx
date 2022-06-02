@@ -1,18 +1,14 @@
 import React from 'react';
 import './App.scss';
+import { Counter } from './components/Counter';
 
-class App extends React.Component {
-  addOne = () => {};
+const App: React.FC = () => {
+  return (
+    <section>
+      <Counter />
+    </section>
 
-  add100 = () => {};
-
-  increase = () => {};
-
-  render() {
-    return (
-      <h1>Count: 0</h1>
-    );
-  }
-}
+  );
+};
 
 export default App;

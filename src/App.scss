@@ -29,3 +29,22 @@ body {
     margin: 20px;
   }
 }
+
+@media (max-width: 500px) {
+  .counter {
+    box-sizing: border-box;
+    width: 300px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__button-box {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 300px;
+      gap: 30px;
+    }
+  }
+}

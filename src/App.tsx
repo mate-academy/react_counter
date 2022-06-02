@@ -1,18 +1,13 @@
 import React from 'react';
 import './App.scss';
+import 'bulma/css/bulma.min.css';
 
-class App extends React.Component {
-  addOne = () => {};
+import { Count } from './components/Count';
 
-  add100 = () => {};
-
-  increase = () => {};
-
-  render() {
-    return (
-      <h1>Count: 0</h1>
-    );
-  }
-}
+const App: React.FC = () => (
+  <div className="container">
+    <Count />
+  </div>
+);
 
 export default App;

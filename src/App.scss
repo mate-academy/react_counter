@@ -1,1 +1,74 @@
-// styles go here
+@import "./utils/variables";
+
+html {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.container {
+  border: 2px solid rgb(142, 59, 220);
+  border-radius: 30px;
+  padding: 0 30px 30px;
+  width: max-content;
+  justify-content: center;
+  margin: 50px auto;
+
+  &__title {
+    color: rgb(142, 59, 220);
+    text-align: center;
+  }
+
+  &__items {
+    text-align: center;
+  }
+}
+
+.button {
+  width: 120px;
+  padding: 15px;
+  justify-content: space-between;
+  border-radius: 30px;
+
+  &__one {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-right: 20px;
+    background-color: $bgColor;
+    border: 1px solid $bgColor;
+    transition: transform 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+    }
+  }
+
+  &__100 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-right: 20px;
+    background-color: $bgColor;
+    border: 1px solid $bgColor;
+    transition: transform 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+    }
+  }
+
+  &__increase {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: $bgColor;
+    border: 1px solid $bgColor;
+    transition: transform 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+    }
+  }
+}

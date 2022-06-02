@@ -1,1 +1,54 @@
 // styles go here
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-self: center;
+  background-color: lightskyblue;
+  border: 5px double aqua;
+  border-radius: 40px;
+
+  &__title {
+    overflow: auto;
+    word-break: break-all;
+    display: flex;
+    word-wrap: normal;
+    text-align: center;
+    padding: 30px;
+  }
+
+  &__button-box {
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
+
+  &__button__clear {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .counter {
+    box-sizing: border-box;
+    width: 450px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__button-box {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+}

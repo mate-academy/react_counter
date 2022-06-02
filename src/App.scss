@@ -14,7 +14,10 @@ body {
   border-radius: 40px;
 
   &__title {
-    display: block;
+    overflow: auto;
+    word-break: break-all;
+    display: flex;
+    word-wrap: normal;
     text-align: center;
     padding: 30px;
   }
@@ -22,7 +25,9 @@ body {
   &__button-box {
     width: 500px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
   }
 
   &__button__clear {
@@ -43,7 +48,6 @@ body {
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: center;
-      height: 300px;
       gap: 30px;
     }
   }

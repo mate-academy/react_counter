@@ -30,6 +30,18 @@ export class App extends React.Component<{}, State> {
     });
   };
 
+  multiply10 = () => {
+    this.setState((state) => ({
+      counter: state.counter * 10,
+    }));
+  };
+
+  random = () => {
+    this.setState(() => ({
+      counter: Math.floor(Math.random() * 1001),
+    }));
+  };
+
   setClear = () => {
     this.setState({ counter: 0 });
   };
@@ -57,6 +69,20 @@ export class App extends React.Component<{}, State> {
             onClick={this.add100}
           >
             Add one hundred
+          </button>
+          <button
+            type="button"
+            className="counter__button__multiply button is-info is-rounded"
+            onClick={this.multiply10}
+          >
+            Multiply one ten
+          </button>
+          <button
+            type="button"
+            className="counter__button__increase button is-danger is-rounded"
+            onClick={this.random}
+          >
+            Random
           </button>
           <button
             type="button"

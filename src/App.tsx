@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.scss';
-import { Counter } from './Components/Counter';
 
 type State = {
   count: number,
@@ -36,7 +35,10 @@ class App extends React.Component<{}, State> {
 
     return (
       <div className="d-grid gap-2 col-6 mx-auto">
-        <Counter count={count} />
+        <h1>
+          Count:
+          <span>{count}</span>
+        </h1>
         <button
           type="button"
           className="btn btn-light"

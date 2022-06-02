@@ -1,1 +1,31 @@
 // styles go here
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-self: center;
+  background-color: lightskyblue;
+  border: 5px double aqua;
+  border-radius: 40px;
+
+  &__title {
+    display: block;
+    text-align: center;
+    padding: 30px;
+  }
+
+  &__button-box {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button__clear {
+    margin: 20px;
+  }
+}

@@ -1,1 +1,16 @@
 // styles go here
+.countBox {
+  text-align: center;
+  height: 100vh;
+  background-color: aquamarine;
+  font-size: 30px;
+
+  &__title {
+    padding: 50px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

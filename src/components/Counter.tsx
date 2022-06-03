@@ -38,21 +38,21 @@ export class Counter extends React.Component<{}, State> {
         <button
           type="button"
           className="button is-medium is-primary mx-2"
-          onClick={() => this.addOne()}
+          onClick={this.addOne}
         >
           Add 1
         </button>
         <button
           type="button"
           className="button is-medium is-warning mx-2"
-          onClick={() => this.add100()}
+          onClick={this.add100}
         >
           Add 100
         </button>
         <button
           type="button"
           className="button is-medium is-danger mx-2"
-          onClick={() => this.increase()}
+          onClick={this.increase}
         >
           Increase
         </button>

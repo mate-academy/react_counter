@@ -1,1 +1,19 @@
 // styles go here
+.container {
+  border: 3px solid cadetblue;
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 500px;
+  background-color: grey;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button {
+  width: 25%;
+  margin: 20px;
+}
+

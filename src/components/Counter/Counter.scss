@@ -1,0 +1,31 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 30px 60px;
+  height: 250px;
+  background-color: #fafafa;
+
+  &__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &__buttonWrapper {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.button {
+  margin-right: 20px;
+  border-radius: 0;
+  font-weight: 700;
+
+  &:nth-last-child() {
+    margin-right: 0;
+  }
+}

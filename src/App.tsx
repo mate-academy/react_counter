@@ -36,30 +36,58 @@ class App extends React.Component<{}, State> {
     const { counter } = this.state;
 
     return (
-      <>
-        <h1>{`Count: ${counter}`}</h1>
-
-        <button
-          type="button"
-          onClick={this.addOne}
+      <div
+        className="App has-background-primary-light"
+      >
+        <h1
+          className="
+            subtitle
+            is-3
+            has-text-success
+            count-title
+          "
         >
-          Add one
-        </button>
+          {`Count: ${counter}`}
+        </h1>
 
-        <button
-          type="button"
-          onClick={this.add100}
-        >
-          Add 100
-        </button>
+        <div className="buttons">
+          <button
+            type="button"
+            className="
+            button
+            is-primary
+            is-light
+            "
+            onClick={this.addOne}
+          >
+            Add one
+          </button>
 
-        <button
-          type="button"
-          onClick={this.increase}
-        >
-          Increase
-        </button>
-      </>
+          <button
+            type="button"
+            className="
+            button
+            is-primary
+            is-light
+            "
+            onClick={this.add100}
+          >
+            Add 100
+          </button>
+
+          <button
+            type="button"
+            className="
+            button
+            is-primary
+            is-light
+            "
+            onClick={this.increase}
+          >
+            Increase
+          </button>
+        </div>
+      </div>
 
     );
   }

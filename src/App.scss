@@ -1,1 +1,18 @@
-// styles go here
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+button {
+  border: 2px solid gray;
+  background-color: lightgray;
+  margin: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: white;
+  }
+}
+

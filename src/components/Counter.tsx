@@ -70,9 +70,7 @@ export class Counter extends React.Component<{}, State> {
             is-danger
             is-large
             is-rounded"
-          onClick={() => {
-            this.increase();
-          }}
+          onClick={this.increase}
         >
           Increase
         </button>

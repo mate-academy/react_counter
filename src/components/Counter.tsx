@@ -48,9 +48,7 @@ export class Counter extends React.Component<{}, State> {
             is-success
             is-large
             is-rounded"
-          onClick={() => {
-            this.addOne();
-          }}
+          onClick={this.addOne}
         >
           Add 1
         </button>
@@ -61,9 +59,7 @@ export class Counter extends React.Component<{}, State> {
             is-warning
             is-large
             is-rounded"
-          onClick={() => {
-            this.add100();
-          }}
+          onClick={this.add100}
         >
           Add 100
         </button>

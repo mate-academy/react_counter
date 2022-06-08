@@ -1,0 +1,11 @@
+@import "~bulma/bulma.sass";
+
+.Counter {
+  height: 100vh;
+  width: 100%;
+  background-color: $black-ter;
+
+  &__count {
+    color: $grey-lighter;
+  }
+}

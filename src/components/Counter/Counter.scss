@@ -1,0 +1,17 @@
+.counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__button {
+    height: 40px;
+    background-color: rgb(93, 190, 29);
+    color: seashell;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

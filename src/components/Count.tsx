@@ -32,7 +32,7 @@ export class Count extends React.Component<{}, State> {
     const { addOne, add100, increase } = this;
 
     return (
-      <article className="panel is-info">
+      <article className="container panel is-info">
         <h1 className="panel-heading is-center">{`Count: ${this.state.count}`}</h1>
         <div className="panel-block">
           <div className="buttons are-medium">

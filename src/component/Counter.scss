@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.counter {
+  background-color: rgb(88, 223, 93);
+  color: red;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    margin: auto;
+  }
+
+  &__buttonContainer {
+    margin: auto;
+  }
+
+  &__button {
+    margin: 10px;
+  }
+}

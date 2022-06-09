@@ -1,16 +1,13 @@
+import 'bulma/css/bulma.min.css';
 import React from 'react';
 import './App.scss';
+import { Count } from './components/Count';
 
+// eslint-disable-next-line react/prefer-stateless-function
 class App extends React.Component {
-  addOne = () => {};
-
-  add100 = () => {};
-
-  increase = () => {};
-
   render() {
     return (
-      <h1>Count: 0</h1>
+      <Count />
     );
   }
 }

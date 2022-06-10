@@ -59,6 +59,13 @@ class App extends React.Component<{}, State> {
           >
             Increase
           </button>
+
+          <button
+            type="button"
+            onClick={this.clear}
+          >
+            Clear
+          </button>
         </div>
       </div>
     );

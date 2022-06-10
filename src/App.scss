@@ -1,1 +1,23 @@
-// styles go here
+h1 {
+  font-family: Impact, Haettenschweiler, sans-serif;
+  letter-spacing: 3px;
+}
+
+.button {
+  margin-right: 5px;
+  background-color: aquamarine;
+  border: none;
+  width: 100px;
+  height: 60px;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: rgb(73, 158, 130);
+  }
+}

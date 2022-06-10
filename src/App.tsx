@@ -1,18 +1,12 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import './App.scss';
+import { Counter } from './components/Counter';
 
-class App extends React.Component {
-  addOne = () => {};
-
-  add100 = () => {};
-
-  increase = () => {};
-
-  render() {
-    return (
-      <h1>Count: 0</h1>
-    );
-  }
-}
+const App: React.FC = () => (
+  <div className="d-flex justify-content-center w-100">
+    <Counter />
+  </div>
+);
 
 export default App;

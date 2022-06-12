@@ -30,19 +30,24 @@ export class Counter extends React.Component<{}, State> {
 
   render() {
     return (
-      <div>
+      <div className="
+        container
+        has-background-primary
+        has-text-centered py-5"
+      >
         <div>
-          <h1>
+          <h1 className="title is-1 py-3">
             Count:
             { ' ' }
             {this.state.count}
           </h1>
         </div>
 
-        <div>
+        <div className="button-container-button">
           <button
             type="button"
             onClick={this.addOne}
+            className="button is-warning mx-3"
           >
             Add 1
           </button>
@@ -50,6 +55,7 @@ export class Counter extends React.Component<{}, State> {
           <button
             type="button"
             onClick={this.add100}
+            className="button is-warning mx-3"
           >
             Add 100
           </button>
@@ -57,6 +63,7 @@ export class Counter extends React.Component<{}, State> {
           <button
             type="button"
             onClick={this.increase}
+            className="button is-warning mx-3"
           >
             Increase
           </button>

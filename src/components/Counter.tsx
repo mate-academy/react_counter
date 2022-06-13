@@ -53,6 +53,7 @@ export class Counter extends React.Component<{}, State> {
 
         <button
           type="button"
+          className="button"
           onClick={this.increase}
         >
           Increase

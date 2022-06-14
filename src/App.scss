@@ -1,1 +1,65 @@
-// styles go here
+.app {
+  background-color: rgb(203, 202, 255);
+  width: 300px;
+  margin: 50px auto;
+  position: relative;
+  padding: 20px 20px 70px;
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 60%;
+  box-shadow: inset 10px 10px 10px 10px rgba(0, 0, 0, 0.685);
+
+  &__title {
+    text-align: center;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em rgb(0, 160, 27);
+    text-transform: uppercase;
+    color: rgb(32, 33, 36);
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__button {
+    display: block;
+    border-radius: 50%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 7px 7px 0 0 rgba(0, 0, 0, 0.692);
+    border-right: 2px solid rgb(221, 17, 17);
+    transition: opacity 0.3s, color 0.3s;
+    cursor: grabbing;
+
+    &:hover {
+      opacity: 0.9;
+      color: red;
+    }
+
+    &:active {
+      transform: translate(7px, 7px);
+      box-shadow: 5px 5px 5px 0 rgba(255, 0, 0, 0.541) inset;
+      cursor: grab;
+    }
+
+    &--1 {
+      width: 50px;
+      height: 50px;
+      background-color: rgb(180, 252, 216);
+    }
+
+    &--100 {
+      width: 70px;
+      height: 70px;
+      background-color: rgb(119, 255, 187);
+    }
+
+    &--increase {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(37, 250, 126);
+    }
+  }
+}

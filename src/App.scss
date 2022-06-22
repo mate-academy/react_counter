@@ -1,1 +1,12 @@
-// styles go here
+html {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #250b58;
+}
+
+body {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

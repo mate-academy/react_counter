@@ -1,0 +1,42 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    -webkit-text-stroke: 2px #ff85b3;
+    text-shadow: 4px 4px 3px #9900f0;
+    color: #f900bf;
+    letter-spacing: 3px;
+    font-size: 40px;
+  }
+
+  &__number {
+    color: #250b58;
+    font-size: 300px;
+    -webkit-text-stroke: 2px #4700d8;
+    text-shadow: 2px 2px 3px #ff85b3;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #9900f0;
+    box-shadow: 5px 5px 22px 4px #ff85b3;
+    border-radius: 5px;
+    border: none;
+
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(130%);
+      cursor: pointer;
+    }
+  }
+}

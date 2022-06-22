@@ -1,16 +1,70 @@
 import React from 'react';
 import './App.scss';
 
-class App extends React.Component {
-  addOne = () => {};
+interface State {
+  value: number;
+}
 
-  add100 = () => {};
+class App extends React.Component<{}, State> {
+  state = {
+    value: 0,
+  };
 
-  increase = () => {};
+  addOne = () => {
+    this.setState((currState) => {
+      return {
+        value: currState.value + 1,
+      };
+    });
+  };
+
+  add100 = () => {
+    this.setState((currState) => {
+      return {
+        value: currState.value + 100,
+      };
+    });
+  };
+
+  increase = () => {
+    this.addOne();
+
+    if (this.state.value % 5 === 0) {
+      this.add100();
+    }
+  };
 
   render() {
     return (
-      <h1>Count: 0</h1>
+      <div className="container">
+        <h1 className="title is-2">
+          Count:
+          {this.state.value}
+        </h1>
+        <button
+          className="button is-link is-outlined"
+          type="button"
+          onClick={this.addOne}
+        >
+          Add 1
+        </button>
+
+        <button
+          className="button is-link is-outlined"
+          type="button"
+          onClick={this.add100}
+        >
+          Add 100
+        </button>
+
+        <button
+          className="button is-link is-outlined"
+          type="button"
+          onClick={this.increase}
+        >
+          Magic addition
+        </button>
+      </div>
     );
   }
 }

@@ -1,1 +1,20 @@
-// styles go here
+html {
+  background-color: aqua;
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 40px;
+  color: blue;
+}

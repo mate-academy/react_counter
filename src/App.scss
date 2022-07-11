@@ -1,1 +1,10 @@
-// styles go here
+.card {
+  margin: 10em auto;
+  width: 50%;
+
+  &-footer {
+    justify-content: center;
+    gap: 2em;
+    border-color: transparent;
+  }
+}

@@ -1,1 +1,36 @@
-// styles go here
+* {
+  font-family: "Arial", sans-serif;
+ }
+
+ .App {
+  margin: auto;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  box-shadow: 5px -5px 5px rgb(211, 211, 153);
+ }
+
+ .paragraph {
+  text-align: center;
+ }
+
+ .buttons {
+  display: flex;
+  justify-content: space-around;
+ }
+
+ .btn {
+  cursor: pointer;
+  background-color: rgb(69, 214, 214);
+  border-radius: 5px;
+  height: 35px;
+  width: 100px;
+  transition: background-color 1s, box-shadow 1s;
+  box-shadow: 5px -5px 5px rgb(134, 180, 180);
+
+  &:hover {
+    background-color: rgb(134, 180, 180);
+    box-shadow: 5px -5px 5px rgb(69, 214, 214);
+  }
+ }

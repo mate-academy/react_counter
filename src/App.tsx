@@ -37,13 +37,17 @@ class App extends React.Component<{}, State> {
   };
 
   render() {
+    const { count } = this.state;
+
     return (
       <section className="section is-medium">
+
         <h1 className="title is-3">
           Count:
           {' '}
-          {this.state.count}
+          {count}
         </h1>
+
         <button
           className="button is-primary is-light"
           type="button"
@@ -51,6 +55,7 @@ class App extends React.Component<{}, State> {
         >
           Add 1
         </button>
+
         <button
           className="button is-primary is-light"
           type="button"
@@ -58,6 +63,7 @@ class App extends React.Component<{}, State> {
         >
           Add 100
         </button>
+
         <button
           className="button is-primary is-light"
           type="button"
@@ -65,17 +71,20 @@ class App extends React.Component<{}, State> {
         >
           Increase
         </button>
-        <button
-          className="button is-warning is-light"
-          type="button"
-          onClick={() => {
-            this.setState({
-              count: 0,
-            });
-          }}
-        >
-          Clear
-        </button>
+
+        {count !== 0 && (
+          <button
+            className="button is-warning is-light"
+            type="button"
+            onClick={() => {
+              this.setState({
+                count: 0,
+              });
+            }}
+          >
+            Clear
+          </button>
+        ) }
       </section>
     );
   }

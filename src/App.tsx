@@ -1,16 +1,91 @@
 import React from 'react';
 import './App.scss';
 
-class App extends React.Component {
-  addOne = () => {};
+type State = {
+  count: number,
+};
 
-  add100 = () => {};
+class App extends React.Component<{}, State> {
+  state = {
+    count: 0,
+  };
 
-  increase = () => {};
+  addOne = () => {
+    this.setState((state) => {
+      return {
+        count: state.count + 1,
+      };
+    });
+  };
+
+  add100 = () => {
+    this.setState((state) => {
+      return {
+        count: state.count + 100,
+      };
+    });
+  };
+
+  increase = () => {
+    this.setState((state) => {
+      if (state.count % 5 === 0) {
+        this.add100();
+      }
+
+      return this.addOne();
+    });
+  };
 
   render() {
+    const { count } = this.state;
+
     return (
-      <h1>Count: 0</h1>
+      <section className="section is-medium">
+
+        <h1 className="title is-3">
+          Count:
+          {' '}
+          {count}
+        </h1>
+
+        <button
+          className="button is-primary is-light"
+          type="button"
+          onClick={this.addOne}
+        >
+          Add 1
+        </button>
+
+        <button
+          className="button is-primary is-light"
+          type="button"
+          onClick={this.add100}
+        >
+          Add 100
+        </button>
+
+        <button
+          className="button is-primary is-light"
+          type="button"
+          onClick={this.increase}
+        >
+          Increase
+        </button>
+
+        {count !== 0 && (
+          <button
+            className="button is-warning is-light"
+            type="button"
+            onClick={() => {
+              this.setState({
+                count: 0,
+              });
+            }}
+          >
+            Clear
+          </button>
+        ) }
+      </section>
     );
   }
 }

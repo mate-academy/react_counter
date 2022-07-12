@@ -29,13 +29,13 @@ class App extends React.Component<{}, State> {
     result: 0,
   };
 
-  addOne = () => {
+  addOne = (): any => {
     this.setState((currentState) => ({
       result: currentState.result + 1,
     }));
   };
 
-  add100 = () => {
+  add100 = (): any => {
     this.setState((currentState) => ({
       result: currentState.result + 100,
     }));
@@ -45,9 +45,7 @@ class App extends React.Component<{}, State> {
     const { result } = this.state;
 
     if (result % 5 === 0) {
-      return (
-        this.add100() + this.addOne()
-      );
+      return (this.add100() + this.addOne());
     }
 
     return this.addOne();

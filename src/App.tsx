@@ -21,53 +21,47 @@ for (let i = 0; i < bubblyButtons.length; i++) {
 }
 
 type State = {
-  age: number,
-  count: number,
+  result: number,
 };
 
 class App extends React.Component<{}, State> {
   state = {
-    age: 0,
-    count: 0,
+    result: 0,
   };
 
   addOne = () => {
-    this.setState((prevState) => ({
-      age: prevState.age + 1,
+    this.setState((currentState) => ({
+      result: currentState.result + 1,
     }));
   };
 
   add100 = () => {
-    this.setState((prevState) => ({
-      age: prevState.age + 100,
+    this.setState((currentState) => ({
+      result: currentState.result + 100,
     }));
   };
 
   increase = () => {
-    const { count } = this.state;
+    const { result } = this.state;
 
-    if (count < 5) {
-      this.setState((prevState) => ({
-        age: prevState.age + 1,
-        count: prevState.count + 1,
-      }));
-    } else {
-      this.setState((prevState) => ({
-        age: prevState.age + 100,
-        count: prevState.count + 1,
-      }));
+    if (result % 5 === 0) {
+      return (
+        this.add100() + this.addOne()
+      );
     }
+
+    return this.addOne();
   };
 
   render() {
-    const { age } = this.state;
+    const { result } = this.state;
 
     return (
       <div className="App">
         <h1
           className="App__title"
         >
-          {`Current age: ${age}`}
+          {`Current age: ${result}`}
         </h1>
 
         <div className="App__button-container">

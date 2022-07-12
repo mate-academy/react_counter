@@ -1,1 +1,50 @@
-// styles go here
+body,
+h1 {
+  margin: 0;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+}
+
+.App {
+  &__container {
+    padding: 50px;
+    margin: 20px auto 0;
+    max-width: 600px;
+
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 10px;
+  }
+
+  &__title {
+    margin-bottom: 70px;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    font-size: 20px;
+
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: rgb(143, 160, 150);
+
+    transition: transform 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:active {
+      transform: scale(0.8);
+    }
+
+    &:hover {
+      color: #fff;
+      background: rgb(52, 90, 68);
+    }
+  }
+}

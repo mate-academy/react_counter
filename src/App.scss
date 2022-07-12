@@ -1,1 +1,30 @@
-// styles go here
+$counterWidth: 500px;
+
+html {
+  background-color: dimgray;
+}
+
+.counter {
+  margin: auto;
+  width: $counterWidth;
+  padding: calc(#{$counterWidth} / 10);
+  box-sizing: border-box;
+  border: 2px solid #444;
+  border-radius: 10px;
+  text-align: center;
+
+  font-size: 30px;
+
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__button {
+    color: white;
+    background-color: dimgray;
+    border: 0;
+
+    font-size: 20px;
+  }
+}

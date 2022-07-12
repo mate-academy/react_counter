@@ -1,1 +1,115 @@
 // styles go here
+$mainColor: #00ffcb;
+$brownColor: #313133;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url(./images/bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 200px;
+
+  &__title {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+
+    color: $brownColor;
+  }
+
+  &__button-container {
+    display: flex;
+    flex-direction: row;
+
+    gap: 20px;
+  }
+
+  &__button {
+    min-width: 300px;
+    min-height: 60px;
+    font-family: "Nunito", sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: $brownColor;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%,
+    rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 28px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,0.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+
+    &::before {
+      content: "";
+      border-radius: 1000px;
+      min-width: calc(300px + 12px);
+      min-height: calc(60px + 12px);
+      border: 6px solid $mainColor;
+      box-shadow: 0 0 60px rgba(0,255,203,0.64);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 3s ease-in-out 0s;
+    }
+
+    &:hover,
+    &:focus {
+      color: $brownColor;
+      transform: translateY(-6px);
+    }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 1;
+    }
+
+    &::after {
+      content: "";
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      border: 6px solid $mainColor;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: ring 1.5s infinite;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      animation: none;
+      display: none;
+    }
+  }
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}

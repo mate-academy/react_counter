@@ -1,1 +1,53 @@
-// styles go here
+body {
+  margin: 0;
+}
+
+.App {
+  width: 100%;
+  background-color: #aaa;
+}
+
+.container {
+  margin: 0 auto;
+  padding-top: 100px;
+  width: 1020px;
+  height: 100vh;
+  background-color: #000;
+}
+
+.title {
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.countSum {
+  color: #ff0;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.button {
+  width: 140px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  transition: all 0.15s;
+
+  &:hover {
+    background-color: #ff0;
+    box-shadow: 0 15px 20px 0 rgba(255,255,0,0.5);
+  }
+
+  &:active {
+    background-color: #000;
+    color: #ff0;
+  }
+}

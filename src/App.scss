@@ -1,1 +1,17 @@
-// styles go here
+@import url("https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css");
+
+.block {
+  margin: 10px;
+  width: min-content;
+  justify-content: center;
+  text-align: center;
+
+  &__buttons {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+.button.is-small:not(.is-rounded) {
+  border-radius: 5px;
+}

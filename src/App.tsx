@@ -25,11 +25,10 @@ class App extends Component<{}, State> {
   increase = () => {
     const { count } = this.state;
 
+    this.addOne();
+
     if (count % 5 === 0) {
       this.add100();
-      this.addOne();
-    } else {
-      this.addOne();
     }
   };
 

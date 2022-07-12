@@ -1,1 +1,23 @@
-// styles go here
+.root {
+  padding: 100px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 500px;
+  height: 100%;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.button {
+  width: 150px;
+  align-items: center;
+
+}

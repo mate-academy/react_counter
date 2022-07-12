@@ -21,9 +21,6 @@ export class Counter extends Component<{}, State> {
     }));
   };
 
-  increase = () => {
-  };
-
   render() {
     const { number } = this.state;
 

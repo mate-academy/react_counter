@@ -22,7 +22,7 @@ export class Counter extends React.Component<{}, State> {
     });
   };
 
-  Increase = () => {
+  increase = () => {
     const { counter } = this.state;
 
     this.addOne();

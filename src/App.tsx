@@ -11,19 +11,15 @@ class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((prevState) => {
-      return {
-        number: prevState.number + 1,
-      };
-    });
+    this.setState((prevState) => ({
+      number: prevState.number + 1,
+    }));
   };
 
   add100 = () => {
-    this.setState((prevState) => {
-      return {
-        number: prevState.number + 100,
-      };
-    });
+    this.setState((prevState) => ({
+      number: prevState.number + 100,
+    }));
   };
 
   increase = () => {

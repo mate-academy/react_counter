@@ -34,9 +34,7 @@ class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div
-        className="counter"
-      >
+      <div className="counter">
         <h1 className="counter__title">
           {`Count: ${count}`}
         </h1>

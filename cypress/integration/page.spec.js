@@ -1,46 +1,92 @@
-describe('Page', () => {
-  const add1ButtonText = 'Add 1';
-  const add100ButtonText = 'Add 100';
-  const increaseButtonText = 'Increase';
+const page = {
+  title: () => cy.get('.App__title'),
+  addOneButton: () => cy.contains('button', 'Add 1'),
+  add100Button: () => cy.contains('button', 'Add 100'),
+  increaseButton: () => cy.contains('button', 'Increase'),
+}
 
+describe('Page', () => {
   beforeEach(() => {
     cy.visit('/');
   });
 
-  it(`should have 'h1' containing '0' on start`, () => {
-    cy.get('h1').should('contain.text', '0');
+  describe('Title', () => {
+    it(`should have count 0 by default`, () => {
+      page.title()
+        .should('have.text', 'Count: 0');
+    });
   });
-
-  it(`should add 1 when clicking on 'Add 1'`, () => {
-    cy.contains('button', add1ButtonText)
-      .click();
-
-    cy.get('h1').should('contain.text', '1');
+  
+  describe('"Add 1" button', () => {
+    it('should add 1 on a single click', () => {
+      page.addOneButton().click();
+  
+      page.title()
+        .should('have.text', 'Count: 1');
+    });
+  
+    it('should add 7 after 7 clicks', () => {
+      page.addOneButton()
+        .click()
+        .click()
+        .click()
+        .click()
+        .click()
+        .click()
+        .click();
+  
+      page.title()
+        .should('have.text', 'Count: 7');
+    });
   });
-
-  it(`should add 100 when clicking on 'Add 100'`, () => {
-    cy.contains('button', add100ButtonText)
-      .click();
-
-    cy.get('h1').should('contain.text', '100');
+  
+  describe('"Add 100" button', () => {
+    it(`should add 100 on a single click`, () => {
+      page.add100Button().click();
+  
+      page.title()
+        .should('have.text', 'Count: 100');
+    });
+  
+    it(`should add 400 after 4 clicks`, () => {
+      page.add100Button()
+        .click()
+        .click()
+        .click()
+        .click();
+  
+      page.title()
+        .should('have.text', 'Count: 400');
+    });
   });
+  
+  describe('"Increase" button', () => {
+    it(`should run addOne and add100 if count is 0`, () => {
+      page.increaseButton().click();
+  
+      page.title().should('have.text', 'Count: 101');
+    });
+  
+    it(`should run only addOne if count is 1'`, () => {
+      page.addOneButton().click();
+      page.increaseButton().click();
+  
+      page.title().should('have.text', 'Count: 2');
+    });
 
-  it(`should add 1 when clicking on 'Increase'`, () => {
-    cy.contains('button', increaseButtonText)
-      .click();
+    it(`should run only addOne if count is 101`, () => {
+      page.addOneButton().click();
+      page.add100Button().click();
+      page.increaseButton().click();
+  
+      page.title().should('have.text', 'Count: 102');
+    });
 
-    cy.get('h1').should('contain.text', '1');
-  });
-
-  it(`should additionaly add 100 when counter is divisible by 5 when clicking on 'Increase'`, () => {
-    cy.contains('button', add100ButtonText)
-      .click();
-
-    cy.get('h1').should('contain.text', '100');
-
-    cy.contains('button', increaseButtonText)
-      .click();
-
-    cy.get('h1').should('contain.text', '201');
+    it(`should run addOne and add100 if count is 100`, () => {
+      page.add100Button().click();
+      page.increaseButton().click();
+  
+      page.title().should('have.text', 'Count: 201');
+    });
   });
 });

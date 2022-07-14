@@ -1,1 +1,22 @@
-// styles go here
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  &__counter {
+    padding: 50px;
+    border: 8px double #000;;
+  }
+
+  &__counter-title {
+    font-family: sans-serif;
+    text-transform: uppercase;
+  }
+
+  &__counter-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+  }
+}

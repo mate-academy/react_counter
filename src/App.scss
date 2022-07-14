@@ -1,1 +1,30 @@
-// styles go here
+html,
+button {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+}
+
+.app {
+  margin: 0 auto;
+  padding: 20px;
+  width: max-content;
+
+  border: 1px solid #000;
+  border-radius: 10px;
+
+  &__counter {
+    margin: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    color: darkorange;
+  }
+
+  &__button-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.button {
+  margin-bottom: 10px;
+}

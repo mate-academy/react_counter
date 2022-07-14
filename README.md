@@ -1,5 +1,7 @@
 # React counter
 
+> [React + Typescript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript)
+
 You are given the `App` component with a title with a text `Count is 0` by default and three buttons.
 The buttons should work the next way:
 

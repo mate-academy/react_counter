@@ -29,7 +29,7 @@ export class App extends React.Component<{}, State> {
 
     this.addOne();
 
-    if (count % 5 === 0 && count !== 0) {
+    if (count % 5 === 0) {
       this.add100();
     }
   };

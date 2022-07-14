@@ -12,19 +12,11 @@ export class App extends React.Component<{}, State> {
 
   // Fix addOne and add100 methods so they can work together
   addOne = () => {
-    let { count } = this.state;
-
-    count += 1;
-
-    this.setState({ count });
+    this.setState((prevState) => ({ count: prevState.count + 1 }));
   };
 
   add100 = () => {
-    let { count } = this.state;
-
-    count += 100;
-
-    this.setState({ count });
+    this.setState((prevState) => ({ count: prevState.count + 100 }));
   };
 
   // DON'T change the code below

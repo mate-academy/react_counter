@@ -1,1 +1,20 @@
-// styles go here
+.container {
+  text-align: center;
+  width: fit-content;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.button__block {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 5px;
+}
+
+button {
+  border: 1px solid black;
+  background: none;
+  border-radius: 5px;
+}

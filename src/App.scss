@@ -1,1 +1,23 @@
-// styles go here
+@import '../node_modules/bulma/bulma.sass';
+
+button {
+  margin: 3px;
+}
+
+.App {
+  background-color: #66a5ad;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & .App__title {
+    color: #c4dfe6;
+  }
+
+  & .button {
+    background-color: #003b46;
+    color: #c4dfe6;
+  }
+}

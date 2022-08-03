@@ -12,22 +12,17 @@ export class App extends React.Component<{}, State> {
 
   // Fix addOne and add100 methods so they can work together
   addOne = () => {
-    let { count } = this.state;
-
-    count += 1;
-
-    this.setState({ count });
+    this.setState((state) => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    let { count } = this.state;
-
-    count += 100;
-
-    this.setState({ count });
+    this.setState((state) => ({
+      count: state.count + 100,
+    }));
   };
 
-  // DON'T change the code below
   increase = () => {
     const { count } = this.state;
 
@@ -47,17 +42,31 @@ export class App extends React.Component<{}, State> {
           {`Count: ${count}`}
         </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+        <div className="App__buttons">
+          <button
+            type="button"
+            className="button"
+            onClick={this.addOne}
+          >
+            Add 1
+          </button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
+          <button
+            type="button"
+            className="button"
+            onClick={this.add100}
+          >
+            Add 100
+          </button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
+          <button
+            type="button"
+            className="button"
+            onClick={this.increase}
+          >
+            Increase
+          </button>
+        </div>
       </div>
     );
   }

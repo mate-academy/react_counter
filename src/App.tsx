@@ -38,22 +38,36 @@ export class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="App">
-        <h1 className="App__title">
+      <div className="App card column is-one-third p-5 m-auto">
+        <h1 className="App__title has-text-centered m-5 is-size-1">
           {`Count: ${count}`}
         </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+        <div className="is-flex is-justify-content-space-between">
+          <button
+            type="button"
+            className="App__add-one button is-primary"
+            onClick={this.addOne}
+          >
+            Add 1
+          </button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
+          <button
+            type="button"
+            className="App__add-100 button is-warning"
+            onClick={this.add100}
+          >
+            Add 100
+          </button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
+          <button
+            type="button"
+            className="App__increase button is-danger"
+            onClick={this.increase}
+          >
+            Increase
+          </button>
+        </div>
       </div>
     );
   }

@@ -39,7 +39,7 @@ export class App extends React.Component<{}, State> {
 
     return (
       <div className="App">
-        <h1 className="title">
+        <h1 className="App__title title">
           {`Count: ${count}`}
         </h1>
         <button

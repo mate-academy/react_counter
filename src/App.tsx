@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 
 type State = {
-  count: number,
+  count: number;
 };
 
 export class App extends React.Component<{}, State> {
@@ -12,19 +12,15 @@ export class App extends React.Component<{}, State> {
 
   // Fix addOne and add100 methods so they can work together
   addOne = () => {
-    let { count } = this.state;
-
-    count += 1;
-
-    this.setState({ count });
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
+    }));
   };
 
   add100 = () => {
-    let { count } = this.state;
-
-    count += 100;
-
-    this.setState({ count });
+    this.setState((prevState) => ({
+      count: prevState.count + 100,
+    }));
   };
 
   // DON'T change the code below
@@ -43,9 +39,7 @@ export class App extends React.Component<{}, State> {
 
     return (
       <div className="App">
-        <h1 className="App__title">
-          {`Count: ${count}`}
-        </h1>
+        <h1 className="App__title">{`Count: ${count}`}</h1>
 
         <button type="button" className="App__add-one" onClick={this.addOne}>
           Add 1

@@ -10,24 +10,22 @@ export class App extends React.Component<{}, State> {
     count: 0,
   };
 
-  // Fix addOne and add100 methods so they can work together
-  addOne = () => {
-    let { count } = this.state;
+  addOne = () => (
+    this.setState((prevState) => (
+      {
+        count: prevState.count + 1,
+      }
+    ))
+  );
 
-    count += 1;
+  add100 = () => (
+    this.setState((prevState) => (
+      {
+        count: prevState.count + 100,
+      }
+    ))
+  );
 
-    this.setState({ count });
-  };
-
-  add100 = () => {
-    let { count } = this.state;
-
-    count += 100;
-
-    this.setState({ count });
-  };
-
-  // DON'T change the code below
   increase = () => {
     const { count } = this.state;
 

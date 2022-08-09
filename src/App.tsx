@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
 
 type State = {
   count: number,
@@ -10,24 +12,18 @@ export class App extends React.Component<{}, State> {
     count: 0,
   };
 
-  // Fix addOne and add100 methods so they can work together
   addOne = () => {
-    let { count } = this.state;
-
-    count += 1;
-
-    this.setState({ count });
+    this.setState(state => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    let { count } = this.state;
-
-    count += 100;
-
-    this.setState({ count });
+    this.setState(state => ({
+      count: state.count + 100,
+    }));
   };
 
-  // DON'T change the code below
   increase = () => {
     const { count } = this.state;
 
@@ -47,17 +43,32 @@ export class App extends React.Component<{}, State> {
           {`Count: ${count}`}
         </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
+        <Button
+          type="button"
+          variant="warning"
+          className="App__add-one btn"
+          onClick={this.addOne}
+        >
           Add 1
-        </button>
+        </Button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
+        <Button
+          type="button"
+          variant="success"
+          className="App__add-100 btn"
+          onClick={this.add100}
+        >
           Add 100
-        </button>
+        </Button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
+        <Button
+          type="button"
+          variant="danger"
+          className="App__increase btn"
+          onClick={this.increase}
+        >
           Increase
-        </button>
+        </Button>
       </div>
     );
   }

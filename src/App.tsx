@@ -10,21 +10,16 @@ export class App extends React.Component<{}, State> {
     count: 0,
   };
 
-  // Fix addOne and add100 methods so they can work together
   addOne = () => {
-    let { count } = this.state;
-
-    count += 1;
-
-    this.setState({ count });
+    this.setState(state => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    let { count } = this.state;
-
-    count += 100;
-
-    this.setState({ count });
+    this.setState(state => ({
+      count: state.count + 100,
+    }));
   };
 
   // DON'T change the code below
@@ -43,21 +38,35 @@ export class App extends React.Component<{}, State> {
 
     return (
       <div className="App">
-        <h1 className="App__title">
+        <h1 className="App__title title is-1">
           {`Count: ${count}`}
         </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+        <div className="App__container">
+          <button
+            type="button"
+            className="App__add-one button is-primary App__btn"
+            onClick={this.addOne}
+          >
+            Add 1
+          </button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
+          <button
+            type="button"
+            className="App__add-100 button is-primary App__btn"
+            onClick={this.add100}
+          >
+            Add 100
+          </button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
+          <button
+            type="button"
+            className="App__increase button is-primary App__btn"
+            onClick={this.increase}
+          >
+            Increase
+          </button>
+        </div>
       </div>
     );
   }

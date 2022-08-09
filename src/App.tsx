@@ -1,33 +1,27 @@
-import React from 'react';
+import { Component } from 'react';
 import './App.scss';
 
 type State = {
   count: number,
 };
 
-export class App extends React.Component<{}, State> {
+export class App extends Component<{}, State> {
   state: Readonly<State> = {
     count: 0,
   };
 
-  // Fix addOne and add100 methods so they can work together
   addOne = () => {
-    let { count } = this.state;
-
-    count += 1;
-
-    this.setState({ count });
+    this.setState((state) => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    let { count } = this.state;
-
-    count += 100;
-
-    this.setState({ count });
+    this.setState((state) => ({
+      count: state.count + 100,
+    }));
   };
 
-  // DON'T change the code below
   increase = () => {
     const { count } = this.state;
 

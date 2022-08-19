@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import 'bulma/css/bulma.min.css';
 
 type State = {
   count: number,
@@ -12,19 +13,15 @@ export class App extends React.Component<{}, State> {
 
   // Fix addOne and add100 methods so they can work together
   addOne = () => {
-    let { count } = this.state;
-
-    count += 1;
-
-    this.setState({ count });
+    this.setState(prevState => ({
+      count: prevState.count + 1,
+    }));
   };
 
   add100 = () => {
-    let { count } = this.state;
-
-    count += 100;
-
-    this.setState({ count });
+    this.setState(prevState => ({
+      count: prevState.count + 100,
+    }));
   };
 
   // DON'T change the code below
@@ -47,17 +44,32 @@ export class App extends React.Component<{}, State> {
           {`Count: ${count}`}
         </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+        <div className="App__buttons">
+          <button
+            type="button"
+            className="App__add-one App__button button is-info"
+            onClick={this.addOne}
+          >
+            Add 1
+          </button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
+          <button
+            type="button"
+            className="App__add-100 App__button button is-info"
+            onClick={this.add100}
+          >
+            Add 100
+          </button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
+          <button
+            type="button"
+            className="App__increase App__button button is-info"
+            onClick={this.increase}
+          >
+            Increase
+          </button>
+
+        </div>
       </div>
     );
   }

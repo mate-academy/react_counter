@@ -1,1 +1,19 @@
-// styles go here
+.App {
+  width: 250px;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    margin-right: 10px;
+  }
+}

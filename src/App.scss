@@ -1,1 +1,30 @@
-// styles go here
+#root {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  &__title {
+    text-align: center;
+  }
+  &__button {
+    margin-right: 10px;
+
+    color: white;
+    background-color: black;
+    font-size: 25px;
+    border-radius: 20px;
+    transition: all 0.5s;
+
+    &:hover {
+      color: black;
+      background-color: white;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

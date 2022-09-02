@@ -13,7 +13,6 @@ export class App extends React.Component<{}, State> {
   // Fix addOne and add100 methods so they can work together
   addOne = () => {
     this.setState(state => ({
-      ...state,
       count: state.count + 1,
     }
     ));
@@ -21,7 +20,6 @@ export class App extends React.Component<{}, State> {
 
   add100 = () => {
     this.setState(state => ({
-      ...state,
       count: state.count + 100,
     }));
   };

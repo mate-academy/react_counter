@@ -1,28 +1,33 @@
 const page = {
   title: () => cy.get('.App__title'),
-  addOneButton: () => cy.contains('button', 'Add 1'),
-  add100Button: () => cy.contains('button', 'Add 100'),
-  increaseButton: () => cy.contains('button', 'Increase'),
-}
+  addOneButton: () => cy.get('.App__add-one'),
+  add100Button: () => cy.get('.App__add-100'),
+  increaseButton: () => cy.get('.App__increase'),
+};
+
+let failed = false;
+
+Cypress.on('fail', (e) => {
+  failed = true;
+  throw e;
+});
 
 describe('Page', () => {
   beforeEach(() => {
+    if (failed) Cypress.runner.stop();
+
     cy.visit('/');
   });
 
-  describe('Title', () => {
-    it(`should have count 0 by default`, () => {
-      page.title()
-        .should('have.text', 'Count: 0');
-    });
+  it(`should have count 0 by default`, () => {
+    page.title().should('have.text', 'Count: 0');
   });
   
   describe('"Add 1" button', () => {
     it('should add 1 on a single click', () => {
       page.addOneButton().click();
   
-      page.title()
-        .should('have.text', 'Count: 1');
+      page.title().should('have.text', 'Count: 1');
     });
   
     it('should add 7 after 7 clicks', () => {
@@ -35,8 +40,7 @@ describe('Page', () => {
         .click()
         .click();
   
-      page.title()
-        .should('have.text', 'Count: 7');
+      page.title().should('have.text', 'Count: 7');
     });
   });
   
@@ -87,6 +91,19 @@ describe('Page', () => {
       page.increaseButton().click();
   
       page.title().should('have.text', 'Count: 201');
+    });
+
+    it('should count as expected after 7 click', () => {
+      page.increaseButton()
+        .click()
+        .click()
+        .click()
+        .click()
+        .click()
+        .click()
+        .click();
+  
+      page.title().should('have.text', 'Count: 207');
     });
   });
 });

@@ -4,4 +4,26 @@ iframe {
 
 button {
   cursor: pointer;
+  border-radius: 5px;
+  gap: 10px;
+  border: none;
+  padding: 1em;
+  width: 8em;
+  margin: 0.5em;
+  transition: background-color 0.3s linear;
+  font-size: 1em;
+
+  &:hover {
+    background-color: rgb(196, 185, 185);
+  }
+}
+
+.App {
+  padding-top: 15%;
+  text-align: center;
+  margin: 0 auto;
+
+  &__title {
+    font-size: 4em;
+  }
 }

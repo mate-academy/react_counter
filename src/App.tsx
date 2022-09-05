@@ -27,6 +27,8 @@ export class App extends React.Component<{}, State> {
     }
   };
 
+  clear = () => this.setState({ count: 0 });
+
   render() {
     const { count } = this.state;
 
@@ -46,6 +48,9 @@ export class App extends React.Component<{}, State> {
 
         <button type="button" className="App__increase" onClick={this.increase}>
           Increase
+        </button>
+        <button type="button" className="App__clear" onClick={this.clear}>
+          Clear
         </button>
       </div>
     );

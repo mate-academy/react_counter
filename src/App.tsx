@@ -1,4 +1,4 @@
-   import React from 'react';
+import React from 'react';
 import './App.scss';
 
 type State = {
@@ -12,14 +12,14 @@ export class App extends React.Component<{}, State> {
 
   addOne = () => {
     this.setState(state => ({
-      count: state.count + 1
-    }))
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
     this.setState((state) => ({
-      count: state.count + 100
-    }))
+      count: state.count + 100,
+    }));
   };
 
   increase = () => {
@@ -31,8 +31,8 @@ export class App extends React.Component<{}, State> {
   };
 
   reset = () => {
-    this.setState({ count: 0})
-  }
+    this.setState({ count: 0 });
+  };
 
   render() {
     const { count } = this.state;
@@ -55,7 +55,7 @@ export class App extends React.Component<{}, State> {
           Increase
         </button>
 
-        <button type="button" className="App__increase" onClick={this.reset}>
+        <button type="button" className="App__reset" onClick={this.reset}>
           Reset
         </button>
       </div>

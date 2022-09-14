@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bulma/css/bulma.min.css';
 import './App.scss';
 
 type State = {
@@ -11,14 +12,17 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState(state => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState(state => ({
+      count: state.count + 100,
+    }));
   };
 
-  // DON'T change the code below
   increase = () => {
     this.addOne();
 
@@ -27,25 +31,49 @@ export class App extends React.Component<{}, State> {
     }
   };
 
+  reset = () => {
+    this.setState({ count: 0 });
+  };
+
   render() {
     const { count } = this.state;
 
     return (
-      <div className="App">
-        <h1 className="App__title">
+      <div className="App box has-text-centered">
+        <h1 className="App__title title has-text-info has-text-centered">
           {`Count: ${count}`}
         </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
+        <button
+          type="button"
+          className="App__add-one button mr-3 is-info"
+          onClick={this.addOne}
+        >
           Add 1
         </button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
+        <button
+          type="button"
+          className="App__add-100 button mr-3 is-success"
+          onClick={this.add100}
+        >
           Add 100
         </button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
+        <button
+          type="button"
+          className="App__increase button mr-3 is-warning"
+          onClick={this.increase}
+        >
           Increase
+        </button>
+
+        <button
+          type="button"
+          className="button is-danger"
+          onClick={this.reset}
+        >
+          Reset
         </button>
       </div>
     );

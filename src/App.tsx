@@ -40,13 +40,13 @@ export class App extends React.Component<{}, State> {
 
     return (
       <div className="App box has-text-centered">
-        <h1 className="title has-text-info has-text-centered">
+        <h1 className="App__title title has-text-info has-text-centered">
           {`Count: ${count}`}
         </h1>
 
         <button
           type="button"
-          className="button mr-3 is-info"
+          className="App__add-one button mr-3 is-info"
           onClick={this.addOne}
         >
           Add 1
@@ -54,7 +54,7 @@ export class App extends React.Component<{}, State> {
 
         <button
           type="button"
-          className="button mr-3 is-success"
+          className="App__add-100 button mr-3 is-success"
           onClick={this.add100}
         >
           Add 100
@@ -62,7 +62,7 @@ export class App extends React.Component<{}, State> {
 
         <button
           type="button"
-          className="button mr-3 is-warning"
+          className="App__increase button mr-3 is-warning"
           onClick={this.increase}
         >
           Increase

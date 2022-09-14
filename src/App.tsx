@@ -1,4 +1,4 @@
-import React from 'react';
+   import React from 'react';
 import './App.scss';
 
 type State = {
@@ -6,19 +6,22 @@ type State = {
 };
 
 export class App extends React.Component<{}, State> {
-  state: Readonly<State> = {
+  state: State = {
     count: 0,
   };
 
   addOne = () => {
-    // write code here
+    this.setState(state => ({
+      count: state.count + 1
+    }))
   };
 
   add100 = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 100
+    }))
   };
 
-  // DON'T change the code below
   increase = () => {
     this.addOne();
 
@@ -26,6 +29,10 @@ export class App extends React.Component<{}, State> {
       this.add100();
     }
   };
+
+  reset = () => {
+    this.setState({ count: 0})
+  }
 
   render() {
     const { count } = this.state;
@@ -46,6 +53,10 @@ export class App extends React.Component<{}, State> {
 
         <button type="button" className="App__increase" onClick={this.increase}>
           Increase
+        </button>
+
+        <button type="button" className="App__increase" onClick={this.reset}>
+          Reset
         </button>
       </div>
     );

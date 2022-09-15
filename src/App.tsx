@@ -6,16 +6,16 @@ type State = {
 };
 
 export class App extends React.Component<{}, State> {
-  state: Readonly<State> = {
+  state = {
     count: 0,
   };
 
   addOne = () => {
-    // write code here
+    this.setState(prevState => ({ count: prevState.count + 1 }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState(prevState => ({ count: prevState.count + 100 }));
   };
 
   // DON'T change the code below

@@ -35,18 +35,23 @@ export class App extends Component<{}, State> {
         <h1 className="App__title">
           {`Count: ${count}`}
         </h1>
+        <div className="App__buttons">
+          <button type="button" className="App__add-one" onClick={this.addOne}>
+            Add 1
+          </button>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+          <button type="button" className="App__add-100" onClick={this.add100}>
+            Add 100
+          </button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
-
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
+          <button
+            type="button"
+            className="App__increase"
+            onClick={this.increase}
+          >
+            Increase
+          </button>
+        </div>
       </div>
     );
   }

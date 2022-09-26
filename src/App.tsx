@@ -1,21 +1,33 @@
-import React from 'react';
+import { Component } from 'react';
 import './App.scss';
+import 'bulma/css/bulma.min.css';
+import { Button, Heading, Box } from 'react-bulma-components';
 
 type State = {
   count: number,
 };
 
-export class App extends React.Component<{}, State> {
+export class App extends Component<{}, State> {
   state: Readonly<State> = {
     count: 0,
   };
 
   addOne = () => {
-    // write code here
+    this.setState(prev => ({
+      count: prev.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState(prev => ({
+      count: prev.count + 100,
+    }));
+  };
+
+  clear = () => {
+    this.setState(() => ({
+      count: 0,
+    }));
   };
 
   // DON'T change the code below
@@ -31,23 +43,48 @@ export class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="App">
-        <h1 className="App__title">
+      <Box className="App">
+        <Heading className="App__title">
           {`Count: ${count}`}
-        </h1>
+        </Heading>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
+        <Button
+          color="success"
+          type="button"
+          className="App__add-one button"
+          onClick={this.addOne}
+        >
           Add 1
-        </button>
+        </Button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
+        <Button
+          color="success"
+          type="button"
+          className="App__add-100 button"
+          onClick={this.add100}
+        >
           Add 100
-        </button>
+        </Button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
+        <Button
+          color="success"
+          type="button"
+          className="App__increase button"
+          onClick={this.increase}
+        >
           Increase
-        </button>
-      </div>
+        </Button>
+
+        <Button
+          color="danger"
+          type="button"
+          className="App__increase button"
+          onClick={this.clear}
+        >
+          Clear
+        </Button>
+
+      </Box>
     );
   }
 }

@@ -1,13 +1,11 @@
-import { Component } from 'react';
+import React from 'react';
 import './App.scss';
-import 'bulma/css/bulma.min.css';
-import { Button, Heading, Box } from 'react-bulma-components';
 
 type State = {
   count: number,
 };
 
-export class App extends Component<{}, State> {
+export class App extends React.Component<{}, State> {
   state: Readonly<State> = {
     count: 0,
   };
@@ -24,12 +22,6 @@ export class App extends Component<{}, State> {
     }));
   };
 
-  clear = () => {
-    this.setState(() => ({
-      count: 0,
-    }));
-  };
-
   // DON'T change the code below
   increase = () => {
     this.addOne();
@@ -43,48 +35,23 @@ export class App extends Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <Box className="App">
-        <Heading className="App__title">
+      <div className="App">
+        <h1 className="App__title">
           {`Count: ${count}`}
-        </Heading>
+        </h1>
 
-        <Button
-          color="success"
-          type="button"
-          className="App__add-one button"
-          onClick={this.addOne}
-        >
+        <button type="button" className="App__add-one" onClick={this.addOne}>
           Add 1
-        </Button>
+        </button>
 
-        <Button
-          color="success"
-          type="button"
-          className="App__add-100 button"
-          onClick={this.add100}
-        >
+        <button type="button" className="App__add-100" onClick={this.add100}>
           Add 100
-        </Button>
+        </button>
 
-        <Button
-          color="success"
-          type="button"
-          className="App__increase button"
-          onClick={this.increase}
-        >
+        <button type="button" className="App__increase" onClick={this.increase}>
           Increase
-        </Button>
-
-        <Button
-          color="danger"
-          type="button"
-          className="App__increase button"
-          onClick={this.clear}
-        >
-          Clear
-        </Button>
-
-      </Box>
+        </button>
+      </div>
     );
   }
 }

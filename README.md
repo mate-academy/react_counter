@@ -1,4 +1,4 @@
-# React counter
+# React counter 
 
 > Here is [the working version](https://mate-academy.github.io/react_counter/)
 

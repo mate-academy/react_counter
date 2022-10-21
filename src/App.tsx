@@ -1,21 +1,25 @@
-import React from 'react';
+import { Component } from 'react';
 import './App.scss';
 
 type State = {
   count: number,
 };
 
-export class App extends React.Component<{}, State> {
+export class App extends Component<{}, State> {
   state: Readonly<State> = {
     count: 0,
   };
 
   addOne = () => {
-    // write code here
+    this.setState(state => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState(state => ({
+      count: state.count + 100,
+    }))
   };
 
   // DON'T change the code below

@@ -22,7 +22,6 @@ export class App extends React.Component<{}, State> {
     }));
   };
 
-  // DON'T change the code below
   increase = () => {
     this.addOne();
 
@@ -56,7 +55,11 @@ export class App extends React.Component<{}, State> {
           Add 100
         </button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
+        <button
+          type="button"
+          className="App__increase"
+          onClick={this.increase}
+        >
           Increase
         </button>
       </div>

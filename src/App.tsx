@@ -5,7 +5,7 @@ type State = {
   count: number,
 };
 
-export class App extends React.Component<{}, State> {
+export class App extends React.PureComponent<{}, State> {
   state: Readonly<State> = {
     count: 0,
   };

@@ -11,14 +11,12 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // eslint-disable-next-line
     this.setState((state) => ({
       count: state.count + 1,
     }));
   };
 
   add100 = () => {
-    // eslint-disable-next-line
     this.setState((state) => ({
       count: state.count + 100,
     }));

@@ -2,6 +2,55 @@ iframe {
   display: none;
 }
 
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  text-align: center;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+  &__title {
+    font-size: 36px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 300px;
+    min-height: 150px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #ffc52f;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+  }
+}
+
 button {
+  font-size: 18px;
+  text-align: center;
+  padding: 5px 10px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #1783db;
+
+  transition: background-color 300ms linear;
+
   cursor: pointer;
+
+  &:hover {
+    background-color: #ca1717;
+
+  }
 }

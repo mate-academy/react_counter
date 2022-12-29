@@ -32,21 +32,34 @@ export class App extends React.Component<{}, State> {
 
     return (
       <div className="App">
-        <h1 className="App__title">
-          {`Count: ${count}`}
-        </h1>
-
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
-
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
-
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
+        <div className="App__content">
+          <h1 className="App__title">
+            {`Count: ${count}`}
+          </h1>
+          <div className="App__buttons">
+            <button
+              type="button"
+              className="App__add-one"
+              onClick={this.addOne}
+            >
+              Add 1
+            </button>
+            <button
+              type="button"
+              className="App__add-100"
+              onClick={this.add100}
+            >
+              Add 100
+            </button>
+            <button
+              type="button"
+              className="App__increase"
+              onClick={this.increase}
+            >
+              Increase
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

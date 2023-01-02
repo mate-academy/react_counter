@@ -1,7 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
 iframe {
   display: none;
 }
 
 button {
   cursor: pointer;
+}
+
+body {
+  display: grid;
+  align-content: center;
+  height: 100vh;
+  background-color: palegoldenrod;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+
+  &__title {
+    font-family: "Roboto", sans-serif;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  &__add-group {
+    padding: 25px;
+  }
 }

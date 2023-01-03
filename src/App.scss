@@ -2,6 +2,17 @@ iframe {
   display: none;
 }
 
-button {
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://hips.hearstapps.com/hmg-prod/images/high-speed-binary-numbers-code-in-data-center-royalty-free-image-1669056906.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button {
   cursor: pointer;
+  margin: 5px;
 }

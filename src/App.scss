@@ -5,3 +5,27 @@ iframe {
 button {
   cursor: pointer;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  align-content: center;
+  height: 100vh;
+  background-color: bisque;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    text-align: center;
+    color: green;
+  }
+}

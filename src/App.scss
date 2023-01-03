@@ -2,6 +2,63 @@ iframe {
   display: none;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  padding-top: 230px;
+
+  background-image: url('https://images.pexels.com/photos/2948636/pexels-photo-2948636.jpeg');
+  background-size: cover;
+  background-position: top;
+}
+
 button {
   cursor: pointer;
+}
+
+.App {
+  width: 500px;
+  text-align: center;
+  padding: 40px 50px;
+  border: 6px solid ;
+  border-radius: 20px;
+
+  &__title {
+    font-size: 40px;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: rgba(86, 205, 165, 0.26);
+  border: 1px solid #000;
+  border-radius: 7px;
+  box-shadow: 1px 0 1px #000;
+  outline: none;
+  transition: background-color 0.5s ease;
+  transition: box-shadow 0.5s ease;
+  
+  &:hover {
+    background-color: rgba(86, 205, 165, 0.413);
+    box-shadow: 2px 1px 3px #000;
+  }
+
+  &:nth-child(2) {
+    background-color: rgba(230, 135, 149, 0.655);
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: rgba(230, 135, 149, 0.847);
+    }
+  }
 }

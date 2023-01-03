@@ -93,8 +93,9 @@ export class App extends React.Component<{}, State> {
           I am a student of Mate Academy
         </button>
 
+        <p>Your expected salary:</p>
+
         <h1 className="App__title">
-          <p>Your expected salary:</p>
           {`Count: ${count}`}
         </h1>
       </div>

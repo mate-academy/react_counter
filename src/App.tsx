@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.scss';
+import Button from '@mui/material/Button';
+import { Paper } from '@mui/material';
 
 type State = {
   count: number,
@@ -11,11 +13,15 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 100,
+    }));
   };
 
   // DON'T change the code below
@@ -31,23 +37,50 @@ export class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="App">
-        <h1 className="App__title">
-          {`Count: ${count}`}
-        </h1>
+      <Paper
+        sx={{
+          margin: 'auto',
+          width: '40%',
+          background: 'grey',
+          opacity: '0.8',
+        }}
+        elevation={24}
+      >
+        <div className="App">
+          <h1 className="App__title">
+            {`Count: ${count}`}
+          </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+          <Button
+            variant="contained"
+            color="success"
+            type="button"
+            className="App__add-one"
+            onClick={this.addOne}
+          >
+            Add 1
+          </Button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
+          <Button
+            variant="contained"
+            color="secondary"
+            type="button"
+            className="App__add-100"
+            onClick={this.add100}
+          >
+            Add 100
+          </Button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
-      </div>
+          <Button
+            variant="contained"
+            type="button"
+            className="App__increase"
+            onClick={this.increase}
+          >
+            Increase
+          </Button>
+        </div>
+      </Paper>
     );
   }
 }

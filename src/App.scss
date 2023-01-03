@@ -5,3 +5,21 @@ iframe {
 button {
   cursor: pointer;
 }
+
+body {
+  background-image: url("https://i1.wp.com/crunchynihongo.com/images/easy-japanese-faq/vocab-10256-counting.jpg?w=810");
+  background-position-y: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.App__title {
+  text-align: center;
+}

@@ -5,3 +5,25 @@ iframe {
 button {
   cursor: pointer;
 }
+
+body {
+  background-image: url("./maxresdefault.jpg");
+}
+
+.App {
+  margin-top: 300px;
+  padding: auto 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.8s ease;
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+    transform: scale(1.5);
+  }
+}

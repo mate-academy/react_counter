@@ -5,3 +5,21 @@ iframe {
 button {
   cursor: pointer;
 }
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin: 0 auto;
+  max-width: 550px;
+  height: 250px;
+
+  background-image: url(./background.jpg);
+}
+
+h1 {
+  margin-bottom: 50px;
+  color: plum;
+}

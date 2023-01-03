@@ -11,17 +11,17 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((prevState) => {
+    this.setState((state) => {
       return {
-        count: prevState.count + 1,
+        count: state.count + 1,
       };
     });
   };
 
   add100 = () => {
-    this.setState((prevState) => {
+    this.setState((state) => {
       return {
-        count: prevState.count + 100,
+        count: state.count + 100,
       };
     });
   };

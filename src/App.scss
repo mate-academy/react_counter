@@ -2,6 +2,19 @@ iframe {
   display: none;
 }
 
-button {
-  cursor: pointer;
+body {
+  background-image: url(./bg_image.jpg);
+  background-position-y: 150px;
+  background-repeat: repeat-x;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.App__title {
+  text-align: center;
 }

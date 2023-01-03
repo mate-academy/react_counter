@@ -11,19 +11,15 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((prevState) => {
-      return {
-        count: prevState.count + 1,
-      };
-    });
+    this.setState(state => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    this.setState((prevState) => {
-      return {
-        count: prevState.count + 100,
-      };
-    });
+    this.setState(state => ({
+      count: state.count + 100,
+    }));
   };
 
   // DON'T change the code below
@@ -39,34 +35,36 @@ export class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="App">
-        <h1 className="App__title">
-          {`Count: ${count}`}
-        </h1>
+      <div className="Wrapper">
+        <div className="App">
+          <h1 className="App__title">
+            {`Count: ${count}`}
+          </h1>
 
-        <button
-          type="button"
-          className="App__add-one App__button"
-          onClick={this.addOne}
-        >
-          Add 1
-        </button>
+          <button
+            type="button"
+            className="App__add-one App__button"
+            onClick={this.addOne}
+          >
+            Add 1
+          </button>
 
-        <button
-          type="button"
-          className="App__add-100 App__button"
-          onClick={this.add100}
-        >
-          Add 100
-        </button>
+          <button
+            type="button"
+            className="App__add-100 App__button"
+            onClick={this.add100}
+          >
+            Add 100
+          </button>
 
-        <button
-          type="button"
-          className="App__increase App__button"
-          onClick={this.increase}
-        >
-          Increase
-        </button>
+          <button
+            type="button"
+            className="App__increase App__button"
+            onClick={this.increase}
+          >
+            Increase
+          </button>
+        </div>
       </div>
     );
   }

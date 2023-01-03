@@ -36,19 +36,31 @@ export class App extends React.Component<{}, State> {
     return (
       <div className="App">
         <h1 className="App__title">
-          {`KILLED occupants: ${count}`}
+          {`Count: ${count}`}
         </h1>
 
         <div className="button-wrapper">
-          <button type="button" className="App__add-one button" onClick={this.addOne}>
-            Kill 1
+          <button
+            type="button"
+            className="App__add-one button"
+            onClick={this.addOne}
+          >
+            Add 1
           </button>
 
-          <button type="button" className="App__add-100 button" onClick={this.add100}>
-            Kill 100
+          <button
+            type="button"
+            className="App__add-100 button"
+            onClick={this.add100}
+          >
+            Add 100
           </button>
 
-          <button type="button" className="App__increase button" onClick={this.increase}>
+          <button
+            type="button"
+            className="App__increase button"
+            onClick={this.increase}
+          >
             Increase
           </button>
         </div>

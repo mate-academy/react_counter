@@ -7,7 +7,7 @@ body {
   justify-content: center;
   padding-top: 230px;
 
-  background-image: url('https://images.pexels.com/photos/2948636/pexels-photo-2948636.jpeg');
+  background-image: url("https://images.pexels.com/photos/2948636/pexels-photo-2948636.jpeg");
   background-size: cover;
   background-position: top;
 }
@@ -45,20 +45,19 @@ button {
   border-radius: 7px;
   box-shadow: 1px 0 1px #000;
   outline: none;
-  transition: background-color 0.5s ease;
-  transition: box-shadow 0.5s ease;
-  
+  transition: all 0.5s ease;
+
   &:hover {
-    background-color: rgba(86, 205, 165, 0.413);
+    background-color: rgba(86, 205, 165, 0.41);
     box-shadow: 2px 1px 3px #000;
   }
 
   &:nth-child(2) {
-    background-color: rgba(230, 135, 149, 0.655);
+    background-color: rgba(230, 135, 149, 0.66);
     transition: background-color 0.5s ease;
 
     &:hover {
-      background-color: rgba(230, 135, 149, 0.847);
+      background-color: rgba(230, 135, 149, 0.85);
     }
   }
 }

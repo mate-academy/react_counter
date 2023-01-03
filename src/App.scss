@@ -5,3 +5,13 @@ iframe {
 button {
   cursor: pointer;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.App__title {
+  font-size: 32px;
+  font-style: italic;
+}

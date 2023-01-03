@@ -1,3 +1,7 @@
+import {
+  Button, ButtonGroup, Paper,
+} from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
 import React from 'react';
 import './App.scss';
 
@@ -11,11 +15,19 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 100,
+    }));
+  };
+
+  clear = () => {
+    this.setState({ count: 0 });
   };
 
   // DON'T change the code below
@@ -31,23 +43,53 @@ export class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="App">
+      <Paper className="App" elevation={3}>
         <h1 className="App__title">
           {`Count: ${count}`}
         </h1>
+        <ButtonGroup
+          variant="text"
+          aria-label="text button group"
+        >
+          <Button
+            variant="outlined"
+            type="button"
+            className="App__add-one"
+            onClick={this.addOne}
+          >
+            Add 1
+          </Button>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+          <Button
+            variant="outlined"
+            type="button"
+            className="App__add-100"
+            onClick={this.add100}
+          >
+            Add 100
+          </Button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
+          <Button
+            variant="outlined"
+            type="button"
+            className="App__increase"
+            onClick={this.increase}
+          >
+            Increase
+          </Button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
-      </div>
+          <Button
+            variant="outlined"
+            startIcon={<DeleteIcon />}
+            type="button"
+            className="App__clear"
+            onClick={this.clear}
+          >
+            Clear
+          </Button>
+        </ButtonGroup>
+
+      </Paper>
     );
   }
 }

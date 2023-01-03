@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
 type State = {
@@ -35,20 +36,32 @@ export class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="App">
+      <div className="App text-bg-dark p-3 shadow rounded">
         <h1 className="App__title">
           {`Count: ${count}`}
         </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
+        <button
+          type="button"
+          className="App__add-one btn btn-primary"
+          onClick={this.addOne}
+        >
           Add 1
         </button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
+        <button
+          type="button"
+          className="App__add-100 btn btn-warning"
+          onClick={this.add100}
+        >
           Add 100
         </button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
+        <button
+          type="button"
+          className="App__increase btn btn-success"
+          onClick={this.increase}
+        >
           Increase
         </button>
       </div>

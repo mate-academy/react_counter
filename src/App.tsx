@@ -54,7 +54,12 @@ export class App extends React.Component<{}, State> {
               alt="counter"
             />
             <CardContent>
-              <Typography gutterBottom variant="h2" component="div">
+              <Typography
+                className="App__title"
+                gutterBottom
+                variant="h2"
+                component="div"
+              >
                 {`Count: ${count}`}
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -62,6 +67,7 @@ export class App extends React.Component<{}, State> {
                   <Button
                     type="button"
                     variant="contained"
+                    className="App__add-one"
                     onClick={this.addOne}
                   >
                     Add 1
@@ -70,6 +76,7 @@ export class App extends React.Component<{}, State> {
                   <Button
                     type="button"
                     variant="contained"
+                    className="App__add-100"
                     onClick={this.add100}
                   >
                     Add 100
@@ -78,6 +85,7 @@ export class App extends React.Component<{}, State> {
                   <Button
                     type="button"
                     variant="outlined"
+                    className="App__increase"
                     onClick={this.increase}
                   >
                     Increase

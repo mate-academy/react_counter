@@ -2,6 +2,22 @@ iframe {
   display: none;
 }
 
+.main {
+  margin: 0;
+  height: 100vh;
+  background-image: url(https://images.pexels.com/photos/2187605/pexels-photo-2187605.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.App {
+  &__title {
+    text-align: center;
+    color: white;
+  }
+}
+
 button {
   cursor: pointer;
 }

@@ -40,6 +40,7 @@ export class App extends React.Component<{}, State> {
           <h1 className="App__title title">
             {`Count: ${count}`}
           </h1>
+
           <button
             type="button"
             className="App__add-one button is-primary"
@@ -47,6 +48,7 @@ export class App extends React.Component<{}, State> {
           >
             Add 1
           </button>
+
           <button
             type="button"
             className="App__add-100 button is-primary"
@@ -54,6 +56,7 @@ export class App extends React.Component<{}, State> {
           >
             Add 100
           </button>
+
           <button
             type="button"
             className="App__increase button is-primary"

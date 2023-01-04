@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import { Paper, Button, ButtonGroup } from '@mui/material';
 
 type State = {
   count: number,
@@ -11,11 +12,15 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState(prevState => ({
+      count: prevState.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState(prevState => ({
+      count: prevState.count + 100,
+    }));
   };
 
   // DON'T change the code below
@@ -32,21 +37,52 @@ export class App extends React.Component<{}, State> {
 
     return (
       <div className="App">
-        <h1 className="App__title">
-          {`Count: ${count}`}
-        </h1>
+        <Paper
+          className="App__paper"
+          elevation={20}
+          sx={{
+            padding: '50px 80px',
+            width: 'max-content',
+            margin: '0 auto',
+            borderRadius: '10px',
+          }}
+        >
+          <h1 className="App__title">
+            {`Count: ${count}`}
+          </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+          <ButtonGroup
+            variant="contained"
+            color="secondary"
+            size="large"
+            aria-label="outlined primary button group"
+          >
+            <Button
+              type="button"
+              className="App__add-one"
+              onClick={this.addOne}
+            >
+              Add 1
+            </Button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
+            <Button
+              type="button"
+              className="App__add-100"
+              onClick={this.add100}
+            >
+              Add 100
+            </Button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
+            <Button
+              variant="outlined"
+              type="button"
+              className="App__increase"
+              onClick={this.increase}
+            >
+              Increase
+            </Button>
+          </ButtonGroup>
+        </Paper>
       </div>
     );
   }

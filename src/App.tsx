@@ -1,8 +1,11 @@
 import React from 'react';
 import './App.scss';
+import 'semantic-ui-css/semantic.min.css';
+
+import { Button, Card, Image } from 'semantic-ui-react';
 
 type State = {
-  count: number,
+  count: number;
 };
 
 export class App extends React.Component<{}, State> {
@@ -11,11 +14,15 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 100,
+    }));
   };
 
   // DON'T change the code below
@@ -32,21 +39,49 @@ export class App extends React.Component<{}, State> {
 
     return (
       <div className="App">
-        <h1 className="App__title">
-          {`Count: ${count}`}
-        </h1>
-
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
-
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
-
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
+        <Card.Group>
+          <Card>
+            <Card.Content>
+              <Image
+                floated="right"
+                size="tiny"
+                src="https://cdn-icons-png.flaticon.com/512/5605/5605901.png"
+              />
+              <Card.Header>
+                <h1 className="App__title">{`Count: ${count}`}</h1>
+              </Card.Header>
+              <Card.Meta>Click to Count</Card.Meta>
+            </Card.Content>
+            <Card.Content extra>
+              <div className="ui three buttons">
+                <Button
+                  color="green"
+                  type="button"
+                  className="App__add-one"
+                  onClick={this.addOne}
+                >
+                  Add 1
+                </Button>
+                <Button
+                  color="olive"
+                  type="button"
+                  className="App__add-100"
+                  onClick={this.add100}
+                >
+                  Add 100
+                </Button>
+                <Button
+                  color="teal"
+                  type="button"
+                  className="App__increase"
+                  onClick={this.increase}
+                >
+                  Increase
+                </Button>
+              </div>
+            </Card.Content>
+          </Card>
+        </Card.Group>
       </div>
     );
   }

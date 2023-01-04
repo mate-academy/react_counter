@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+import { Button, ButtonGroup, Card } from '@mui/material';
 import React from 'react';
 import './App.scss';
 
@@ -35,23 +37,42 @@ export class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="App">
-        <h1 className="App__title">
-          {`Count: ${count}`}
-        </h1>
+      <Card sx={{
+        width: 'max-content',
+        margin: '0 auto',
+      }}
+      >
+        <div className="App">
+          <h1 className="App__title">
+            {`Count: ${count}`}
+          </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+          <ButtonGroup variant="text" aria-label="text button group">
+            <Button
+              type="button"
+              className="App__add-one"
+              onClick={this.addOne}
+            >
+              Add 1
+            </Button>
+            <Button
+              type="button"
+              className="App__add-100"
+              onClick={this.add100}
+            >
+              Add 100
+            </Button>
+            <Button
+              type="button"
+              className="App__increase"
+              onClick={this.increase}
+            >
+              Increase
+            </Button>
+          </ButtonGroup>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
-
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
-      </div>
+        </div>
+      </Card>
     );
   }
 }

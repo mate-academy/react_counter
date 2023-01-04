@@ -5,3 +5,19 @@ iframe {
 button {
   cursor: pointer;
 }
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: max-content;
+  height: max-content;
+}
+
+.button:not(:last-child) {
+  margin-right: 2px;
+}

@@ -2,6 +2,21 @@ iframe {
   display: none;
 }
 
+.App {
+  background-color: rgb(88, 88, 88);
+  text-align: center;
+  height: 100vh;
+  &__title {
+    margin: 0;
+    padding: 100px;
+  }
+}
+
 button {
+  display: inline-block;
   cursor: pointer;
+  margin-right: 5px;
+  width: 70px;
+  background-color: rgb(218, 135, 20);
+  border-color: rgb(218, 135, 20);
 }

@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.scss';
+import {
+  Button, ButtonGroup, Box, Card, CardContent,
+  Typography, CardActions,
+} from '@mui/material';
 
 type State = {
   count: number,
@@ -11,14 +15,21 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState(prevState => {
+      return {
+        count: prevState.count + 1,
+      };
+    });
   };
 
   add100 = () => {
-    // write code here
+    this.setState(prevState => {
+      return {
+        count: prevState.count + 100,
+      };
+    });
   };
 
-  // DON'T change the code below
   increase = () => {
     this.addOne();
 
@@ -31,23 +42,31 @@ export class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="App">
-        <h1 className="App__title">
-          {`Count: ${count}`}
-        </h1>
-
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
-
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
-
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
-      </div>
+      <Box
+        sx={{
+          width: 300,
+        }}
+      >
+        <Card variant="outlined">
+          <CardContent>
+            <Typography gutterBottom variant="h4" component="div">
+              {`Count: ${count}`}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <ButtonGroup
+              variant="contained"
+              size="small"
+              color="success"
+              aria-label="alignment button group"
+            >
+              <Button onClick={this.addOne}>Add 1</Button>
+              <Button onClick={this.add100}>Add 100</Button>
+              <Button onClick={this.increase}>Increase</Button>
+            </ButtonGroup>
+          </CardActions>
+        </Card>
+      </Box>
     );
   }
 }

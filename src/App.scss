@@ -2,6 +2,38 @@ iframe {
   display: none;
 }
 
+body {
+  background: linear-gradient(75deg, #607d8b, #d459cb);
+
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px #0000004a;
+
+  &__title {
+    color: rgb(77, 77, 77);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+}
+
 button {
-  cursor: pointer;
+  background: linear-gradient(75deg, #607d8b, #d459cb);
+  border: none;
+  margin: 10px;
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px #0000004a;
+  width: 100px;
 }

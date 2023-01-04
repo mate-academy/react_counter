@@ -1,0 +1,8 @@
+body {
+  height: calc(100vh - 308px);
+
+  background-image: url(./bg-c.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

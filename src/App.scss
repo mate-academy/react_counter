@@ -2,6 +2,40 @@ iframe {
   display: none;
 }
 
+html {
+  background-color: rgb(247, 247, 247);
+  font-family: "Orbitron", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+  width: 440px;
+  padding: 5px 0 15px;
+  border: solid 2px gray;
+  box-shadow: 0 0 7px 1px rgb(168, 168, 168);
+  border-radius: 10px;
+  margin-top: 70px;
+  background-color: #fff;
+}
+
 button {
+  height: 40px;
+  width: 120px;
+  border: 5px;
+  border-radius: 5px;
+  margin: 3px;
+  font-size: 17px;
+  font-family: "Orbitron", sans-serif;
   cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 4px 1px gray;
+  }
 }

@@ -5,3 +5,12 @@ iframe {
 button {
   cursor: pointer;
 }
+
+.App {
+  width: max-content;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+  }
+}

@@ -4,4 +4,33 @@ iframe {
 
 button {
   cursor: pointer;
+  margin: 0 16px;
+  background-color: rgba(108, 159, 226, 0.5);
+  border-radius: 5px;
+  border-color: rgba(0, 139, 139, 0.5);
+  transition-property: background-color, border-color, transform;
+  transition-duration: 500ms, 500ms, 300ms;
+
+  &:hover {
+    background-color: rgba(216, 78, 14, 0.5);
+    border-color: rgba(172, 163, 37, 0.5);
+    transform: scale(1.2);
+  }
+}
+
+.App {
+  border-radius: 20px;
+  width: 300px;
+  margin: 300px auto 0;
+  background-color: rgba(138, 109, 185, 0.5);
+
+  &__title {
+    margin-left: 80px;
+    color: rgba(34, 21, 92, 0.7);
+    transition: color 1s;
+
+    &:hover {
+      color: rgb(230, 41, 16);
+    }
+  }
 }

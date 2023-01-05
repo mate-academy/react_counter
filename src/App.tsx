@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.scss';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import RotateLeftIcon from '@mui/icons-material/RotateLeft';
+import AddIcon from '@mui/icons-material/Add';
 
 type State = {
   count: number,
@@ -11,20 +15,27 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 100,
+    }));
   };
 
-  // DON'T change the code below
   increase = () => {
     this.addOne();
 
     if (this.state.count % 5 === 0) {
       this.add100();
     }
+  };
+
+  reset = () => {
+    this.setState({ count: 0 });
   };
 
   render() {
@@ -36,17 +47,47 @@ export class App extends React.Component<{}, State> {
           {`Count: ${count}`}
         </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+        <Stack direction="row" alignItems="center" spacing={2}>
+          <Button
+            variant="contained"
+            startIcon={<AddIcon />}
+            type="button"
+            className="App__add-one"
+            onClick={this.addOne}
+          >
+            1
+          </Button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
+          <Button
+            variant="contained"
+            startIcon={<AddIcon />}
+            type="button"
+            className="App__add-100"
+            onClick={this.add100}
+          >
+            100
+          </Button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
+          <Button
+            variant="contained"
+            type="button"
+            className="App__increase"
+            onClick={this.increase}
+          >
+            Increase
+          </Button>
+        </Stack>
+
+        <Button
+          variant="contained"
+          color="error"
+          endIcon={<RotateLeftIcon />}
+          type="button"
+          className="App__reset"
+          onClick={this.reset}
+        >
+          Reset
+        </Button>
       </div>
     );
   }

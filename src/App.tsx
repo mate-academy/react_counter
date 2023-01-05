@@ -1,3 +1,4 @@
+import { Button, ButtonGroup } from '@mui/material';
 import React from 'react';
 import './App.scss';
 
@@ -11,11 +12,15 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 100,
+    }));
   };
 
   // DON'T change the code below
@@ -31,22 +36,42 @@ export class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="App">
+      <div className="App" style={{ textAlign: 'center' }}>
         <h1 className="App__title">
+
           {`Count: ${count}`}
         </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+        <ButtonGroup
+          variant="text"
+          arial-aria-label="text button group"
+        >
+          <Button
+            type="button"
+            color="success"
+            className="App__add-one"
+            onClick={this.addOne}
+          >
+            Add 1
+          </Button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
+          <Button
+            type="button"
+            className="App__add-100"
+            onClick={this.add100}
+          >
+            Add 100
+          </Button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
+          <Button
+            type="button"
+            color="warning"
+            className="App__increase"
+            onClick={this.increase}
+          >
+            Increase
+          </Button>
+        </ButtonGroup>
       </div>
     );
   }

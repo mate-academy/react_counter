@@ -6,10 +6,15 @@ iframe {
   background-color: rgb(88, 88, 88);
   text-align: center;
   height: 100vh;
+  margin: 0;
   &__title {
     margin: 0;
     padding: 100px;
   }
+}
+
+body {
+  margin: 0;
 }
 
 button {

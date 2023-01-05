@@ -11,19 +11,15 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    this.setState((prevState) => {
-      return {
-        count: prevState.count + 1,
-      };
-    });
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
+    }));
   };
 
   add100 = () => {
-    this.setState((prevState) => {
-      return {
-        count: prevState.count + 100,
-      };
-    });
+    this.setState((prevState) => ({
+      count: prevState.count + 100,
+    }));
   };
 
   increase = () => {
@@ -43,25 +39,25 @@ export class App extends React.Component<{}, State> {
           {`Count: ${count}`}
         </h1>
 
-        <button 
-          type="button" 
-          className="App__add-one" 
+        <button
+          type="button"
+          className="App__add-one"
           onClick={this.addOne}
         >
           Add 1
         </button>
 
-        <button 
-          type="button" 
-          className="App__add-100" 
+        <button
+          type="button"
+          className="App__add-100"
           onClick={this.add100}
         >
           Add 100
         </button>
 
-        <button 
-          type="button" 
-          className="App__increase" 
+        <button
+          type="button"
+          className="App__increase"
           onClick={this.increase}
         >
           Increase

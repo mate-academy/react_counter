@@ -10,15 +10,15 @@ export class App extends React.Component<{}, State> {
     count: 0,
   };
 
-  addOne = () => {
-    this.setState((prevState) => ({
-      count: prevState.count + 1,
-    }));
-  };
-
   add100 = () => {
     this.setState((prevState) => ({
       count: prevState.count + 100,
+    }));
+  };
+
+  addOne = () => {
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
     }));
   };
 

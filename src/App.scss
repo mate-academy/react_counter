@@ -2,6 +2,26 @@ iframe {
   display: none;
 }
 
+body {
+  color: white;
+  display: flex;
+  justify-content: center;
+  background-image: url("https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.App {
+  &__title {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 button {
   cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
 }

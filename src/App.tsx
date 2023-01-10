@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
 
 type State = {
   count: number,
@@ -35,22 +37,73 @@ export class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="App">
-        <h1 className="App__title">
-          {`Count: ${count}`}
-        </h1>
+      <div
+        className="
+          App
+          d-flex
+          flex-column
+          align-items-center
+          justify-content-center
+        "
+        style={{ height: '100vh' }}
+      >
+        <div
+          className="
+            d-flex
+            flex-column
+            justify-content-center
+            p-5
+            bg-gradient
+            rounded
+            bg-opacity-70
+            shadow
+          "
+          style={{ height: '300px' }}
+        >
+          <h1
+            className="
+              App__title
+              mb-4
+              text-center
+              text-black
+              fw-bold
+            "
+          >
+            {`Count: ${count}`}
+          </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+          <div className="d-flex justify-content-center">
+            <Button
+              type="button"
+              className="App__add-one"
+              onClick={this.addOne}
+              variant="light"
+              size="lg"
+            >
+              Add 1
+            </Button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
+            <Button
+              type="button"
+              className="App__add-100 ms-2"
+              onClick={this.add100}
+              variant="light"
+              size="lg"
+            >
+              Add 100
+            </Button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
+            <Button
+              type="button"
+              className="App__increase ms-2"
+              onClick={this.increase}
+              variant="light"
+              size="lg"
+            >
+              Increase
+            </Button>
+          </div>
+        </div>
       </div>
     );
   }

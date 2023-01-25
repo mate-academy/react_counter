@@ -24,7 +24,6 @@ export class App extends React.Component<{}, State> {
     }));
   };
 
-  // DON'T change the code below
   increase = () => {
     this.addOne();
 
@@ -37,29 +36,29 @@ export class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="App">
-        <h1 className="App__title title">
+      <div className="app">
+        <h1 className="app__title title">
           {`Count: ${count}`}
         </h1>
 
-        <div className="App__actions">
+        <div className="app__actions">
           <button
             type="button"
-            className="App__add-one button is-primary"
+            className="app__add-one button is-primary"
             onClick={this.addOne}
           >
             Add 1
           </button>
           <button
             type="button"
-            className="App__add-100 button is-primary"
+            className="app__add-100 button is-primary"
             onClick={this.add100}
           >
             Add 100
           </button>
           <button
             type="button"
-            className="App__increase button is-primary"
+            className="app__increase button is-primary"
             onClick={this.increase}
           >
             Increase

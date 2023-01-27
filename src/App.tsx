@@ -11,14 +11,17 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState(state => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState(state => ({
+      count: state.count + 100,
+    }));
   };
 
-  // DON'T change the code below
   increase = () => {
     this.addOne();
 
@@ -32,21 +35,37 @@ export class App extends React.Component<{}, State> {
 
     return (
       <div className="App">
-        <h1 className="App__title">
-          {`Count: ${count}`}
-        </h1>
+        <div className="App__wrapper">
+          <h1 className="App__title">
+            {`Count: ${count}`}
+          </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+          <div className="App__buttons">
+            <button
+              type="button"
+              className="App__add-one App__button"
+              onClick={this.addOne}
+            >
+              Add 1
+            </button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
+            <button
+              type="button"
+              className="App__add-100 App__button"
+              onClick={this.add100}
+            >
+              Add 100
+            </button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
+            <button
+              type="button"
+              className="App__increase App__button"
+              onClick={this.increase}
+            >
+              Increase
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

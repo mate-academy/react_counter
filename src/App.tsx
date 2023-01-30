@@ -1,40 +1,42 @@
-import React from 'react';
-import './App.scss';
+import React from 'react'
+import './App.scss'
 
 type State = {
-  count: number,
-};
+  count: number
+}
 
 export class App extends React.Component<{}, State> {
   state: Readonly<State> = {
     count: 0,
-  };
+  }
 
   addOne = () => {
-    // write code here
-  };
+    this.setState((state) => ({
+      count: state.count + 1,
+    }))
+  }
 
   add100 = () => {
-    // write code here
-  };
+    this.setState((state) => ({
+      count: state.count + 100,
+    }))
+  }
 
   // DON'T change the code below
   increase = () => {
-    this.addOne();
+    this.addOne()
 
     if (this.state.count % 5 === 0) {
-      this.add100();
+      this.add100()
     }
-  };
+  }
 
   render() {
-    const { count } = this.state;
+    const { count } = this.state
 
     return (
       <div className="App">
-        <h1 className="App__title">
-          {`Count: ${count}`}
-        </h1>
+        <h1 className="App__title">{`Count: ${count}`}</h1>
 
         <button type="button" className="App__add-one" onClick={this.addOne}>
           Add 1
@@ -48,6 +50,6 @@ export class App extends React.Component<{}, State> {
           Increase
         </button>
       </div>
-    );
+    )
   }
 }

@@ -2,6 +2,28 @@ iframe {
   display: none;
 }
 
+// just an attempt to combine React with mine own scss code
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.button-Container {
+  display: flex;
+  gap: 7px;
+}
+
 button {
   cursor: pointer;
+  min-height: 50px;
+  min-width: 90px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.15);
+  }
 }

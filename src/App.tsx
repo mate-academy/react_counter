@@ -11,6 +11,7 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
+  // write code here
     this.setState(state => {
       return {
         count: state.count + 1,

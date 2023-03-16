@@ -21,6 +21,7 @@ export class App extends React.Component<{}, State> {
       count: state.count + 100,
     }));
   };
+
   // DON'T change the code below
   increase = () => {
     this.addOne();

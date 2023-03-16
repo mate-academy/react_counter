@@ -12,18 +12,16 @@ export class App extends React.Component<{}, State> {
 
   addOne = () => {
     // write code here
-    this.setState((prevState: { count: number; }) => (
-      {
-        count: prevState.count + 1,
-      }));
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
+    }));
   };
 
   add100 = () => {
     // write code here
-    this.setState((prevState: { count: number; }) => (
-      {
-        count: prevState.count + 100,
-      }));
+    this.setState((prevState) => ({
+      count: prevState.count + 100,
+    }));
   };
 
   // DON'T change the code below

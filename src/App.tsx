@@ -10,13 +10,9 @@ export class App extends React.Component<{}, State> {
     count: 0,
   };
 
-  addOne = () => {
-    // write code here
-  };
+  addOne = this.countUp();
 
-  add100 = () => {
-    // write code here
-  };
+  add100 = this.countUp(100);
 
   // DON'T change the code below
   increase = () => {
@@ -26,6 +22,14 @@ export class App extends React.Component<{}, State> {
       this.add100();
     }
   };
+
+  countUp(numUp = 1) {
+    return () => {
+      this.setState(state => ({
+        count: state.count + numUp,
+      }));
+    };
+  }
 
   render() {
     const { count } = this.state;

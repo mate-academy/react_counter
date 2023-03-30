@@ -22,6 +22,8 @@ export class App extends React.Component<{}, State> {
     }));
   };
 
+  // increase
+
   increase = () => {
     this.addOne();
 

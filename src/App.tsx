@@ -14,16 +14,16 @@ export class App extends React.Component<{}, State> {
     this.setState((prev): Readonly<State> => {
       return {
         count: prev.count + 1,
-      }
-    })
+      };
+    });
   };
 
   add100 = () => {
     this.setState((prev): Readonly<State> => {
       return {
         count: prev.count + 100,
-      }
-    })
+      };
+    });
   };
 
   // DON'T change the code below

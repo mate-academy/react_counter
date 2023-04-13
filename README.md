@@ -16,4 +16,16 @@ So the third button should count like this:
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
 - Use [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
 - Open one more terminal and run tests with `npm test` to ensure your solution is correct.
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_counter/) and add it to PR description.
+- Replace `<your_account>` with your Github username in the [DEMO LINK](https://emxm.github.io/react_counter/) and add it to PR description.
+
+# ua-translation
+
+Вам надається компонент `App` із заголовком із текстом `Count is 0` за замовчуванням і трьома кнопками.
+Кнопки повинні працювати наступним чином:
+
+- кнопка `Add 1` викликає метод `addOne`, щоб додати `1` до `count`;
+- кнопка `Add 100` викликає метод `add100`, щоб додати `100` до `count`;
+- Кнопка `Increase` викликає `addOne`, а потім, якщо кількість ділиться на 5, додатково викликає `add100`.
+
+Отже, третя кнопка має рахуватися так:
+`101, 102, 103, 104, 105, 206, 207, 208, 209, 210, 311 ...`

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-// import { count } from 'console';
+// import { count } from 'console'; //
 
 type State = {
   count: number,

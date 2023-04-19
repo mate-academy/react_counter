@@ -12,25 +12,20 @@ export class App extends React.Component<{}, State> {
 
   addOne = () => {
     this.setState(state => {
-      const newCounter = state.count;
-
       return {
-        count: newCounter + 1,
+        count: state.count + 1,
       };
     });
   };
 
   add100 = () => {
     this.setState(state => {
-      const newCounter = state.count;
-
       return {
-        count: newCounter + 100,
+        count: state.count + 100,
       };
     });
   };
 
-  // DON'T change the code below
   increase = () => {
     this.addOne();
 

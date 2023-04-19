@@ -18,7 +18,6 @@ export class App extends React.Component<{}, State> {
     this.setState(prevState => ({ count: prevState.count + 100 }));
   };
 
-  // DON'T change the code below
   increase = () => {
     this.addOne();
 

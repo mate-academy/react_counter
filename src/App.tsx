@@ -17,15 +17,9 @@ export class App extends React.Component<{}, State> {
   };
 
   add100 = () => {
-    let i = 0;
-
-    while (i < 100) {
-      this.setState((state) => ({
-        count: state.count + 1,
-      }));
-
-      i += 1;
-    }
+    this.setState((state) => ({
+      count: state.count + 100,
+    }));
   };
 
   // DON'T change the code below

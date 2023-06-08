@@ -2,6 +2,10 @@ iframe {
   display: none;
 }
 
-button {
-  cursor: pointer;
+body {
+  margin: 0;
+}
+
+.is-fullheight {
+  height: 100vh;
 }

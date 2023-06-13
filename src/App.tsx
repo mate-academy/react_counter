@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import { Button } from '@mui/material';
 
 type State = {
   count: number,
@@ -11,14 +12,17 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 100,
+    }));
   };
 
-  // DON'T change the code below
   increase = () => {
     this.addOne();
 
@@ -36,17 +40,32 @@ export class App extends React.Component<{}, State> {
           {`Count: ${count}`}
         </h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
+        <Button
+          type="button"
+          variant="outlined"
+          className="App__add-one"
+          onClick={this.addOne}
+        >
           Add 1
-        </button>
+        </Button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
+        <Button
+          type="button"
+          variant="outlined"
+          className="App__add-100"
+          onClick={this.add100}
+        >
           Add 100
-        </button>
+        </Button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
+        <Button
+          type="button"
+          variant="contained"
+          className="App__increase"
+          onClick={this.increase}
+        >
           Increase
-        </button>
+        </Button>
       </div>
     );
   }

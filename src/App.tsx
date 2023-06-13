@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bulma/css/bulma.css';
 import './App.scss';
 
 type State = {
@@ -11,11 +12,15 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState((state) => ({
+      count: state.count + 100,
+    }));
   };
 
   // DON'T change the code below
@@ -31,22 +36,35 @@ export class App extends React.Component<{}, State> {
     const { count } = this.state;
 
     return (
-      <div className="App">
-        <h1 className="App__title">
+      <div className="App box">
+        <h1 className="App__title title">
           {`Count: ${count}`}
         </h1>
+        <div className="buttons">
+          <button
+            type="button"
+            className="App__add-one button is-success is-rounded"
+            onClick={this.addOne}
+          >
+            Add 1
+          </button>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
+          <button
+            type="button"
+            className="App__add-100 button is-success is-rounded"
+            onClick={this.add100}
+          >
+            Add 100
+          </button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
-
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
+          <button
+            type="button"
+            className="App__increase button is-success is-rounded"
+            onClick={this.increase}
+          >
+            Increase
+          </button>
+        </div>
       </div>
     );
   }

@@ -2,6 +2,65 @@ iframe {
   display: none;
 }
 
+html {
+  user-select: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #0a7159;
+}
+
 button {
   cursor: pointer;
+  width: 200px;
+  height: 50px;
+  margin-right: 30px;
+
+  color: #057158;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+
+  border: 0;
+  border-radius: 30px;
+  background-color: #fff;
+  transition: background 0.5s;
+}
+
+.App {
+  margin-top: 250px;
+  color: #fff;
+
+  &__title {
+    margin: 0 0 40px;
+    text-align: center;
+  }
+
+  &__add-one {
+    &:hover {
+      color: #fff;
+      background: #43bf35;
+    }
+  }
+
+  &__add-100 {
+    &:hover {
+      color: #fff;
+      background: #d9d132;
+    }
+  }
+
+  &__increase {
+    &:hover {
+      color: #fff;
+      background: #c65532;
+    }
+  }
 }

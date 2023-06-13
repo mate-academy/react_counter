@@ -3,5 +3,25 @@ iframe {
 }
 
 button {
+  font-size: 22px;
+  margin: 10px;
+  line-height: 50px;
   cursor: pointer;
+}
+
+.App__add-one {
+  background-color: yellow;
+}
+
+.App__add-100 {
+  background-color: yellowgreen;
+}
+
+.App__increase {
+  background-color: blueviolet;
+}
+
+.delateAll {
+  color: aliceblue;
+  background-color: red;
 }

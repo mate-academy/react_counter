@@ -6,16 +6,25 @@ type State = {
 };
 
 export class App extends React.Component<{}, State> {
-  state: Readonly<State> = {
+  state = {
     count: 0,
   };
 
   addOne = () => {
-    // write code here
+    this.setState((state) => ({
+      count: this.state.count + 1
+    }))
   };
 
   add100 = () => {
-    // write code here
+    this.setState((state) => ({
+      count: this.state.count + 100
+    }),
+    () => {
+        if (this.state.count % 5 === 0) {
+          this.addOne();
+        }
+    })
   };
 
   // DON'T change the code below

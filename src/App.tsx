@@ -19,12 +19,7 @@ export class App extends React.Component<{}, State> {
   add100 = () => {
     this.setState((state) => ({
       count: state.count + 100,
-    }),
-    () => {
-      if (this.state.count % 5 === 0) {
-        this.addOne();
-      }
-    });
+    }));
   };
 
   // DON'T change the code below

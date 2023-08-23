@@ -7,7 +7,7 @@ type State = {
 
 export class App extends React.Component<{}, State> {
   state: Readonly<State> = {
-    count: 0,
+    count: 10,
   };
 
   addOne = () => {

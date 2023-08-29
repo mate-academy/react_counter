@@ -11,11 +11,11 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState((state) => ({ count: state.count + 1 }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState((state) => ({ count: state.count + 100 }));
   };
 
   // DON'T change the code below
@@ -28,6 +28,7 @@ export class App extends React.Component<{}, State> {
   };
 
   render() {
+    // eslint-disable-next-line @typescript-eslint/no-shadow
     const { count } = this.state;
 
     return (

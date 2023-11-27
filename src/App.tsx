@@ -10,12 +10,20 @@ export class App extends React.Component<{}, State> {
     count: 0,
   };
 
+  updateCount = (addValue: number) => {
+    this.setState((state) => {
+      return {
+        count: state.count + addValue,
+      };
+    });
+  };
+
   addOne = () => {
-    // write code here
+    this.updateCount(1);
   };
 
   add100 = () => {
-    // write code here
+    this.updateCount(100);
   };
 
   // DON'T change the code below

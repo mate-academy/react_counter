@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.scss';
 
-type State = {
-  count: number,
-};
+interface State {
+  count: number;
+}
 
 export class App extends React.Component<{}, State> {
   state: Readonly<State> = {
@@ -11,14 +11,13 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState(prevState => ({ count: prevState.count + 1 }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState(prevState => ({ count: prevState.count + 100 }));
   };
 
-  // DON'T change the code below
   increase = () => {
     this.addOne();
 
@@ -39,11 +38,9 @@ export class App extends React.Component<{}, State> {
         <button type="button" className="App__add-one" onClick={this.addOne}>
           Add 1
         </button>
-
         <button type="button" className="App__add-100" onClick={this.add100}>
           Add 100
         </button>
-
         <button type="button" className="App__increase" onClick={this.increase}>
           Increase
         </button>

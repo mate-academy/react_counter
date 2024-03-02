@@ -1,51 +1,37 @@
-import React from 'react';
+import { useState } from 'react';
 import './App.scss';
 
-type State = {
-  count: number;
-};
+export const App = () => {
+  const [count, setCount] = useState(0);
 
-export class App extends React.Component<{}, State> {
-  state: Readonly<State> = {
-    count: 0,
+  const addOne = () => {
+    setCount(counter => counter + 1);
   };
 
-  addOne = () => {
-    // write code here
+  const add100 = () => {
+    setCount(counter => counter + 100);
   };
 
-  add100 = () => {
-    // write code here
-  };
-
-  // DON'T change the code below
-  increase = () => {
-    this.addOne();
-
-    if (this.state.count % 5 === 0) {
-      this.add100();
+  const increase = () => {
+    if (count % 5 === 0) {
+      add100();
     }
+
+    addOne();
   };
 
-  render() {
-    const { count } = this.state;
-
-    return (
-      <div className="App">
-        <h1 className="App__title">{`Count: ${count}`}</h1>
-
-        <button type="button" className="App__add-one" onClick={this.addOne}>
-          Add 1
-        </button>
-
-        <button type="button" className="App__add-100" onClick={this.add100}>
-          Add 100
-        </button>
-
-        <button type="button" className="App__increase" onClick={this.increase}>
-          Increase
-        </button>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="App">
+      <h1 className="App__title">{`Count: ${count}`}</h1>
+      <button type="button" className="App__add-one" onClick={addOne}>
+        Add 1
+      </button>
+      <button type="button" className="App__add-100" onClick={add100}>
+        Add 100
+      </button>
+      <button type="button" className="App__increase" onClick={increase}>
+        Increase
+      </button>
+    </div>
+  );
+};

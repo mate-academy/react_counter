@@ -1,0 +1,18 @@
+{
+    "sourceFile": "README.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1712063607473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1712063607473,
+            "name": "Commit-0",
+            "content": "# React counter\n\n> Here is [the working version](https://mate-academy.github.io/react_counter/)\n\nYou are given the `App` component with a title with a text `Count is 0` by default and three buttons.\nThe buttons should work the next way:\n\n- `Add 1` button calls `addOne` method to add `1` to the `count`;\n- `Add 100` button calls `add100` method to add `100` to the `count`;\n- `Increase` button calls `addOne` and then, if count was divisible by 5, it additionally calls `add100`.\n\nSo the third button should count like this:\n`101, 102, 103, 104, 105, 206, 207, 208, 209, 210, 311 ...`\n\n## Instructions\n- Install Prettier Extention and use this [VSCode settings](https://mate-academy.github.io/fe-program/tools/vscode/settings.json) to enable format on save.\n- Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).\n- Use [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).\n- Open one more terminal and run tests with `npm test` to ensure your solution is correct.\n- Replace `<your_account>` with your Github username in the [DEMO LINK](https://marinatea.github.io/react_counter/) and add it to PR description.\n"
+        }
+    ]
+}

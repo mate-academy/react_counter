@@ -11,11 +11,17 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState(state => ({
+      ...state,
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState(state => ({
+      ...state,
+      count: state.count + 100,
+    }));
   };
 
   // DON'T change the code below
@@ -29,20 +35,21 @@ export class App extends React.Component<{}, State> {
 
   render() {
     const { count } = this.state;
+    const { addOne, add100, increase } = this;
 
     return (
       <div className="App">
         <h1 className="App__title">{`Count: ${count}`}</h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
+        <button type="button" className="App__add-one" onClick={addOne}>
           Add 1
         </button>
 
-        <button type="button" className="App__add-100" onClick={this.add100}>
+        <button type="button" className="App__add-100" onClick={add100}>
           Add 100
         </button>
 
-        <button type="button" className="App__increase" onClick={this.increase}>
+        <button type="button" className="App__increase" onClick={increase}>
           Increase
         </button>
       </div>

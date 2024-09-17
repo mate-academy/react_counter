@@ -11,11 +11,11 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState(prevCount => ({ count: prevCount.count + 1 }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState(prevCount => ({ count: prevCount.count + 100 }));
   };
 
   // DON'T change the code below

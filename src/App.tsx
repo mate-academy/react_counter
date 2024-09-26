@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss';
+import './App.css';
 
 type State = {
   count: number;
@@ -11,11 +11,15 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState(state => ({
+      count: state.count + 1,
+    }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState(state => ({
+      count: state.count + 100,
+    }));
   };
 
   // DON'T change the code below

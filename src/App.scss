@@ -1,7 +1,32 @@
+body {
+  margin: 0;
+}
+
 iframe {
   display: none;
 }
 
+.App {
+  margin-left: 5px;
+
+  &__add-one {
+    color: orange;
+  }
+
+  &__add-100 {
+    color: blue;
+  }
+
+  &__increase {
+    color: green;
+  }
+}
+
 button {
   cursor: pointer;
+  margin-left: 8px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
 }

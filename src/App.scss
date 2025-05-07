@@ -2,6 +2,38 @@ iframe {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  background-color: #3f3b6c;
+  color: #a3c7d6;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+}
+
+.App {
+  width: 350px;
+  margin: 150px auto 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #624f82;
+  text-align: center;
+}
+
 button {
+  margin: 0 10px;
+  width: 75px;
+  height: 50px;
+
+  border: 1px solid #3f3b6c;
+  border-radius: 5px;
+  background-color: #9f73ab;
+  color: inherit;
+
+  font-family: inherit;
+  text-align: center;
+  text-transform: uppercase;
   cursor: pointer;
 }

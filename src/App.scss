@@ -2,6 +2,36 @@ iframe {
   display: none;
 }
 
+body {
+  background-color: #c99;
+}
+
 button {
   cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  width: 350px;
+  height: 70px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #fcc;
+
+  &:hover {
+    color: rosybrown;
+    box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+  }
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
+
+  &__title {
+    font-size: 50px;
+  }
 }

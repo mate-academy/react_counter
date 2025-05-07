@@ -4,4 +4,33 @@ iframe {
 
 button {
   cursor: pointer;
+
+  border-radius: 10px;
+  margin: 0 10px;
+  height: 30px;
+  background-color: cornflowerblue;
+  color: gold;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+h1 {
+  margin: 0 0 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  background-color: bisque;
+  color: #000;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 20px;
+  align-items: center;
 }

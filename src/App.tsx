@@ -11,11 +11,11 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState(prev => ({ count: prev.count + 1 }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState(prev => ({ count: prev.count + 100 }));
   };
 
   // DON'T change the code below
@@ -34,7 +34,11 @@ export class App extends React.Component<{}, State> {
       <div className="App">
         <h1 className="App__title">{`Count: ${count}`}</h1>
 
-        <button type="button" className="App__add-one" onClick={this.addOne}>
+        <button
+          type="button"
+          className="App__add-one"
+          onClick={() => this.addOne()}
+        >
           Add 1
         </button>
 

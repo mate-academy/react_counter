@@ -15,8 +15,9 @@ So the third button should count like this:
 Your task is to write the logic for the `addOne` and `add100` callbacks. Please don't modify any other code in this task.
 
 ## Instructions
+
 - Install Prettier Extension and use this [VSCode settings](https://mate-academy.github.io/fe-program/tools/vscode/settings.json) to enable format on save.
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
 - Use [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
 - Open one more terminal and run tests with `npm test` to ensure your solution is correct.
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_counter/) and add it to PR description.
+- Replace `<your_account>` with your Github username in the [DEMO LINK](https://KrawczykDamiann.github.io/react_counter/) and add it to PR description.

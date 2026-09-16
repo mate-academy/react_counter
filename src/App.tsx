@@ -11,20 +11,20 @@ export class App extends React.Component<{}, State> {
   };
 
   addOne = () => {
-    // write code here
+    this.setState(state => ({ count: state.count + 1 }));
   };
 
   add100 = () => {
-    // write code here
+    this.setState(state => ({ count: state.count + 100 }));
   };
 
   // DON'T change the code below
   increase = () => {
-    this.addOne();
+    this.setState(({ count }) => {
+      const nextCount = count + 1;
 
-    if (this.state.count % 5 === 0) {
-      this.add100();
-    }
+      return { count: count % 5 === 0 ? nextCount + 100 : nextCount };
+    });
   };
 
   render() {
